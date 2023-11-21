@@ -24,7 +24,7 @@
     <byteCheckEncoding value="euc-kr"/>
     <initScript value="false"/>
     <clearMemory value="false"/>
-    <stylesheet earlyImportList="/cm/css/base.css" enable="true" import="link" value="stylesheet_ext.css"/>
+    <stylesheet earlyImportList="/cm/css/common.css,/cm/css/reset.css" enable="true" import="link" value="stylesheet_ext.css"/>
     <mediaInfo>
         <media maxWidth="" minWidth="1025" name="desktop"/>
         <media maxWidth="1024" minWidth="768" name="tablet"/>
@@ -33,7 +33,9 @@
     <style>
         <removeDefaultClass value="true"/>
     </style>
-    <engine/>
+    <engine>
+    	<module src="/cm/js/jquery-3.6.0.min.js"></module>
+    </engine>
     <ModelUtil>
         <copyChildrenNodes refresh="false"/>
     </ModelUtil>

@@ -1,4 +1,4 @@
-﻿﻿﻿﻿export default {
+export default {
   "WebSquare": {
     "convertPageXML": {
       "@value": "true"
@@ -71,7 +71,7 @@
       "@value": "false"
     },
     "stylesheet": {
-      "@earlyImportList": "/cm/css/base.css",
+      "@earlyImportList": "/cm/css/common.css,/cm/css/reset.css",
       "@enable": "true",
       "@import": "link",
       "@value": "stylesheet_ext.css"
@@ -100,7 +100,11 @@
         "@value": "true"
       }
     },
-    "engine": {},
+    "engine": {
+      "module": {
+        "@src": "/cm/js/jquery-3.6.0.min.js"
+      }
+    },
     "ModelUtil": {
       "copyChildrenNodes": {
         "@refresh": "false"

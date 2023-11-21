@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+    	<w2:type>DEFAULT</w2:type>
+        <w2:buildDate/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+            <w2:dataCollection baseNode="map">
+            </w2:dataCollection>
+            <w2:workflowCollection>
+            </w2:workflowCollection>
+        </xf:model>
+         <script type="text/javascript" lazy="false"><![CDATA[
+        
+	scwin.onpageload = function() {
+		
+	};
+	
+	scwin.onpageunload = function() {
+		
+	};
+	
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    	<xf:group class="header" id="" style="">
+
+    		<xf:group class="left" id="" style="">
+    			<w2:anchor outerDiv="false" style="" id="" class="btn_menu">
+    				<xf:label><![CDATA[메뉴 닫기]]></xf:label>
+    			</w2:anchor>
+    			<xf:group id="" class="logo" tagname="h1">
+    				<w2:anchor outerDiv="false" style="" id="" class="">
+    					<xf:label><![CDATA[메인화면 바로가기]]></xf:label>
+    				</w2:anchor>
+
+    			</xf:group>
+    			<w2:textbox label="콘텐츠 관리 시스템" style="" id=""></w2:textbox>
+    		</xf:group>
+    		<xf:group class="right" id="" style="">
+    			<xf:group class="user-box" id="" style="">
+    				<w2:span label="김국민" style="" id="" class="fc-yellow"></w2:span>
+    				<w2:span id="" label="(KB123456)" style="" class="fs-14" dataType=""></w2:span>
+    				<w2:span id="" label="님" style="" class=""></w2:span>
+    			</xf:group>
+    			<xf:group class="logout" id="" style="">
+    				<w2:anchor class="btn_logout" id="" outerDiv="false" style="">
+    					<xf:label><![CDATA[로그아웃]]></xf:label>
+    				</w2:anchor>
+    			</xf:group>
+    		</xf:group>
+    	</xf:group>
+    </body>
+</html>
