@@ -1,4 +1,4 @@
-/*amd /cm/template/page/04_search_tab/search_tab.xml 14493 a4d00bdcce2d055fe676e223383769fd657026b178a0583e2f813d24c89d57df */
+/*amd /cm/template/page/04_search_tab/search_tab.xml 14500 243390c2f7b74664b7e94d2b3987142924b911e65a8b8d22f88b7cd743c49289 */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8',standalone:'no'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){        
 			scwin.onpageload = function() {	
 				$(".btn_fav").click(function(){

@@ -1,4 +1,4 @@
-/*amd /cm/template/design_system/xml/tab.xml 13138 a6042c83c33c9077c05aece16339c5b744650bc4dc8895d750594e456adfb2b4 */
+/*amd /cm/template/design_system/xml/tab.xml 13142 9629992281983ff5b6df501b0c6086b55702dd41cd9159dac743b89b6cddc6db */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
 scwin.onpageload = function() {
 	

@@ -1,4 +1,4 @@
-/*amd /cm/template/page/02_search_table/search_table.xml 11132 71edbfd56eca9496cecac68549b70a992c2091ae9bc95187c2fbee72b8c0a28a */
+/*amd /cm/template/page/02_search_table/search_table.xml 11138 0a42252ecab41cb4d519864d1168761010a54cdd6987779b7d284aa1afcea360 */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8',standalone:'no'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
 			scwin.onpageload = function() {
 				$(".btn_fav").click(function(){

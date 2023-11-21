@@ -1,4 +1,4 @@
-/*amd /cm/template/design_system/xml/gridsystem.xml 2613 2503f7e5b5b89a5d2097702d0973bd7b002c0496c8c7805bc7161363a050162d */
+/*amd /cm/template/design_system/xml/gridsystem.xml 2617 301ad873aa0fe693da704805267abd14f82093c7a9cf83cf4c3ec854366243b9 */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
 scwin.onpageload = function() {
 	

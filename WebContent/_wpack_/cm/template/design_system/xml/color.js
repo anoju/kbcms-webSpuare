@@ -1,4 +1,4 @@
-/*amd /cm/template/design_system/xml/color.xml 30302 82b4538e0f98bc94fac6773da345c27df261d0dabdcde57d1f0f5f32a4e538ce */
+/*amd /cm/template/design_system/xml/color.xml 30306 e63046cc25f03cdba4733f0fec861ff53faa4085335332f64568a6e7a60e8872 */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
 scwin.onpageload = function() {
 	

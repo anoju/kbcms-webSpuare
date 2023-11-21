@@ -1,4 +1,4 @@
-/*amd /cm/template/design_system/xml/message.xml 7716 0501de4d2ec67898d795b9bca186d68eb2bde252063ecfe6488d4e215e62082f */
+/*amd /cm/template/design_system/xml/message.xml 7720 1fbb6f9f9dfb8ee6d8f09dd9803a44a1968e084ebdbf8395ec2a4bcd7a42714a */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
 scwin.onpageload = function() {
 	

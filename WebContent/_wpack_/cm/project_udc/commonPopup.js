@@ -1,4 +1,4 @@
-/*amd /cm/project_udc/commonPopup.xml 9098 c2984041513f5b5456b4817d7aa2fff82c306b7ca8be64d054b6eda426f6d2d8 */
+/*amd /cm/project_udc/commonPopup.xml 9169 be1fca9923fd31b057c04a1cf688d2eaf182f1efd193b003688dff5a948fd729 */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',A:{},E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:publicInfo',A:{method:'scwin.alert,scwin.messagBox,scwin.confirm,scwin.openPopup,scwin.closePopup,scwin.isPopup'}},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'script',A:{type:'text/javascript',lazy:'false'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
 	requires("uiplugin.popup");
 		

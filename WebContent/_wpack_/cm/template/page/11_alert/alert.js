@@ -1,4 +1,4 @@
-/*amd /cm/template/page/11_alert/alert.xml 2329 78b6887034df1459d356ccc0e3710769a19f012d96d8160c73a15713c8dfca4b */
+/*amd /cm/template/page/11_alert/alert.xml 2350 de63144ab1feff3e6251271ce8da2d6c4fe10c79a6f7e2fa37f0c661aa83d171 */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8',standalone:'no'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
     scwin.onpageload = function() {
         scwin.openAlert();

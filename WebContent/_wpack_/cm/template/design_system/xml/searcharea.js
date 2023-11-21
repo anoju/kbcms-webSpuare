@@ -1,4 +1,4 @@
-/*amd /cm/template/design_system/xml/searcharea.xml 8932 be31984eee5e078fab9e1ef5103f0f1011b4fb7bb5821ea64b1362567ee7afd8 */
+/*amd /cm/template/design_system/xml/searcharea.xml 8936 e9171303add393532acd2779ac5d799dc65058e1078728073637d1ed88bd007b */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
 scwin.onpageload = function() {
 	

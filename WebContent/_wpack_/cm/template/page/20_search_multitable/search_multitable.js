@@ -1,4 +1,4 @@
-/*amd /cm/template/page/20_search_multitable/search_multitable.xml 21669 8962ac72d7e0a2176162b6b18f866c5d46b8e4b77f6af0967d3ce78ee4b1a003 */
+/*amd /cm/template/page/20_search_multitable/search_multitable.xml 21675 43e704c7373ab4c3c1202ea43fca6b8b90d1e7dc9ebd1193e87748d868bed790 */
 define({declaration:{A:{version:'1.0',encoding:'UTF-8',standalone:'no'}},E:[{T:1,N:'html',A:{xmlns:'http://www.w3.org/1999/xhtml','xmlns:ev':'http://www.w3.org/2001/xml-events','xmlns:w2':'http://www.inswave.com/websquare','xmlns:xf':'http://www.w3.org/2002/xforms'},E:[{T:1,N:'head',A:{},E:[{T:1,N:'w2:type',E:[{T:3,text:'COMPONENT'}]},{T:1,N:'w2:buildDate'},{T:1,N:'w2:MSA'},{T:1,N:'xf:model',E:[{T:1,N:'w2:dataCollection',A:{baseNode:'map'}},{T:1,N:'w2:workflowCollection'}]},{T:1,N:'w2:layoutInfo'},{T:1,N:'w2:publicInfo',A:{method:''}},{T:1,N:'script',A:{lazy:'false',type:'text/javascript'},E:[{T:4,cdata:function(scopeObj){with(scopeObj){
 			scwin.onpageload = function() {
 				$(".btn_fav").click(function(){
