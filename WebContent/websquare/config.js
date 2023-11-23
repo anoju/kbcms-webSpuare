@@ -614,6 +614,16 @@ export default {
     },
     "license": {
       "@value": "true"
+    },
+    "textbox": {
+      "escape": {
+        "@value": "false"
+      }
+    },
+    "span": {
+      "escape": {
+        "@value": "false"
+      }
     }
   }
 }
