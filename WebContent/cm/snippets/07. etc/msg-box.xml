@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:buildDate/>
+        <w2:userPalette defaultIcon="i_group.png" desc=""/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+        </xf:model>
+        <script type="text/javascript"><![CDATA[ ]]></script>
+    </head>
+    <body><xf:group class="" id="" style="" tagname="ul">
+	<xf:group class="" id="" style="" tagname="li">
+		<w2:textbox id="" label="그리드 가로 스크롤 설정은 gridView 속성 autoMinWidth에 적절한 전체 스크롤 width 값을 넣어주시면 됩니다." style="">
+</w2:textbox>
+</xf:group>
+	<xf:group class="" id="" style="" tagname="li">
+		<w2:textbox id="" label="체크박스 설정시 해당 셀의 속성에 checkLabel 값을 꼭 입력해야만 합니다 ('선택'이라고 쓰면 되지만 기본적으로 아무 글자나 입력하면 됨)" style="">
+</w2:textbox>
+</xf:group>
+	<xf:group class="" id="" style="" tagname="li">
+		<w2:textbox id="" label="각 컬럼의 text-align은 속성에서 제어합니다" style="">
+		</w2:textbox>
+</xf:group>
+	<xf:group class="" id="" style="" tagname="li">
+		<w2:textbox id="" label="그리드는 꼭 스니핏에서만 가져옵니다 (속성설정값)" style="">
+		</w2:textbox>
+</xf:group>
+</xf:group>
+</body>
+</html>

@@ -99,6 +99,8 @@ body{
 	line-height: 1.8rem;
 }
 .fc-yellow {color: #FFDC00 !important;}
+.fc-blue {color: #2E74F2;}
+.fc-gray {color: #999;}
 .fwb {font-weight: 900 !important;}
 
 /*width*/
@@ -190,6 +192,13 @@ body{
 /*message*/
 .txt-error {display:block;width:100%;margin-top:0.6rem;font-size: 1.2rem;font-weight: 500;line-height: 1.8rem;color:#FF1C37;}
 .txt-division {margin-left:1.2rem;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
+.txt-link {text-decoration: underline;color: #2E74F2;font-size: 1.4rem;font-weight: 300;}
+
+.msg-box {margin-top:2.4rem;color:#666;font-size: 1.4rem;font-weight: 300;}
+.msg-box .info-title {margin-bottom:0.8rem;color: #202020;font-weight:500;font-size: 1.5rem;line-height: 2.2rem;}
+.msg-box li {position: relative; display:flex;padding-left: 1rem;}
+.msg-box li::before {content: '';position:absolute;left:0.2rem;top:1rem;display: inline-block;width:0.2rem;height:0.2rem;background-color:#202020;}
+.msg-box li + li {margin-top: 0.4rem;}
 
 /*select*/
 .w2selectbox_select,
@@ -366,6 +375,8 @@ body{
 .grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].w2grid_default_disabled.ico-download button {background-image: url(../images/ico/ico-download-disable.svg);}
 .grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].ico-check button {padding-left:2.6rem;background:#fff  url(../images/ico/ico-check.svg) no-repeat 0.6rem 0 / 2rem 2rem;}
 .grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].w2grid_default_disabled.ico-check button {background-image: url(../images/ico/ico-check-disabled.svg);}
+.grid-box .w2pageList {width: 100%;height: 2rem;margin-top: 1.6rem;}
+.grid-box .w2pageList td {font-size:1.3rem;line-height: 1.9rem;font-weight: 300;color: #999;}
 
 /*search box*/
 .search-box .tb {width: 100%;}
