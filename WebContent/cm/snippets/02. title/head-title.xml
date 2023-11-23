@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
     <head>
         <w2:buildDate/>
-        <w2:userPalette defaultIcon="mix.png" desc=""/>
+        <w2:userPalette defaultIcon="i_group.png" desc=""/>
         <xf:model>
             <xf:instance>
                 <data xmlns=""/>
@@ -9,7 +9,8 @@
         </xf:model>
         <script type="text/javascript"><![CDATA[ ]]></script>
     </head>
-    <body><xf:group class="title-box" id="" style="">
+    <body>
+        <xf:group class="title-box" id="" style="">
 	<w2:textbox class="head-title" id="" label="대제목" style="" tagname="h2">
 	</w2:textbox>
 </xf:group>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:buildDate/>
+        <w2:userPalette defaultIcon="i_group.png" desc=""/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+        </xf:model>
+        <script type="text/javascript"><![CDATA[ ]]></script>
+    </head>
+    <body><xf:group class="form-box -term" id="" style="">
+	<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="" class="" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style="" submenuSize="auto">
+		<xf:choices>
+			<xf:item>
+				<xf:label>
+<![CDATA[new row]]></xf:label>
+				<xf:value>
+				</xf:value>
+</xf:item>
+			<xf:item>
+				<xf:label>
+<![CDATA[new row]]></xf:label>
+				<xf:value>
+				</xf:value>
+</xf:item>
+			<xf:item>
+				<xf:label>
+<![CDATA[new row]]></xf:label>
+				<xf:value>
+				</xf:value>
+</xf:item>
+			<xf:item>
+				<xf:label>
+<![CDATA[new row]]></xf:label>
+				<xf:value>
+				</xf:value>
+</xf:item>
+</xf:choices>
+</xf:select1>
+	<w2:inputCalendar calendarImage="/cm/images/ico/ico-calrendar.svg" calendarImageOver="/cm/images/ico/ico-calrendar.svg" calendarValueType="yearMonthDate" displayDayType="text" displayFormat="yyyy.MM.dd" focusOnDateSelect="false" footerDiv="false" id="" renderDiv="true" rightAlign="false" style="" visibleWeekNum="5">
+</w2:inputCalendar>
+	<w2:span id="" label="~" style="">
+	</w2:span>
+	<w2:inputCalendar calendarImage="/cm/images/ico/ico-calrendar.svg" calendarImageOver="/cm/images/ico/ico-calrendar.svg" calendarValueType="yearMonthDate" displayDayType="text" displayFormat="yyyy.MM.dd" focusOnDateSelect="false" footerDiv="false" id="" renderDiv="true" rightAlign="false" style="" visibleWeekNum="5">
+</w2:inputCalendar>
+	<xf:select1 appearance="full" class="btn-round" cols="" id="" ref="" renderType="radiogroup" rows="" selectedIndex="0" style="">
+		<xf:choices>
+			<xf:item>
+				<xf:label>
+<![CDATA[당일]]></xf:label>
+				<xf:value>
+</xf:value>
+</xf:item>
+			<xf:item>
+				<xf:label>
+<![CDATA[1주일]]></xf:label>
+				<xf:value>
+</xf:value>
+</xf:item>
+			<xf:item>
+				<xf:label>
+<![CDATA[1개월]]></xf:label>
+				<xf:value>
+</xf:value>
+</xf:item>
+</xf:choices>
+</xf:select1>
+</xf:group>
+</body>
+</html>

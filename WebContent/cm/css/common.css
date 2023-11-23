@@ -101,11 +101,11 @@ body{
 .fwb {font-weight: 900 !important;}
 
 /*width*/
-.wxs {width: 12rem !important;}
-.ws {width:14rem !important;}
-.wm {width: 16rem !important;}
-.wl {width:20rem !important;}
-.wxl {width:25rem !important;}
+.wxs {width: 12rem !important; flex-grow: 0 !important;}
+.ws {width:14rem !important; flex-grow: 0 !important;}
+.wm {width: 16rem !important; flex-grow: 0 !important;}
+.wl {width:20rem !important; flex-grow: 0 !important;}
+.wxl {width:25rem !important; flex-grow: 0 !important;}
 .w100 {width:100% !important;}
 
 /*margin*/
@@ -114,6 +114,7 @@ body{
 /***title***/
 .title-box {display:flex;width: 100%;justify-content: space-between;}
 .title-box * {display: inline-block;}
+.table-box + .title-box {margin-top: 3.2rem;}
 .title-box .right {display: flex;gap: 0.6rem;margin-bottom: 1.2rem;}
 .head-title {margin-bottom:2rem;font-size: 2.2rem;line-height:3.4rem;font-weight: 700;}
 .sub-title {margin-bottom:1.2rem;font-size: 1.6rem;line-height: 2.4rem;font-weight: 700;}
@@ -124,7 +125,6 @@ body{
 .breadcrumb a {font-size: 1.4rem;line-height: 2rem;color:#666;}
 .breadcrumb ul li:last-child a {font-weight: 500;color: #202020;}
 
-.txt-division {margin-left:1.2rem;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
 .total-box {margin-left:1.2rem;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
 .total-box .current {margin-right:0.4rem;font-weight: 500;color: #2E74F2;}
 .total-box .total {margin-left: 0.4rem;}
@@ -166,13 +166,6 @@ body{
 .btn-line.small {color: #42444E;}
 .btn-line.small:hover {border-color: #4A567E; color: #4A567E;}
 .btn-line.small:disabled {border-color: #ccc;background-color: #F3F5F6;color: #ccc;}
-/*radio button*/
-.btn-round {display: flex;gap:0.4rem;}
-.btn-round .w2radio_item {position: relative;}
-.btn-round .w2radio_item .w2radio_input {position: absolute;width: 100%;height: 100%;margin:0;outline: 0;border: 0;opacity: 0;z-index: 5;}
-.btn-round .w2radio_item .w2radio_label {display:inline-block;height: 3.2rem;padding: 0 1.6rem;border-radius: 1.6rem;border:1px solid #ccc;background-color: #F3F5F6;color: #ccc;font-size: 1.4rem;font-weight: 300;line-height: 3.2rem;}
-.btn-round .w2radio_item .w2radio_input:hover + .w2radio_label {background-color:#4A567E;border-color: #4A567E;color:#fff;}
-.btn-round .w2radio_item .w2radio_input:checked + .w2radio_label  {background-color: #42444E;color:#fff;border-color: #42444E;}
 
 /*icon button*/
 .btn-icon {min-width: auto;height: 3.2rem;padding: 0 1.6rem 0 3.2rem;border-radius: 0.2rem;border:1px solid #AEB6D0;color: #42444E;font-size: 1.4rem;font-weight: 300;line-height: 3.32rem;}
@@ -185,24 +178,179 @@ body{
 .btn-box {display: flex;gap:0.6rem;justify-content: center;margin-top: 1.6rem;}
 .layer-box .btn-box {justify-content: space-between;}
 .layer-box .btn-box .btn + .btn {margin-left: 0.6rem;}
+.btn-box + .layer-box {margin-top: 3.2rem;}
 
 /******common component*******/
+/*message*/
+.txt-error {display:block;width:100%;margin-top:0.6rem;font-size: 1.2rem;font-weight: 500;line-height: 1.8rem;color:#FF1C37;}
+.txt-division {margin-left:1.2rem;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
 
 /*select*/
-.w2selectbox_select {height: 3.2rem;padding:0.6rem 3.2rem 0.6rem 1.2rem;border: 1px solid #ccc;border-radius: 0.3rem;background: #fff url(../images/ico/ico-arrow-select.svg) no-repeat 98% 0.4rem / 2.4rem 2.4rem;font-size: 1.4rem;font-weight: 300;}
+.w2selectbox_select,
+.w2calendar .w2calendar_wrap .w2selectbox {height: 3.2rem;padding:0.6rem 3.2rem 0.6rem 1.2rem;border: 1px solid #ccc;border-radius: 0.3rem;background: #fff url(../images/ico/ico-arrow-select.svg) no-repeat 98% 0.4rem / 2.4rem 2.4rem;font-size: 1.4rem;font-weight: 300;}
+.w2selectbox_select:hover:not([disabled="disabled"]),
+.w2calendar .w2calendar_wrap .w2selectbox:hover  {border-color: #2E74F2;}
+.w2selectbox_select:disabled,
+.w2calendar .w2calendar_wrap .w2selectbox:disabled {background-color: #F3F5F6;color:#999;}
+.w2selectbox_select:active:not([disabled="disabled"]),
+.w2selectbox_select:focus:not([disabled="disabled"]),
+.w2calendar .w2calendar_wrap .w2selectbox:active,
+.w2calendar .w2calendar_wrap .w2selectbox:focus {border-color: #42444E;}
+
+/*input*/
+.w2input {height: 3.2rem;padding:0 1.2rem;border-radius: 0.3rem !important;border: 1px solid #ccc;outline: 0;font-size: 1.4rem;font-weight: 300;line-height: 2rem;font-family:'Noto Sans KR', 'sans-serif';box-sizing: border-box;}
+.w2input:hover:not([disabled="disabled"]) {border-color: #2E74F2;}
+.w2input:placeholder {color: #999999;}
+.w2input:focus:not([disabled="disabled"]),
+.w2input:active:not([disabled="disabled"]) {border-color: #42444E;background: #fff;}
+
+/*textarea*/
+.w2textarea {width:100%;height: 7.2rem;padding:0.6rem 1.2rem;border-radius: 0.3rem !important;border: 1px solid #ccc;outline: 0;font-size: 1.4rem;font-weight: 300;line-height: 2rem;font-family:'Noto Sans KR', 'sans-serif';box-sizing: border-box;}
+.w2textarea:hover:not([disabled="disabled"]) {border-color: #2E74F2;}
+.w2textarea:placeholder {color: #999999;}
+.w2textarea:focus:not([disabled="disabled"]),
+.w2textarea:active:not([disabled="disabled"]) {border-color: #42444E;background: #fff;}
+
+/*checkbox & radio*/
+.w2checkbox,.w2radio {display: flex;flex-wrap: wrap;align-items: center;gap:4rem;row-gap: 0.8rem;}
+.w2checkbox .w2checkbox_item, .w2radio .w2radio_item {position: relative;height: 2.4rem;}
+.w2checkbox .w2checkbox_label, .w2radio .w2radio_label {display:block;padding-left:3.2rem;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
+.w2checkbox .w2checkbox_label::before {content: '';position:absolute;left:0;top:0;display:inline-block;width: 2.4rem;height: 2.4rem;background: url(../images/ico/ico-checkbox-default.svg) no-repeat 0 0 / 2.4rem 2.4rem;}
+.w2radio .w2radio_label::before {content: '';position:absolute;left:0;top:0;display:inline-block;width: 2.4rem;height: 2.4rem;background: url(../images/ico/ico-radio-default.svg) no-repeat 0 0 / 2.4rem 2.4rem;}
+.w2checkbox .w2checkbox_input,
+.w2radio .w2radio_input  {position:absolute;width:100%;height: 100%;margin:0;padding:0;opacity: 0;cursor: pointer;}
+.w2checkbox .w2checkbox_input:checked + .w2checkbox_label,
+.w2radio .w2radio_input:checked + .w2radio_label {font-weight: 500;}
+.w2checkbox .w2checkbox_input:checked + .w2checkbox_label::before {background-image: url(../images/ico/ico-checkbox-checked.svg);}
+.w2radio .w2radio_input:checked + .w2radio_label::before {background-image: url(../images/ico/ico-radio-checked.svg);}
+.w2checkbox .w2checkbox_label.w2checkbox_disabled,
+.w2radio .w2radio_label.w2radio_disabled  {color: #999;}
+.w2checkbox .w2checkbox_label.w2checkbox_disabled::before {background-image: url(../images/ico/ico-checkbox-default-disabled.svg);}
+.w2radio  .w2radio_label.w2radio_disabled::before {background-image: url(../images/ico/ico-radio-default-disabled.svg);}
+.w2checkbox .w2checkbox_input:checked + .w2checkbox_label.w2checkbox_disabled::before {background-image: url(../images/ico/ico-checkbox-checked-disabled.svg);}
+.w2radio .w2radio_input:checked + .w2radio_label.w2radio_disabled::before {background-image: url(../images/ico/ico-radio-checked-disabled.svg);}
+.w2checkbox.small .w2checkbox_item,
+.w2radio.small .w2radio_item {height: 2rem;}
+.w2checkbox.small .w2checkbox_label,
+.w2radio.small .w2radio_label {padding-left:2.8rem;font-size: 1.3rem;line-height: 2rem;}
+.w2checkbox.small .w2checkbox_label::before,
+.w2radio.small .w2radio_label::before {top:3px;width: 2rem;height: 2rem;background-size: 2rem 2rem;}
+/*radio button round*/
+.w2radio.btn-round {display: flex;gap:0.4rem;}
+.w2radio.btn-round .w2radio_item {position: relative;height: 3.2rem;}
+.w2radio.btn-round .w2radio_item .w2radio_input {position: absolute;width: 100%;height: 100%;margin:0;outline: 0;border: 0;opacity: 0;z-index: 5;}
+.w2radio.btn-round .w2radio_item .w2radio_label {display:block;height: 3.2rem;padding: 0 1.6rem;border-radius: 1.6rem;border:1px solid #ccc;background-color: #F3F5F6;color: #ccc;font-size: 1.4rem;font-weight: 300;line-height: 2.9rem;box-sizing: border-box;}
+.w2radio.btn-round .w2radio_item .w2radio_label::before {display: none;}
+.w2radio.btn-round .w2radio_item .w2radio_input:hover + .w2radio_label {background-color:#4A567E;border-color: #4A567E;color:#fff;}
+.w2radio.btn-round .w2radio_item .w2radio_input:checked + .w2radio_label  {background-color: #42444E;color:#fff;border-color: #42444E;}
+
+/*input calendar*/
+.w2inputCalendar_div {position:relative;height:3.2rem;width: 12rem;border-radius: 0.3rem;border: 1px solid #ccc;box-sizing: border-box;}
+.w2inputCalendar_div .w2inputCalendar_divInput {border: 0;outline: 0;font-size: 1.4rem;font-weight: 300;font-family:'Noto Sans KR', 'sans-serif';padding-left:1.2rem;padding-right:0.6rem;}
+.w2inputCalendar_div .w2inputCalendar_div_img {position:absolute;top:0.3rem;right:0.6rem;width: 2rem;height: 2rem;}
+.w2inputCalendar_div .w2inputCalendar_button {width: 2rem;height: 2rem;}
+.w2inputCalendar_div:hover:not([disabled="disabled"]) {border-color: #2E74F2;}
+.w2inputCalendar_div[disabled="disabled"] {background-color: #e3e3e3;}
+.w2inputCalendar_div:focus:not([disabled="disabled"]),
+.w2inputCalendar_div:active:not([disabled="disabled"]) {border-color: #42444E;}
+
+/*input calendar - 년월일*/
+.w2calendar {width:26.6rem;height:auto;border-radius:0.8rem;border-color: #ccc;font:1.4rem 'Noto Sans KR', sans-serif;box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.08);}
+.w2calendar .w2calendar_wrap {padding: 2.4rem 2rem;}
+.w2calendar .w2calendar_wrap .w2calendar_header {height: 3.2rem;display: flex;gap:0.4rem;align-items: center;margin-bottom: 2rem;}
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2calendar_header_last_month,
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2calendar_header_next_month {position:static;width:2.4rem;height: 2.4rem;background: transparent url(../images/ico/ico-calendar-last-month.svg) no-repeat 0 0 / cover;}
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2calendar_header_next_month {background-image: url(../images/ico/ico-calendar-next-month.svg);}
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2selectbox {position: static;flex-grow:0;width: 7.6rem;font-size:1.4rem;font-family: 'Noto Sans KR', sans-serif;box-sizing: border-box;}
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2selectbox.w2calendar_selectbox_year {width:9rem;}
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2selectbox .w2selectbox_col_label {font-size: 1.4rem;line-height: 1.4rem;}
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2selectbox .w2selectbox_label {padding:0;}
+.w2selectbox_over .w2selectbox_col_label {background: transparent;}
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2selectbox .w2selectbox_col_button {display: none;}
+.w2calendar .w2calendar_wrap .w2calendar_content {border: 0;background: transparent;padding:0;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_col_date {height:3.2rem;background: transparent;font-size: 1.2rem;vertical-align: middle;line-height: 1.2rem;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_col_date.w2calendar_selected {position:relative;background-color: #FFDC00;border-radius: 50%;color:#202020;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_col_date.w2calendar_date_over {color:initial;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_day_0 {color: #FF1C37;font-weight: 500;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_day_0.w2calendar_date_over {color: #FF1C37;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_day_6 {color:#42444E;font-weight: 500;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_day_6.w2calendar_date_over {color:#42444E;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_date_nextmonth {display: none;}
+.w2calendar .w2calendar_wrap .w2calendar_content table thead tr {border-bottom: 1.2rem solid #fff;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_day {color:#999 !important;font-weight: 500;}
+.w2calendar .w2calendar_footer,
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2calendar_header_last_year,
+.w2calendar .w2calendar_wrap .w2calendar_header > .w2calendar_header_next_year {display: none;}
+
+/*input calendar - 년월*/
+.w2calendar.w2calendar_classYearMonth_dynamic .w2calendar_picker_header {display:flex;align-items: center; height:3.2rem;padding: 0;margin-bottom: 1rem;}
+.w2calendar.w2calendar_classYearMonth_dynamic .w2calendar_picker_header_last_entity {flex-shrink:0;width:2.4rem;height: 2.4rem;background: transparent url(../images/ico/ico-calendar-last-month.svg) no-repeat 0 0/ cover;}
+.w2calendar.w2calendar_classYearMonth_dynamic .w2calendar_picker_header_next_entity {flex-shrink:0;width:2.4rem;height: 2.4rem;background: transparent url(../images/ico/ico-calendar-next-month.svg) no-repeat 0 0/ cover;}
+.w2calendar.w2calendar_classYearMonth_dynamic .w2calendar_picker_header_dynamic_entity
+.w2calendar_picker_header_dynamic_entity:hover,
+.w2calendar_picker_header_next_entity:hover,
+.w2calendar_picker_header_dynamic_entity:hover {background: transparent;}
+.w2calendar_picker_content table td {display: flex;row-gap: 0.8rem; flex-wrap: wrap;justify-content: space-between;padding: 0;}
+.w2calendar_picker_content table td div {width: 5rem;height: 3rem;background-color:transparent;border-radius: 1.6rem; font-size: 1.4rem;line-height: 3rem;font-weight: 500;}
+.w2calendar_picker_content table td div.active,
+.w2calendar_picker_content table td div.active:hover {background-color:#FFDC00;color: #202020;font-weight: 500;text-shadow: none;}
+.w2calendar_picker_content table td div:hover {background-color: transparent;color: #202020;font-weight: 500;text-shadow: none;}
+
+/*form-box*/
+.form-box {display: flex;gap:0.6rem;align-items: center;}
+.form-box > * {flex-grow: 1;}
+.form-box + .form-box {margin-top: 0.8rem;}
+.form-box.-term > * {flex-grow: 0;}
+.form-box.-term > .w2selectbox_select,
+.form-box.-term > .w2inputCalendar_div {width: 12rem;}
+.form-box > .w2textbox,
+.form-box > span {font-weight: 300;color: #666;}
 
 /*table*/
 .table-box + .table-box {margin-top: 1.6rem;}
 .table-box .tb {width:100%;border-top:1px solid #AEB6D0;}
 .table-box .tb tbody tr {border-bottom: 1px solid #ddd;box-sizing: border-box;}
 .table-box .tb .w2tb_th,
-.table-box .tb .w2tb_td {padding:1.2rem 1.6rem;border-right: 1px solid #ddd;background-color: #fbfbfb;font-size: 1.4rem;line-height: 2rem;font-weight: 500;text-align: left;height: 4.4rem;box-sizing: border-box;}
+.table-box .tb .w2tb_td {padding:0.6rem 1.2rem;border:0;border-right: 1px solid #ddd;background-color: #fbfbfb;font-size: 1.4rem;line-height: 2rem;font-weight: 500;text-align: left;height: 4.4rem;box-sizing: border-box;}
 .table-box .tb .w2tb_td {border-right:0;background-color: #fff;font-size: 1.4rem;font-weight: 300;}
 .table-box .tb .w2tb_td + .w2tb_td {border-left: 1px solid #ddd;}
 .table-box .tb .w2tb_th.req > .w2textbox,
 .table-box .tb .w2tb_th.req > span,
-.table-box .tb .w2tb_th .req {position:relative;display: inline-block;}
+.table-box .tb .w2tb_th .req,
+.search-box .tb .w2tb_th.req > .w2textbox,
+.search-box .tb .w2tb_th.req > span,
+.search-box .tb .w2tb_th .req {position:relative;display: inline-block;}
 .table-box .tb .w2tb_th.req > .w2textbox:after,
 .table-box .tb .w2tb_th.req > span:after,
-.table-box .tb .w2tb_th .req:after {content: '*';position: absolute;right:-12px;color:#FF1C37;font-size: 1.6rem;}
+.table-box .tb .w2tb_th .req:after,
+.search-box .tb .w2tb_th.req > .w2textbox:after,
+.search-box .tb .w2tb_th.req > span:after,
+.search-box .tb .w2tb_th .req:after {content: '*';position: absolute;right:-12px;color:#FF1C37;font-size: 1.6rem;}
+/*table td > table*/
+.table-box .tb .w2tb_td > .table-box {width:calc(100% + 2.4rem);margin-left: -1.2rem;margin-top: -0.6rem;margin-bottom: -0.6rem;}
+.table-box .tb .w2tb_td > .table-box .tb {border-top: 0;}
+.table-box .tb .w2tb_td > .table-box .tb .w2tb_th, 
+.table-box .tb .w2tb_td > .table-box .tb .w2tb_td {border-right: 0;background-color:transparent;}
+.table-box .tb .w2tb_td > .table-box .tb .w2tb_th {padding:0.6rem 1.6rem;}
+.table-box .tb .w2tb_td > .table-box .tb .w2tb_td {padding: 0.6rem 0;}
+.table-box .tb .w2tb_td > .table-box .tb tr:last-child {border-bottom: 0;}
+
+/*grid*/
+.grid-box .gvw {border-top: 1px solid #AEB6D0;}
+.grid-box .gvw .gridHeaderTableDefault {border: 0;border-bottom: 1px solid #ddd;}
+.grid-box .gvw th.gridHeaderTDDefault {padding:1.2rem 0.8rem;border: 0;background: #FBFBFB;font-size: 1.4rem;font-weight: 500;line-height: 2rem;}
+.grid-box .gvw th.gridHeaderTDDefault + th.gridHeaderTDDefault {border-left:1px solid #ddd;} 
+.grid-box .gvw .gridBodyDefault {height: 4.5rem;padding:0 0.8rem;border: 0;vertical-align: middle;font-size:1.3rem;font-weight:300;box-sizing: border-box;}
+.grid-box .gvw .gridBodyDefault + .gridBodyDefault {border-left: 1px solid #ddd;}
+.grid-box .gvw .grid_body_row {border-bottom: 1px solid #ddd;}
+
+/*search box*/
+.search-box .tb {width: 100%;}
+.search-box .tb .w2tb_th,.search-box .tb .w2tb_td {height:auto;border: 0;border-bottom:1.2rem solid transparent;background: none;font-weight: 500;font-size:1.4rem;line-height:2rem;text-align: left;vertical-align: middle;box-sizing: border-box;}
+.search-box .tb .w2tb_th {padding:0.32rem 0;}
+.search-box .tb .w2tb_td {padding: 0;}
+.search-box .tb .w2tb_td .w2textbox,
+.search-box .tb .w2tb_td .w2span {color:#666;font-size: 1.3rem;}
+.search-box .tb tbody tr:last-child .w2tb_th,
+.search-box .tb tbody tr:last-child .w2tb_td {border-bottom: none;}
 /******common component end*******/
