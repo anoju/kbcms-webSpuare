@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:buildDate/>
+        <w2:userPalette defaultIcon="/multi/i_group.png" desc=""/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+        </xf:model>
+        <script type="text/javascript"><![CDATA[ ]]></script>
+    </head>
+    <body><xf:group class="title-box mt10" id="" style="">
+	<xf:group id="">
+		<w2:textbox class="sub-title" id="" label="그리드 안 요소들" style="" tagname="h3">
+		</w2:textbox>
+</xf:group>
+</xf:group>
+<xf:group class="grid-box" id="" style="">
+	<w2:gridView autoFit="allColumn" autoFitMinWidth="1200" checkAllType="false" checkOnCellClick="true" class="gvw" dataList="data:dataList1" ev:oncellclick="scwin.gridView1_oncellclick" evenRowBackgroundColor="#ffffff" id="gridView2" rowMouseOver="false" rowNumBackgroundColor="#ffffff" scrollByColumn="false" scrollByColumnAdaptive="false" style="" visibleRowNum="all">
+		<w2:caption id="caption1" style="" value="this is a grid caption.">
+		</w2:caption>
+		<w2:header id="header1" style="">
+			<w2:row id="row1" style="">
+				<w2:column checkboxLabel="전체선택" displayMode="label" id="column10" inputType="checkbox" style="" value="" width="40">
+</w2:column>
+				<w2:column displayMode="label" id="column9" inputType="text" style="" value="CID" width="50">
+				</w2:column>
+				<w2:column displayMode="label" id="column8" inputType="text" style="" value="제목" width="70">
+				</w2:column>
+				<w2:column displayMode="label" id="column7" inputType="text" style="" value="설명" width="90">
+				</w2:column>
+				<w2:column displayMode="label" id="column6" inputType="text" style="" value="상태" width="70">
+				</w2:column>
+				<w2:column displayMode="label" id="column5" inputType="text" style="" value="" width="70">
+				</w2:column>
+				<w2:column displayMode="label" id="column4" inputType="text" style="" value="등록일시" width="90">
+				</w2:column>
+				<w2:column displayMode="label" id="column3" inputType="text" style="" value="등록자" width="40">
+				</w2:column>
+				<w2:column displayMode="label" id="column2" inputType="text" style="" value="수정일시" width="90">
+				</w2:column>
+				<w2:column displayMode="label" id="column1" inputType="text" style="" value="수정자" width="70">
+				</w2:column>
+</w2:row>
+</w2:header>
+		<w2:gBody id="gBody1" style="">
+			<w2:row id="row2" style="">
+				<w2:column checkboxLabel="선택" class="bg-green" displayMode="label" id="col1" inputType="checkbox" style="" value="" width="40">
+</w2:column>
+				<w2:column class="bg-green" displayMode="label" id="col2" inputType="text" style="" value="" width="50">
+</w2:column>
+				<w2:column class="bg-green" displayMode="label" id="col3" inputType="link" style="" textAlign="left" value="" width="70">
+</w2:column>
+				<w2:column class="bg-green" displayMode="label" id="col4" inputType="text" style="" textAlign="left" value="" width="90">
+</w2:column>
+				<w2:column class="bg-green ico-download" displayMode="label" id="col5" inputType="button" style="" value="다운로드" width="70">
+</w2:column>
+				<w2:column class="bg-blue ico-check" displayMode="label" id="col6" inputType="button" style="" value="미리보기" width="70">
+</w2:column>
+				<w2:column class="bg-green" displayMode="label" id="col7" inputType="text" style="" value="" width="90">
+</w2:column>
+				<w2:column class="bg-green" displayMode="label" id="col8" inputType="text" style="" value="" width="40">
+</w2:column>
+				<w2:column class="bg-green" displayMode="label" id="col9" inputType="text" style="" value="2023-07-15 12:23" width="90">
+</w2:column>
+				<w2:column class="bg-green" displayMode="label" id="col10" inputType="text" style="" value="홍길동" width="70">
+</w2:column>
+</w2:row>
+			<w2:row id="row3" style="">
+				<w2:column checkboxLabel="선택" class="bg-blue" displayMode="label" id="column30" inputType="checkbox" style="" value="" width="40">
+</w2:column>
+				<w2:column class="bg-blue" displayMode="label" id="column29" inputType="text" style="" value="" width="50">
+</w2:column>
+				<w2:column class="bg-blue" displayMode="label" id="column28" inputType="link" style="" textAlign="left" value="춘천도서관" width="70">
+</w2:column>
+				<w2:column class="bg-blue" displayMode="label" id="column27" inputType="text" style="" textAlign="left" value="춘천시립도서관" width="90">
+</w2:column>
+				<w2:column class="bg-blue" displayMode="label" id="column26" inputType="text" style="" value="" width="70">
+</w2:column>
+				<w2:column class="bg-blue ico-check" disabled="true" displayMode="label" id="column25" inputType="button" style="" value="미리보기" width="70">
+</w2:column>
+				<w2:column class="bg-blue" displayMode="label" id="column24" inputType="text" style="" value="2023-07-15 12:23" width="90">
+</w2:column>
+				<w2:column class="bg-blue" displayMode="label" id="column23" inputType="text" style="" value="" width="40">
+</w2:column>
+				<w2:column class="bg-blue" displayMode="label" id="column22" inputType="text" style="" value="-" width="90">
+</w2:column>
+				<w2:column class="bg-blue" displayMode="label" id="column21" inputType="text" style="" value="-" width="70">
+</w2:column>
+</w2:row>
+			<w2:row id="row4" style="">
+				<w2:column checkboxLabel="선택" class="bg-yellow" displayMode="label" id="column40" inputType="checkbox" style="" value="" width="40">
+</w2:column>
+				<w2:column class="bg-yellow" displayMode="label" id="column39" inputType="text" style="" value="" width="50">
+</w2:column>
+				<w2:column class="bg-yellow" displayMode="label" id="column38" inputType="link" style="" textAlign="left" value="춘천도서관" width="70">
+</w2:column>
+				<w2:column class="bg-yellow" displayMode="label" id="column37" inputType="text" style="" textAlign="left" value="춘천시립도서관" width="90">
+</w2:column>
+				<w2:column class="bg-yellow" displayMode="label" id="column36" inputType="text" style="" value="" width="70">
+</w2:column>
+				<w2:column class="bg-yellow" displayMode="label" id="column35" inputType="text" style="" value="" width="70">
+</w2:column>
+				<w2:column class="bg-yellow" displayMode="label" id="column34" inputType="text" style="" value="2023-07-15 12:23" width="90">
+</w2:column>
+				<w2:column class="bg-yellow" displayMode="label" id="column33" inputType="text" style="" value="" width="40">
+</w2:column>
+				<w2:column class="bg-yellow" displayMode="label" id="column32" inputType="text" style="" value="2023-07-15 12:23" width="90">
+</w2:column>
+				<w2:column class="bg-yellow" displayMode="label" id="column31" inputType="text" style="" value="홍길동" width="70">
+</w2:column>
+</w2:row>
+			<w2:row id="row5" style="">
+				<w2:column checkboxLabel="선택" class="bg-red" displayMode="label" id="column50" inputType="checkbox" style="" value="" width="40">
+</w2:column>
+				<w2:column class="bg-red" displayMode="label" id="column49" inputType="text" style="" value="" width="50">
+</w2:column>
+				<w2:column class="bg-red" displayMode="label" id="column48" inputType="link" style="" textAlign="left" value="춘천도서관" width="70">
+</w2:column>
+				<w2:column class="bg-red" displayMode="label" id="column47" inputType="text" style="" textAlign="left" value="춘천시립도서관" width="90">
+</w2:column>
+				<w2:column class="bg-red" displayMode="label" id="column46" inputType="text" style="" value="" width="70">
+</w2:column>
+				<w2:column class="bg-red" displayMode="label" id="column45" inputType="text" style="" value="" width="70">
+</w2:column>
+				<w2:column class="bg-red" displayMode="label" id="column44" inputType="text" style="" value="2023-07-15 12:23" width="90">
+</w2:column>
+				<w2:column class="bg-red" displayMode="label" id="column43" inputType="text" style="" value="" width="40">
+</w2:column>
+				<w2:column class="bg-red" displayMode="label" id="column42" inputType="text" style="" value="" width="90">
+</w2:column>
+				<w2:column class="bg-red" displayMode="label" id="column41" inputType="text" style="" value="" width="70">
+</w2:column>
+</w2:row>
+</w2:gBody>
+</w2:gridView>
+</xf:group>
+</body>
+</html>

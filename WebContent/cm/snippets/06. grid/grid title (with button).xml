@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:buildDate/>
+        <w2:userPalette defaultIcon="i_group.png" desc=""/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+        </xf:model>
+        <script type="text/javascript"><![CDATA[ ]]></script>
+    </head>
+    <body><xf:group class="title-box" id="" style="">
+	<xf:group class="left" id="">
+		<w2:textbox class="sub-title" id="" label="그리드제목" style="" tagname="h3">
+		</w2:textbox>
+		<xf:group class="total-box" id="" style="">
+			<w2:span class="current" id="" label="20" style="">
+			</w2:span>
+			<w2:span class="" id="" label="/" style="">
+			</w2:span>
+			<w2:span class="total" id="" label="20" style="">
+			</w2:span>
+</xf:group>
+</xf:group>
+	<xf:group class="right" id="" style="">
+		<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="" class="ws" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style="" submenuSize="auto">
+			<xf:choices>
+				<xf:item>
+					<xf:label>
+<![CDATA[new row]]></xf:label>
+					<xf:value>
+					</xf:value>
+</xf:item>
+				<xf:item>
+					<xf:label>
+<![CDATA[new row]]></xf:label>
+					<xf:value>
+					</xf:value>
+</xf:item>
+				<xf:item>
+					<xf:label>
+<![CDATA[new row]]></xf:label>
+					<xf:value>
+					</xf:value>
+</xf:item>
+				<xf:item>
+					<xf:label>
+<![CDATA[new row]]></xf:label>
+					<xf:value>
+					</xf:value>
+</xf:item>
+</xf:choices>
+</xf:select1>
+		<xf:trigger class="btn btn-icon -download" id="" style="" type="button">
+			<xf:label>
+<![CDATA[엑셀 다운로드]]></xf:label>
+</xf:trigger>
+		<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+			<xf:label>
+<![CDATA[신규등록]]></xf:label>
+</xf:trigger>
+</xf:group>
+</xf:group>
+</body>
+</html>

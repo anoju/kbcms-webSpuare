@@ -18,6 +18,7 @@
 
 /*********layout********/
 body{
+	min-width: 128rem;
 	font-size: 1.6rem;
 	line-height: 2.4rem;
 }
@@ -129,6 +130,11 @@ body{
 .total-box .current {margin-right:0.4rem;font-weight: 500;color: #2E74F2;}
 .total-box .total {margin-left: 0.4rem;}
 
+/*background color*/
+.bg-green {background-color: #EEF9F6 !important;}
+.bg-blue {background-color: rgba(46, 116, 242, 0.05) !important;}
+.bg-yellow {background-color: #FFFBE5 !important;}
+.bg-red {background-color: #FFF4F6 !important;}
 
 /***button***/
 .btn {
@@ -337,14 +343,29 @@ body{
 
 /*grid*/
 .grid-box .gvw {border-top: 1px solid #AEB6D0;}
-.grid-box .gvw .gridHeaderTableDefault {min-height:18rem;border: 0;border-bottom: 1px solid #ddd;}
+.grid-box .gvw .gridHeaderTableDefault {min-height:8rem;border: 0;border-bottom: 1px solid #ddd;}
 .grid-box .gvw th.gridHeaderTDDefault {padding:1.2rem 0.8rem;border: 0;background: #FBFBFB;font-size: 1.4rem;font-weight: 500;line-height: 2rem;}
 .grid-box .gvw th.gridHeaderTDDefault + th.gridHeaderTDDefault {border-left:1px solid #ddd;} 
-.grid-box .gvw .gridBodyDefault {height: 4.5rem;padding:0 0.8rem;border: 0;vertical-align: middle;font-size:1.3rem;font-weight:300;box-sizing: border-box;}
+.grid-box .gvw .gridBodyDefault {height: 4.5rem;padding:0 0.8rem;border: 0;vertical-align: middle;line-height:1.3rem;font-size:1.3rem;font-weight:300;box-sizing: border-box;}
 .grid-box .gvw .gridBodyDefault + .gridBodyDefault {border-left: 1px solid #ddd;}
 .grid-box .gvw .grid_body_row {border-bottom: 1px solid #ddd;}
 .grid-box .gvw .gridHeaderTableDefault th[inputtype="checkbox"] {position: relative;}
-.grid-box .gvw .gridHeaderTableDefault input[type="checkbox"] {position:absolute;left:0;top:0;width:100%;height: 100%;border:0;outline:0;background:transparent url(../images/ico/ico-checkbox-default.svg) no-repeat 50% 50% / 2rem 2rem;}
+.grid-box .gvw .gridHeaderTableDefault input[type="checkbox"] {position:absolute;left:0;top:0;width:100%;height: 100%;margin:0;opacity: 0;}
+.grid-box .gvw .gridHeaderTableDefault input[type="checkbox"] + label {display:block;width:100%;height:2rem;background: url(../images/ico/ico-checkbox-default.svg) no-repeat 50% 0 / 2rem 2rem;text-indent: -9999em;}
+.grid-box .gvw .gridHeaderTableDefault input[type="checkbox"]:checked + label {background-image: url(../images/ico/ico-checkbox-checked.svg);}
+.grid-box .gvw .gridHeaderTableDefault .w2grid_default_readonly input[type="checkbox"]:checked + label,
+.grid-box .gvw .gridHeaderTableDefault input[type="checkbox"]:checked:disabled + label {background-image: url(../images/ico/ico-checkbox-checked-disabled.svg);}
+.grid-box .gvw .gridHeaderTableDefault .w2grid_default_disabled input[type="checkbox"] + label,
+.grid-box .gvw .gridHeaderTableDefault input[type="checkbox"]:disabled + label {background-image: url(../images/ico/ico-checkbox-default-disabled.svg);}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="link"] a {text-decoration: underline;color: #2E74F2;}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"] button {width:auto !important;height: 2.4rem !important;border:1px solid #AEB6D0;border-radius:0.2rem;background:#fff;padding-left: 1rem;padding-right:1rem;font-size: 1.2rem;font-weight: 300;color:#42444E;line-height: 2.4rem;box-sizing: border-box;}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"] button:hover {color: #4A567E;border-color: #4A567E;}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].w2grid_default_disabled button {border-color: #ccc;background-color: #F3F5F6;color:#999;cursor: default;}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].ico-download button {padding-left:2.6rem;background:#fff url(../images/ico/ico-download.svg) no-repeat 0.6rem 0 / 2rem 2rem;}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].ico-download button:hover {background-image: url(../images/ico/ico-download-hover.svg);}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].w2grid_default_disabled.ico-download button {background-image: url(../images/ico/ico-download-disable.svg);}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].ico-check button {padding-left:2.6rem;background:#fff  url(../images/ico/ico-check.svg) no-repeat 0.6rem 0 / 2rem 2rem;}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].w2grid_default_disabled.ico-check button {background-image: url(../images/ico/ico-check-disabled.svg);}
 
 /*search box*/
 .search-box .tb {width: 100%;}
