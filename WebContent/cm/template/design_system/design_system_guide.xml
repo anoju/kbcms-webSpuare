@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="/cm/css/base.css" type="text/css"?>
+<?xml-stylesheet href="/cm/template/css/base.css" type="text/css"?>
 <?xml-stylesheet href="/cm/template/design_system/design_system.css" type="text/css"?>
 <html xmlns="http://www.w3.org/1999/xhtml"
     xmlns:ev="http://www.w3.org/2001/xml-events"
@@ -16,7 +16,11 @@
         <w2:publicInfo method=""/>
         <script lazy="false" type="text/javascript"><![CDATA[
 scwin.onpageload = function() {
-	
+	$('head link').each(function(){
+        const $this = $(this);
+        const $href = $this[0].href;
+        if($href.indexOf('/cm/css/') > -1) $this.remove();
+    });
 };
 ]]></script>
     </head>

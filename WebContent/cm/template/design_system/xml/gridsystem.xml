@@ -53,13 +53,13 @@ scwin.onpageload = function() {
     			<w2:textbox class="con_txt" escape="false" id="" label="12단 40마진 16거터" style=""></w2:textbox>
     		</xf:group>
     		<xf:group class="dfbox" id="" style="" tagname="">
-    			<xf:image src="/cm/images/base/Grid.png" style="border:1px solid #eee;" id=""></xf:image>
+    			<xf:image src="/cm/template/images/base/Grid.png" style="border:1px solid #eee;" id=""></xf:image>
     		</xf:group>
     		<xf:group class="subtitbox" id="" style="" tagname="">
     			<w2:textbox class="subtit" id="" label="그리드 활용" style=""></w2:textbox>
     		</xf:group>
     		<xf:group class="dfbox" id="" style="" tagname="">
-    			<xf:image id="" src="/cm/images/base/Grid_ex.png" style="border:1px solid #eee;"></xf:image>
+    			<xf:image id="" src="/cm/template/images/base/Grid_ex.png" style="border:1px solid #eee;"></xf:image>
     		</xf:group>
     	</xf:group>
     </body>
