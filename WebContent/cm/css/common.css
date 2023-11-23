@@ -337,12 +337,14 @@ body{
 
 /*grid*/
 .grid-box .gvw {border-top: 1px solid #AEB6D0;}
-.grid-box .gvw .gridHeaderTableDefault {border: 0;border-bottom: 1px solid #ddd;}
+.grid-box .gvw .gridHeaderTableDefault {min-height:18rem;border: 0;border-bottom: 1px solid #ddd;}
 .grid-box .gvw th.gridHeaderTDDefault {padding:1.2rem 0.8rem;border: 0;background: #FBFBFB;font-size: 1.4rem;font-weight: 500;line-height: 2rem;}
 .grid-box .gvw th.gridHeaderTDDefault + th.gridHeaderTDDefault {border-left:1px solid #ddd;} 
 .grid-box .gvw .gridBodyDefault {height: 4.5rem;padding:0 0.8rem;border: 0;vertical-align: middle;font-size:1.3rem;font-weight:300;box-sizing: border-box;}
 .grid-box .gvw .gridBodyDefault + .gridBodyDefault {border-left: 1px solid #ddd;}
 .grid-box .gvw .grid_body_row {border-bottom: 1px solid #ddd;}
+.grid-box .gvw .gridHeaderTableDefault th[inputtype="checkbox"] {position: relative;}
+.grid-box .gvw .gridHeaderTableDefault input[type="checkbox"] {position:absolute;left:0;top:0;width:100%;height: 100%;border:0;outline:0;background:transparent url(../images/ico/ico-checkbox-default.svg) no-repeat 50% 50% / 2rem 2rem;}
 
 /*search box*/
 .search-box .tb {width: 100%;}
