@@ -163,6 +163,11 @@
 			<displayFormat value="yyyy-MM-dd HH:mm:SS" valueType="yearMonthDateTimeSec" />
 			<displayFormat value="yyyy-MM-dd HH:mm:SS" valueType="yearMonthDateTimeSec" />
 		</column>
+		<summaryOnlyAuto value="true"></summaryOnlyAuto>
+		<sortHeaderDiv value="true"></sortHeaderDiv>
+		<sortEvent value="onclick"></sortEvent>
+		<showSortableImage value="true"></showSortableImage>
+		<keepDefaultColumnWidth value="true"></keepDefaultColumnWidth>
 	</gridView>
 	<inputCalendar>
 		<validCheck value="false" />

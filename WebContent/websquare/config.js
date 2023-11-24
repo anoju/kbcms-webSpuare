@@ -448,7 +448,22 @@ export default {
             }
           ]
         }
-      ]
+      ],
+      "summaryOnlyAuto": {
+        "@value": "true"
+      },
+      "sortHeaderDiv": {
+        "@value": "true"
+      },
+      "sortEvent": {
+        "@value": "onclick"
+      },
+      "showSortableImage": {
+        "@value": "true"
+      },
+      "keepDefaultColumnWidth": {
+        "@value": "true"
+      }
     },
     "inputCalendar": {
       "validCheck": {

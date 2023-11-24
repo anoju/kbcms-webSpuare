@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:buildDate/>
+        <w2:userPalette defaultIcon="i_group.png" desc=""/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+        </xf:model>
+        <script type="text/javascript"><![CDATA[ ]]></script>
+    </head>
+    <body><xf:group class="btn-box" id="" style="">
+	<xf:group id="">
+		<xf:trigger class="btn btn-line" id="" style="" type="button">
+			<xf:label>
+<![CDATA[목록]]></xf:label>
+</xf:trigger>
+</xf:group>
+	<xf:group id="" style="">
+		<xf:trigger class="btn btn-line" id="" style="" type="button">
+			<xf:label>
+<![CDATA[초기화]]></xf:label>
+</xf:trigger>
+		<xf:trigger class="btn btn-primary" id="" style="" type="button">
+			<xf:label>
+<![CDATA[저장]]></xf:label>
+</xf:trigger>
+</xf:group>
+</xf:group>
+</body>
+</html>
