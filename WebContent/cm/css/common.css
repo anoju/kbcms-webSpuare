@@ -176,12 +176,14 @@ body{
 .btn-line.small:disabled {border-color: #ccc;background-color: #F3F5F6;color: #ccc;}
 
 /*icon button*/
-.btn-icon {min-width: auto;height: 3.2rem;padding: 0 1.6rem 0 3.2rem;border-radius: 0.2rem;border:1px solid #AEB6D0;color: #42444E;font-size: 1.4rem;font-weight: 300;line-height: 3.32rem;}
+.btn-icon {min-width: auto;height: 3.2rem;padding: 0 1.6rem 0 3.2rem;border-radius: 0.2rem;border:1px solid #AEB6D0;background-repeat: no-repeat;background-size: 2rem 2rem;background-position: 1.0rem 0.5rem;color: #42444E;font-size: 1.4rem;font-weight: 300;line-height: 3.32rem;}
 .btn-icon:hover {border-color: #4A567E;color: #4A567E;}
 .btn-icon:disabled {border-color: #ccc;background-color: #F3F5F6;color: #ccc;}
 .btn-icon.-download {background-image: url(../images/ico/ico-download.svg);background-repeat: no-repeat;background-size: 2rem 2rem;background-position: 1.0rem 0.5rem;}
 .btn-icon.-download:hover {background-image: url(../images/ico/ico-download-hover.svg);}
 .btn-icon.-download:disabled {background-image: url(../images/ico/ico-download-disable.svg);}
+.btn-icon.-o {background-image: url(../images/ico/ico-o.svg);}
+.btn-icon.-x {background-image: url(../images/ico/ico-x.svg);}
 
 .btn-box {display: flex;gap:0.6rem;justify-content: center;margin-top: 1.6rem;}
 .layer-box .btn-box {justify-content: space-between;}
@@ -227,7 +229,7 @@ body{
 .w2textarea:active:not([disabled="disabled"]) {border-color: #42444E;background: #fff;}
 
 /*checkbox & radio*/
-.w2checkbox,.w2radio {display: flex;flex-wrap: wrap;align-items: center;gap:4rem;row-gap: 0.8rem;}
+.w2checkbox,.w2radio {display: flex;flex-wrap: wrap;align-items: center;gap:2.4rem;row-gap: 0.8rem;}
 .w2checkbox .w2checkbox_item, .w2radio .w2radio_item {position: relative;height: 2.4rem;}
 .w2checkbox .w2checkbox_label, .w2radio .w2radio_label {display:block;padding-left:3.2rem;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
 .w2checkbox .w2checkbox_label::before {content: '';position:absolute;left:0;top:0;display:inline-block;width: 2.4rem;height: 2.4rem;background: url(../images/ico/ico-checkbox-default.svg) no-repeat 0 0 / 2.4rem 2.4rem;}
