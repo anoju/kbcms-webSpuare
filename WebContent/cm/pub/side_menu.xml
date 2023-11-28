@@ -76,7 +76,8 @@
     </head>
     <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
     	<xf:group class="side-menu-box" id="" style="">
-    		<w2:accordion style="" id="accordion1" class="side-menu-list" collapseAll="true" collapsible="true" panelMoveSpeed="300" ev:onclick="scwin.accordion1_onclick">
+    		<w2:accordion style="" id="accordion1" class="side-menu-list" collapseAll="true" collapsible="true" panelMoveSpeed="300"
+    			ev:onclick="scwin.accordion1_onclick">
     			<w2:panels style="" id="panels1" class="">
     				<w2:panelTitle style="" id="panelTitle1" label="대시보드"></w2:panelTitle>
     				<w2:panelContent style="" id="panelContent1">
@@ -552,6 +553,45 @@
     								<xf:group class="" id="" style="" tagname="li">
     									<w2:anchor class="" id="" outerDiv="false" style="">
     										<xf:label><![CDATA[하위 메뉴 2]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    							</xf:group>
+    						</xf:group>
+    					</xf:group>
+    				</w2:panelContent>
+    			</w2:panels>
+    			<w2:panels style="" id="panels7" class="">
+    				<w2:panelTitle style="" id="panelTitle7" label="페이지리스트"></w2:panelTitle>
+    				<w2:panelContent style="" id="panelContent7">
+    					<xf:group class="two-dept-list" id="" style="" tagname="ul">
+    						<xf:group class="two-dept-li" id="" style="" tagname="li">
+    							<w2:anchor class="" href="websquare.html?w2xPath=/cm/pub/index.xml" id="" outerDiv="false"
+    								style="">
+    								<xf:label><![CDATA[index 화면]]></xf:label>
+    							</w2:anchor>
+    						</xf:group>
+    						<xf:group class="two-dept-li" id="" style="" tagname="li">
+    							<w2:anchor class="" id="" outerDiv="false" style=""
+    								href="websquare.html?w2xPath=/cm/pub/kbcms_mainPage.xml">
+    								<xf:label><![CDATA[메인화면]]></xf:label>
+    							</w2:anchor>
+    						</xf:group>
+    						<xf:group class="two-dept-li" id="" style="" tagname="li">
+    							<w2:anchor class="" id="" outerDiv="false" style="">
+    								<xf:label><![CDATA[콘텐츠속성관리]]></xf:label>
+    							</w2:anchor>
+    							<w2:anchor class="btn_expand" id="" outerDiv="false" style="">
+    								<xf:label><![CDATA[하위 리스트 열기닫기]]></xf:label>
+    							</w2:anchor>
+    							<xf:group class="three-dept-list" id="" style="" tagname="ul">
+    								<xf:group class="" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="" href="websquare.html?w2xPath=/cm/pub/kbcms_page01.xml">
+    										<xf:label><![CDATA[내용분류 관리]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="" href="websquare.html?w2xPath=/cm/pub/kbcms_page02.xml">
+    										<xf:label><![CDATA[언어가이드 등록]]></xf:label>
     									</w2:anchor>
     								</xf:group>
     							</xf:group>

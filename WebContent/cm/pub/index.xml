@@ -92,11 +92,51 @@
         
 	scwin.onpageload = function() {
 
+
 	};
 	
 	scwin.onpageunload = function() {
 		
 	};
+	var popupS = {
+    id : "popupS",
+    type : "wframePopup",
+    popupName : "팝업S-W500",
+    modal : "true",
+	width:"500px"
+	}; 
+	$p.openPopup("popup1.xml", popupS);
+
+	var popupM = {
+    id : "popupM",
+    type : "wframePopup",
+    popupName : "팝업M-W800",
+    modal : "true",
+	width:"800px"
+	}; 
+	$p.openPopup("popup1.xml", popupM);
+
+	var popupL = {
+    id : "popupL",
+    type : "wframePopup",
+    popupName : "팝업L-W1000",
+    modal : "true",
+	width:"1000px"
+	}; 
+	$p.openPopup("popup1.xml", popupL);
+
+	scwin.popupS_onclick = function(e) {
+		$p.openPopup("popup1.xml", popupS);
+	};
+
+	scwin.popupM_onclick = function(e) {
+		$p.openPopup("popup1.xml", popupM);
+	};
+
+	scwin.popupL_onclick = function(e) {
+		$p.openPopup("popup1.xml", popupL);
+	};
+
 ]]></script>
 	</head>
 	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
@@ -300,6 +340,12 @@
 									<xf:label><![CDATA[icon]]></xf:label>
 								</xf:trigger>
 
+								<xf:trigger class="btn btn-icon -o" id="" style="" type="button">
+									<xf:label><![CDATA[선택 사용]]></xf:label>
+								</xf:trigger>
+								<xf:trigger class="btn btn-icon -x" id="" style="" type="button">
+									<xf:label><![CDATA[선택 사용안함]]></xf:label>
+								</xf:trigger>
 							</xf:group>
 							<xf:group id="" class="mt10">
 								<xf:select1 ref="" appearance="full" style="" id="" rows="" renderType="radiogroup" class="btn-round"
@@ -321,7 +367,11 @@
 								</xf:select1>
 							</xf:group>
 							<xf:group class="title-box mt10" id="" style="">
-							<xf:group id=""><w2:textbox tagname="h3" style="" id="" label="mini (그리드에서 사용)" class="sub-title"></w2:textbox><w2:span style="" id="" label="해당 셀의 width가 100px 이상이 되어야 함" class="txt-division"></w2:span></xf:group></xf:group>
+								<xf:group id="">
+									<w2:textbox tagname="h3" style="" id="" label="mini (그리드에서 사용)" class="sub-title"></w2:textbox>
+									<w2:span style="" id="" label="해당 셀의 width가 100px 이상이 되어야 함" class="txt-division"></w2:span>
+								</xf:group>
+							</xf:group>
 							<xf:group class="grid-box" id="" style="">
 								<w2:gridView autoFit="allColumn" checkAllType="false" checkOnCellClick="true" class="gvw"
 									dataList="data:dataList2" ev:oncellclick="scwin.gridView1_oncellclick" evenRowBackgroundColor="#ffffff" id="" rowMouseOver="false"
@@ -346,8 +396,12 @@
 									<w2:gBody id="gBody2" style="">
 										<w2:row id="row8" style="">
 											<w2:column displayMode="label" id="col1" inputType="button" style="" value="텍스트버튼" width="70"></w2:column>
-											<w2:column displayMode="label" id="col2" inputType="button" style="" value="다운로드" width="70" class="ico-download"></w2:column>
-											<w2:column displayMode="label" id="col3" inputType="button" style="" value="미리보기" width="70" class="ico-check"></w2:column>
+											<w2:column displayMode="label" id="col2" inputType="button" style="" value="다운로드" width="70"
+												class="ico-download">
+											</w2:column>
+											<w2:column displayMode="label" id="col3" inputType="button" style="" value="미리보기" width="70"
+												class="ico-check">
+											</w2:column>
 											<w2:column displayMode="label" id="col4" inputType="text" style="" value="" width="70"></w2:column>
 										</w2:row>
 									</w2:gBody>
@@ -1709,6 +1763,23 @@
 							</xf:trigger>
 							<xf:trigger class="btn btn-primary" id="" style="" type="button">
 								<xf:label><![CDATA[검색]]></xf:label>
+							</xf:trigger>
+						</xf:group>
+						<xf:group class="title-box mt10" id="" style="">
+							<xf:group id="">
+								<w2:textbox class="head-title" id="" label="팝업" style="" tagname="h2"></w2:textbox>
+								<w2:span class="txt-division" id="" label="스크립트 확인" style=""></w2:span>
+							</xf:group>
+						</xf:group>
+						<xf:group class="btn-box" id="" style="">
+							<xf:trigger class="btn btn-line" id="popupS" style="" type="button" ev:onclick="scwin.popupS_onclick">
+								<xf:label><![CDATA[팝업S w500]]></xf:label>
+							</xf:trigger>
+							<xf:trigger class="btn btn-line" ev:onclick="scwin.popupM_onclick" id="popupM" style="" type="button">
+								<xf:label><![CDATA[팝업m w800]]></xf:label>
+							</xf:trigger>
+							<xf:trigger class="btn btn-line" ev:onclick="scwin.popupL_onclick" id="popupL" style="" type="button">
+								<xf:label><![CDATA[팝업L w1000]]></xf:label>
 							</xf:trigger>
 						</xf:group>
 					</xf:group>

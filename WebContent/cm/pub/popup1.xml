@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head meta_vertical_guides="" meta_horizontal_guides="">
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map"/>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+
+
+scwin.closePopup_onclick = function(e) {
+	$p.closePopup();
+};]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:group class="pop-contents" id="" style="">
+    		<xf:group class="pop-content-box" id="" style="">
+    			<xf:group class="table-box" id="" style="">
+    				<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+    					<w2:attributes>
+    						<w2:summary></w2:summary>
+    					</w2:attributes>
+    					<xf:group tagname="caption"></xf:group>
+    					<xf:group tagname="colgroup">
+    						<xf:group style="width:172px;" tagname="col"></xf:group>
+    						<xf:group tagname="col"></xf:group>
+    						<xf:group style="width:172px;" tagname="col"></xf:group>
+    						<xf:group style="" tagname="col"></xf:group>
+    					</xf:group>
+    					<xf:group style="" tagname="tr">
+    						<xf:group class="w2tb_th req" style="" tagname="th">
+    							<w2:attributes>
+    								<w2:scope>row</w2:scope>
+    							</w2:attributes>
+    							<w2:textbox id="" label="필수값" style=""></w2:textbox>
+    						</xf:group>
+    						<xf:group class="w2tb_td" style="" tagname="td">
+    							<w2:textbox class="" id="" label="th나 th안 텍스트에 req를 준다" style=""></w2:textbox>
+    						</xf:group>
+    						<xf:group class="w2tb_th" tagname="th">
+    							<w2:attributes></w2:attributes>
+    							<w2:textbox id="" label="text" style=""></w2:textbox>
+    						</xf:group>
+    						<xf:group class="w2tb_td" tagname="td">
+    							<w2:attributes></w2:attributes>
+    							<w2:textbox id="" label="text" style=""></w2:textbox>
+    						</xf:group>
+    					</xf:group>
+    					<xf:group tagname="tr">
+    						<xf:group class="w2tb_th" style="" tagname="th">
+    							<w2:attributes>
+    								<w2:scope>row</w2:scope>
+    							</w2:attributes>
+    							<w2:textbox id="" label="text" style=""></w2:textbox>
+    						</xf:group>
+    						<xf:group class="w2tb_td" style="" tagname="td">
+    							<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
+    						</xf:group>
+    						<xf:group class="w2tb_th" tagname="th">
+    							<w2:attributes></w2:attributes>
+    							<w2:textbox id="" label="text" style=""></w2:textbox>
+    						</xf:group>
+    						<xf:group class="w2tb_td" tagname="td">
+    							<w2:attributes></w2:attributes>
+    							<w2:textbox id="" label="text" style=""></w2:textbox>
+    						</xf:group>
+    					</xf:group>
+    				</xf:group>
+    			</xf:group>
+    			<xf:group class="msg-box" id="" style="">
+    				<w2:textbox class="info-title" id="" label="그리드 그릴 때 유의점" style=""></w2:textbox>
+    				<xf:group class="" id="" style="" tagname="ul">
+    					<xf:group class="" id="" style="" tagname="li">
+    						<w2:textbox id="" label="그리드 가로 스크롤 설정은 gridView 속성 autoMinWidth에 적절한 전체 스크롤 width 값을 넣어주시면 됩니다." style=""></w2:textbox>
+    					</xf:group>
+    					<xf:group class="" id="" style="" tagname="li">
+    						<w2:textbox id="" label="체크박스 설정시 해당 셀의 속성에 checkLabel 값을 꼭 입력해야만 합니다 ('선택'이라고 쓰면 되지만 기본적으로 아무 글자나 입력하면 됨)"
+    							style="">
+    						</w2:textbox>
+    					</xf:group>
+    					<xf:group class="" id="" style="" tagname="li">
+    						<w2:textbox id="" label="각 컬럼의 text-align은 속성에서 제어합니다" style=""></w2:textbox>
+    					</xf:group>
+    					<xf:group class="" id="" style="" tagname="li">
+    						<w2:textbox id="" label="그리드는 꼭 스니핏에서만 가져옵니다 (속성설정값)" style=""></w2:textbox>
+    					</xf:group>
+    					<xf:group class="" id="" style="" tagname="li">
+    						<w2:textbox id="" label="몇 행 이상부터 스크롤이 생기게 하려면 visibleRowNum에서 제어" style=""></w2:textbox>
+    					</xf:group>
+    					<xf:group class="" id="" style="" tagname="li">
+    						<w2:textbox id="" label="sort 기능은 해당 header 셀에 sortable true로 해준다. 모든 헤더가 sort 기능이 들어가면 전체 그리드에 sortable을 준다"
+    							style="">
+    						</w2:textbox>
+    					</xf:group>
+    				</xf:group>
+    			</xf:group>
+    		</xf:group>
+    		<xf:group class="pop-btn-box" id="" style="">
+    			<xf:trigger class="btn btn-line" id="closePopup" style="" type="button" ev:onclick="scwin.closePopup_onclick">
+    				<xf:label><![CDATA[취소]]></xf:label>
+    			</xf:trigger>
+    			<xf:trigger class="btn btn-primary" id="" style="" type="button">
+    				<xf:label><![CDATA[확인]]></xf:label>
+    			</xf:trigger>
+    		</xf:group>
+    	</xf:group>
+    </body>
+</html>
