@@ -563,7 +563,7 @@
     				</w2:panelContent>
     			</w2:panels>
     			<w2:panels style="" id="panels7" class="">
-    				<w2:panelTitle style="" id="panelTitle7" label="페이지리스트"></w2:panelTitle>
+    				<w2:panelTitle style="" id="panelTitle7" label="퍼블리스트"></w2:panelTitle>
     				<w2:panelContent style="" id="panelContent7">
     					<xf:group class="two-dept-list" id="" style="" tagname="ul">
     						<xf:group class="two-dept-li" id="" style="" tagname="li">

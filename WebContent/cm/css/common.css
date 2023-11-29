@@ -320,7 +320,8 @@ body{
 /*form-box*/
 .form-box {display: flex;gap:0.6rem;align-items: center;}
 .form-box > * {flex-grow: 1;}
-.form-box + .form-box {margin-top: 0.8rem;}
+.form-box + .form-box,
+.form-box + .add-box {margin-top: 0.8rem;}
 .form-box.-term > * {flex-grow: 0;}
 .form-box.-term > .w2selectbox_select,
 .form-box.-term > .w2inputCalendar_div {width: 12rem;}
@@ -330,6 +331,15 @@ body{
 .form-box > .btn-delete,
 .form-box > .btn-text {flex-grow:0;}
 
+.add-box {display: flex;align-items: center;}
+.add-box .name {padding-left:1.2rem;background-color:#F3F5F6;border-radius: 0.4rem 0 0 0.4rem;}
+.add-box span {display:inline-block;height: 3.2rem;line-height: 3.2rem;}
+.add-box span + span {margin-left: 0.8rem;}
+.add-box span + span::before {content: '';display: inline-block;width:2rem;height: 2rem;margin-right:0.8rem;background: url(../images/ico/ico-arrow-right.svg) no-repeat 0 0 / cover;transform: translate(0, 0.5rem);}
+.add-box .name + .btn-delete {width:4rem;height:3.2rem;padding-left: 0.8rem;padding-right:1.2rem;border-radius:0 0.4rem 0.4rem 0;background-color:#F3F5F6;background-size:2rem 2rem;background-position: 0.8rem 50%;}
+.add-box + .add-box {margin-top: 0.6rem;}
+
+/*multiupload*/
 .upload-form-box .form-header {display: flex;justify-content: space-between;align-items: center;margin-bottom: 0.6rem;}
 .upload-form-box .form-header .btn-box {position: relative;margin: 0;}
 .upload-form-box .form-header .w2multiupload_uploader {width: 100%;height: 100%;}
@@ -337,7 +347,7 @@ body{
 .upload-form-box .form-header .w2multiupload_uploader:hover + .btn {border-color: #4A567E;background-image: url(../images/ico/ico-download-hover.svg);color: #4A567E;}
 .upload-form-box .form-contents .upload-list-box {position:relative;min-height:8rem;padding:1.6rem;border-radius: 0.3rem;border:1px dashed #ccc;background-color: #FBFBFB;}
 .upload-form-box .form-contents .upload-list-box .notice {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:100%;font-weight: 300;line-height: 2rem;text-align: center;color:#999;}
-.upload-form-box .form-contents .upload-list-box .notice::before {content: '';display: inline-block;width:2rem;height: 2rem;margin-right:0.4rem;background: url(../images/ico/ico-file-upload.svg) no-repeat 0 0 / cover;vertical-align: middle;}
+.upload-form-box .form-contents .upload-list-box .notice::before {content: '';display: inline-block;width:2rem;height: 2rem;margin-right:0.4rem;margin-bottom:0.3rem;background: url(../images/ico/ico-file-upload.svg) no-repeat 0 0 / cover;vertical-align: middle;}
 .upload-form-box .form-contents .upload-list-box .table-box {display: none;}
 .upload-form-box .form-contents .upload-list-box .tb {border: 0;background-color: #FBFBFB;}
 .upload-form-box .form-contents .upload-list-box .tb tr {border: 0;}
@@ -345,6 +355,7 @@ body{
 .upload-form-box .form-contents .upload-list-box .tb tr + tr > td {padding-top: 1rem;}
 .upload-form-box .form-contents.-load .table-box {display: block;}
 .upload-form-box .form-contents.-load .notice {display: none;}
+
 /*table*/
 .table-box + .table-box {margin-top: 1.6rem;}
 .table-box .tb {width:100%;border-top:1px solid #AEB6D0;}
@@ -420,7 +431,9 @@ body{
 .search-box .tb tbody tr:last-child .w2tb_th,
 .search-box .tb tbody tr:last-child .w2tb_td {border-bottom: none;}
 
-/*popup*/
+/******common component end*******/
+
+/*******popup*******/
 .w2modal {background-color: #000;opacity: 0.4;}
 .w2popup_window {left:50% !important;top:50% !important;display:flex;flex-direction: column;height:auto !important;min-height:20rem;border: 1px solid #ddd;border-radius: 0.8rem;overflow: hidden; box-shadow: 0.4rem 0.4rem 0.8rem 0 rgba(0,0,0,0.08);transform: translate(-50%, -50%);}
 .w2popup_window .w2window_header {display:flex;justify-content: space-between;width:100%;height: 5.4rem;position:static;padding:2.4rem 2.4rem 0 2.4rem;border-radius:0.8rem 0.8rem 0 0;background: #fff;box-sizing: border-box;}
@@ -437,4 +450,8 @@ body{
 .w2popup_window .pop-contents .pop-btn-box .btn + .btn {border-left:1px solid #ddd;}
 .w2popup_window .pop-contents .pop-btn-box .btn-primary {color: #2E74F2;}
 
-/******common component end*******/
+/*검색영역*/
+.w2popup_window .search-box {padding:2.4rem;border-radius:0.8rem;border: 1px solid #ddd;background-color: #FBFBFB;}
+.w2popup_window .search-box + .btn-box {margin-bottom: 3.2rem;}
+
+/******popup end******/

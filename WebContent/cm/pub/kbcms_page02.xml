@@ -31,9 +31,22 @@
         <w2:publicInfo method=""/>
         <script lazy="false" type="text/javascript"><![CDATA[
 scwin.onpageload = function() {
-	
-};
-]]></script>
+ 		// multiupload & add-box 삭제 버튼튼
+		    function deleteBtn() {
+			const $btn = $('.btn-delete');
+
+			$btn.on('click', function(){
+				if($(this).closest('.add-box')){
+					$(this).closest('.add-box').remove();
+				} 
+				if($(this).closest('.upload-list-box')){
+					$(this).closest('tr').remove();
+				}
+			});
+			};
+			deleteBtn();
+}
+	]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<xf:group class="wrap" id="" style="">
@@ -190,6 +203,18 @@ scwin.onpageload = function() {
     															</xf:trigger>
     															<w2:textbox class="" id="" label="최대 5개 등록 가능" style=""></w2:textbox>
     														</xf:group>
+    														<xf:group class="add-box" id="" style="">
+    															<xf:group class="name" id="" style="">
+    																<w2:span id="" label="상품 대분류" style=""></w2:span>
+    																<w2:span id="" label="상품 중분류" style=""></w2:span>
+    																<w2:span id="" label="상품 소분류" style=""></w2:span>
+    															</xf:group>
+    															<xf:trigger type="button" id="" style="" class="btn-delete">
+    																<xf:label><![CDATA[삭제]]></xf:label>
+    															</xf:trigger>
+    														</xf:group>
+    														
+    														
     													</xf:group>
     												</xf:group>
     												<xf:group tagname="tr">
@@ -272,7 +297,24 @@ scwin.onpageload = function() {
     															</xf:trigger>
     															<w2:textbox class="" id="" label="최대 5개 등록 가능" style=""></w2:textbox>
     														</xf:group>
-    													</xf:group>
+    													<xf:group class="add-box" id="" style="">
+    															<xf:group class="name" id="" style="">
+    																<w2:span id="" label="퇴직연금" style=""></w2:span>
+    																<w2:span id="" label="국내주식" style=""></w2:span>
+    															</xf:group>
+    															<xf:trigger class="btn-delete" id="" style="" type="button">
+    																<xf:label><![CDATA[삭제]]></xf:label>
+    															</xf:trigger>
+    														</xf:group><xf:group class="add-box" id="" style="">
+    															<xf:group class="name" id="" style="">
+    																<w2:span id="" label="계좌 대분류" style=""></w2:span>
+    																<w2:span id="" label="계좌 중분류" style=""></w2:span>
+    																<w2:span id="" label="계좌 소분류" style=""></w2:span>
+    															</xf:group>
+    															<xf:trigger class="btn-delete" id="" style="" type="button">
+    																<xf:label><![CDATA[삭제]]></xf:label>
+    															</xf:trigger>
+    														</xf:group></xf:group>
     												</xf:group>
     												<xf:group tagname="tr">
     													<xf:group tagname="th" class="w2tb_th">
