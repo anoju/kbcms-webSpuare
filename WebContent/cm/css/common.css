@@ -286,6 +286,7 @@ body{
 .w2calendar .w2calendar_wrap .w2calendar_header > .w2selectbox.w2calendar_selectbox_year {width:9rem;}
 .w2calendar .w2calendar_wrap .w2calendar_header > .w2selectbox .w2selectbox_col_label {font-size: 1.4rem;line-height: 1.4rem;}
 .w2calendar .w2calendar_wrap .w2calendar_header > .w2selectbox .w2selectbox_label {padding:0;}
+.w2calendar .w2calendar_wrap .w2calendar_header .w2calendar_col_day_text {height: 3rem;}
 .w2selectbox_over .w2selectbox_col_label {background: transparent;}
 .w2calendar .w2calendar_wrap .w2calendar_header > .w2selectbox .w2selectbox_col_button {display: none;}
 .w2calendar .w2calendar_wrap .w2calendar_content {border: 0;background: transparent;padding:0;}
@@ -297,8 +298,7 @@ body{
 .w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_day_6 {color:#42444E;font-weight: 500;}
 .w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_day_6.w2calendar_date_over {color:#42444E;}
 .w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_date_nextmonth {display: none;}
-.w2calendar .w2calendar_wrap .w2calendar_content table thead tr {border-bottom: 1.2rem solid #fff;}
-.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_day {color:#999 !important;font-weight: 500;}
+.w2calendar .w2calendar_wrap .w2calendar_content table .w2calendar_day {margin-bottom:1.2rem;color:#999 !important;font-weight: 500;}
 .w2calendar .w2calendar_footer,
 .w2calendar .w2calendar_wrap .w2calendar_header > .w2calendar_header_last_year,
 .w2calendar .w2calendar_wrap .w2calendar_header > .w2calendar_header_next_year {display: none;}
@@ -450,6 +450,11 @@ body{
 .w2popup_window .pop-contents .pop-btn-box .btn + .btn {border-left:1px solid #ddd;}
 .w2popup_window .pop-contents .pop-btn-box .btn-primary {color: #2E74F2;}
 
+/*alert*/
+.alert-pop {min-height:15rem;}
+.alert-pop .w2window_header {display: none;}
+.alert-pop .alert .pop-content-box {display:flex;justify-content: center;align-items:center;min-height:11rem;padding:3.2rem 2.4rem;font-size:1.5rem;font-weight:500;text-align:center;line-height:2.2rem;box-sizing: border-box;}
+.w2modal.opt {opacity: 0;}
 /*검색영역*/
 .w2popup_window .search-box {padding:2.4rem;border-radius:0.8rem;border: 1px solid #ddd;background-color: #FBFBFB;}
 .w2popup_window .search-box + .btn-box {margin-bottom: 3.2rem;}

@@ -206,6 +206,7 @@
 	<wframe>
 		<mode value="sync" />
 		<scope value="true" />
+		<scopeExternal value=""></scopeExternal>
 	</wframe>
 	<pageInherit>
 		<mode value="sync" />

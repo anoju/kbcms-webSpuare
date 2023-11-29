@@ -543,6 +543,9 @@ export default {
       },
       "scope": {
         "@value": "true"
+      },
+      "scopeExternal": {
+        "@value": ""
       }
     },
     "pageInherit": {

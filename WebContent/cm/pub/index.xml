@@ -106,6 +106,7 @@
 			};
 			deleteBtn();
 
+
 	};
 	
 	scwin.onpageunload = function() {
@@ -139,6 +140,15 @@
 	}; 
 	$p.openPopup("popup1.xml", popupL);
 
+	var alert = {
+    id : "alertBtn",
+    type : "wframePopup",
+    popupName : "alert",
+    modal : "true",
+	width:"280px"
+	}; 
+	$p.openPopup("alert.xml", alert);
+
 	scwin.popupS_onclick = function(e) {
 		$p.openPopup("popup1.xml", popupS);
 	};
@@ -150,6 +160,11 @@
 	scwin.popupL_onclick = function(e) {
 		$p.openPopup("popup1.xml", popupL);
 	};
+
+	scwin.alertBtn_onclick = function(e) {
+		$p.openPopup("alert.xml", alert);
+	}; 
+
 
 //팝업닫기
 // scwin.closePopup_onclick = function(e) {
@@ -827,8 +842,12 @@
 													</xf:group>
 												</xf:group>
 											</xf:group>
-											<w2:textbox id="" label="** upload-list-box 안의 notice와 table-box는 form-contents에 class -load로 온오프 제어" style="" class="mt10"></w2:textbox>
-										</xf:group></xf:group><xf:group tagname="tr">
+											<w2:textbox id=""
+												label="** upload-list-box 안의 notice와 table-box는 form-contents에 class -load로 온오프 제어" style="" class="mt10">
+											</w2:textbox>
+										</xf:group>
+									</xf:group>
+									<xf:group tagname="tr">
 										<xf:group tagname="th" class="w2tb_th">
 											<w2:attributes>
 												<w2:scope>row</w2:scope>
@@ -1099,7 +1118,7 @@
 												</xf:trigger>
 											</xf:group>
 										</xf:group>
-</xf:group>
+									</xf:group>
 									<xf:group tagname="tr">
 										<xf:group tagname="th" class="w2tb_th">
 											<w2:attributes>
@@ -1542,8 +1561,8 @@
 											<w2:column checkboxLabel="선택" displayMode="label" fixColumnWidth="true" id="column33"
 												inputType="checkbox" style="" value="" width="46">
 											</w2:column>
-											<w2:column displayMode="label" id="column32" inputType="text" style=""
-												value="순번" width="46" fixColumnWidth="true">
+											<w2:column displayMode="label" id="column32" inputType="text" style="" value="순번" width="46"
+												fixColumnWidth="true">
 											</w2:column>
 											<w2:column displayMode="label" id="column31" inputType="text" style="" value="분류 명"
 												width="70">
@@ -1635,8 +1654,7 @@
 										</w2:textbox>
 									</xf:group>
 									<xf:group class="" id="" style="" tagname="li">
-										<w2:textbox id=""
-											label="체크박스+순번 그리드에서, 앞에 두 컬럼의 width를 fix하기 위해 fixColumnWidth:true;를 설정한다"
+										<w2:textbox id="" label="체크박스+순번 그리드에서, 앞에 두 컬럼의 width를 fix하기 위해 fixColumnWidth:true;를 설정한다"
 											style="">
 										</w2:textbox>
 									</xf:group>
@@ -2058,6 +2076,9 @@
 							</xf:trigger>
 							<xf:trigger class="btn btn-line" ev:onclick="scwin.popupL_onclick" id="popupL" style="" type="button">
 								<xf:label><![CDATA[팝업L w1000]]></xf:label>
+							</xf:trigger>
+							<xf:trigger class="btn btn-line" ev:onclick="scwin.alertBtn_onclick" id="alertBtn" style="" type="button">
+								<xf:label><![CDATA[alert]]></xf:label>
 							</xf:trigger>
 						</xf:group>
 					</xf:group>
