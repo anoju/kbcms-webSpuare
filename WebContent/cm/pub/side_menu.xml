@@ -567,8 +567,7 @@
     				<w2:panelContent style="" id="panelContent7">
     					<xf:group class="two-dept-list" id="" style="" tagname="ul">
     						<xf:group class="two-dept-li" id="" style="" tagname="li">
-    							<w2:anchor class="" href="websquare.html?w2xPath=/cm/pub/index.xml" id="" outerDiv="false"
-    								style="">
+    							<w2:anchor class="" href="websquare.html?w2xPath=/cm/pub/index.xml" id="" outerDiv="false" style="">
     								<xf:label><![CDATA[index 화면]]></xf:label>
     							</w2:anchor>
     						</xf:group>
@@ -587,8 +586,8 @@
     							</w2:anchor>
     							<xf:group class="three-dept-list" id="" style="" tagname="ul">
     								<xf:group class="" id="" style="" tagname="li">
-    									<w2:anchor class="" id="" outerDiv="false" style=""
-    										href="websquare.html?w2xPath=/cm/pub/kbcms_page01.xml">
+    									<w2:anchor class="" href="websquare.html?w2xPath=/cm/pub/kbcms_page01.xml" id="" outerDiv="false"
+    										style="">
     										<xf:label><![CDATA[내용분류 관리]]></xf:label>
     									</w2:anchor>
     								</xf:group>
@@ -596,6 +595,22 @@
     									<w2:anchor class="" href="websquare.html?w2xPath=/cm/pub/kbcms_page02.xml" id="" outerDiv="false"
     										style="">
     										<xf:label><![CDATA[언어가이드 등록]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    							</xf:group>
+    						</xf:group>
+    						<xf:group class="two-dept-li" id="" style="" tagname="li">
+    							<w2:anchor class="" id="" outerDiv="false" style="">
+    								<xf:label><![CDATA[콘텐츠 생성 배포]]></xf:label>
+    							</w2:anchor>
+    							<w2:anchor class="btn_expand" id="" outerDiv="false" style="">
+    								<xf:label><![CDATA[하위 리스트 열기닫기]]></xf:label>
+    							</w2:anchor>
+    							<xf:group class="three-dept-list" id="" style="" tagname="ul">
+    								<xf:group class="" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style=""
+    										href="websquare.html?w2xPath=/cm/pub/kbcms_page03.xml">
+    										<xf:label><![CDATA[콘텐츠 목록]]></xf:label>
     									</w2:anchor>
     								</xf:group>
     							</xf:group>

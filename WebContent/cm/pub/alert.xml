@@ -14,6 +14,7 @@
         <w2:publicInfo method=""/>
         <script lazy="false" type="text/javascript"><![CDATA[
 scwin.onpageload = function() {
+    // 알럿창 클래스 부여
     var alertElements = document.querySelectorAll('.alert');
 
     alertElements.forEach(function(alertElement) {
@@ -29,7 +30,7 @@ scwin.onpageload = function() {
         }
     });
 };
-
+//팝업 닫기
 scwin.closePopup_onclick = function(e) {
 	$p.closePopup();
 };]]></script>
