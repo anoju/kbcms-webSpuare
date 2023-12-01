@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="col1" name="메누번호" dataType="text"></w2:column>
+            			<w2:column id="col2" name="메뉴명" dataType="text"></w2:column>
+            			<w2:column id="col3" name="삭제" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<col1><![CDATA[MB000100101]]></col1>
+            			</w2:row>
+            			<w2:row></w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+    // grp-add-box
+            function addBoxVisibility(){
+                $(".grp-add-box").each(function() {
+                    const wrapAddBox = $(this);
+                    const addBox = wrapAddBox.find(".add-box");
+
+                    if (addBox.length === 0) {
+                        wrapAddBox.remove();
+                    }
+                });
+            };
+    //round-table-box 안에 data가 없으면
+            function tableVisibility(){
+                 $(".round-table-box").each(function() {
+                const wrapTableBox = $(this);
+                const dataRow = wrapTableBox.find(".w2tb_td");
+
+                if(dataRow.length === 0){
+                    wrapTableBox.find('.tb').remove();
+                    wrapTableBox.find('.nodata').show();
+                }
+                });
+            };
+    //upload-form-box 안에 data가 없으면
+            function uploadVisibility(){
+                 $(".upload-form-box").each(function() {
+                const uploadBox = $(this);
+                const dataRow = uploadBox.find(".w2tb_td");
+
+                if(dataRow.length === 0){
+                    uploadBox.find('.table-box').remove();
+                    uploadBox.find('.notice').show();
+                }
+                });
+            };
+     // add-box 삭제       
+			function deleteBtn() {
+                    const $btn = $('.btn-delete');
+
+                    $btn.on('click', function(){
+                        if($(this).closest('.add-box')){
+                            $(this).closest('.add-box').remove();
+                        } 
+                        if($(this).closest('table')){
+                            $(this).closest('tr').remove();
+                        }
+                        addBoxVisibility();
+                        tableVisibility();
+                        uploadVisibility();
+                    });
+			};
+
+            addBoxVisibility();
+            tableVisibility();
+            uploadVisibility();
+            deleteBtn(); 
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:group class="wrap" id="" style="">
+    		<w2:wframe class="header_frame" id="" src="main_header.xml" style=""></w2:wframe>
+    		<xf:group class="contents-box" id="" style="">
+    			<w2:wframe class="side-menu-frame" id="" src="side_menu.xml" style=""></w2:wframe>
+    			<xf:group class="page-box" id="" style="">
+    				<xf:group class="contents" id="" style="">
+    					<xf:group class="title-box" id="" style="">
+    						<xf:group id="" class="left">
+    							<w2:textbox tagname="h2" style="" id="" label="컨텐츠 부가정보 등록" class="head-title"></w2:textbox>
+    							<xf:trigger centerOnImageClass="" class="btn btn-line small" id="" style="" type="button">
+    								<xf:label><![CDATA[신규등록]]></xf:label>
+    							</xf:trigger>
+    							<xf:trigger centerOnImageClass="" class="btn btn-line small" id="" style="" type="button">
+    								<xf:label><![CDATA[복사하기]]></xf:label>
+    							</xf:trigger>
+    						</xf:group>
+    						<xf:group class="breadcrumb" id="" style="">
+    							<xf:group class="" id="" style="" tagname="ul">
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[홈]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[콘텐츠 생성배포]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[콘텐츠 부가정보 등록]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    							</xf:group>
+    						</xf:group>
+    					</xf:group>
+    					<xf:group class="layer-box" id="" style="">
+    						<xf:group class="title-box" id="" style="">
+    							<w2:textbox class="sub-title" id="" label="콘텐츠 조회" style="" tagname="h3"></w2:textbox>
+    						</xf:group>
+    						<xf:group class="table-box" id="" style="">
+    							<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+    								<w2:attributes>
+    									<w2:summary></w2:summary>
+    								</w2:attributes>
+    								<xf:group tagname="caption"></xf:group>
+    								<xf:group tagname="colgroup">
+    									<xf:group style="width:172px;" tagname="col"></xf:group>
+    									<xf:group style="" tagname="col"></xf:group>
+    								</xf:group>
+    								<xf:group style="" tagname="tr">
+    									<xf:group class="w2tb_th" style="" tagname="th">
+    										<w2:attributes>
+    											<w2:scope>row</w2:scope>
+    										</w2:attributes>
+    										<w2:textbox id="" label="콘텐츠 내용" style=""></w2:textbox>
+    									</xf:group>
+    									<xf:group class="w2tb_td" style="" tagname="td">
+    										<xf:group class="table-box" id="" style="">
+    											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+    												<w2:attributes>
+    													<w2:summary></w2:summary>
+    												</w2:attributes>
+    												<xf:group tagname="caption"></xf:group>
+    												<xf:group tagname="colgroup">
+    													<xf:group style="width:132px;" tagname="col"></xf:group>
+    													<xf:group style="" tagname="col"></xf:group>
+    												</xf:group>
+    												<xf:group style="" tagname="tr">
+    													<xf:group class="w2tb_th" style="" tagname="th"><w2:attributes>
+    															<w2:scope>row</w2:scope>
+    														</w2:attributes><w2:textbox id="" label="상품 기준정보" style=""></w2:textbox></xf:group>
+    													<xf:group class="w2tb_td" style="" tagname="td">
+    														<xf:group class="form-box" id="" style="">
+    															<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    																class="wxs" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    																style="" submenuSize="auto">
+    																<xf:choices>
+    																	<xf:item>
+    																		<xf:label><![CDATA[대분류 선택]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																</xf:choices>
+    															</xf:select1>
+    															<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    																class="wxs" direction="auto" disabled="true" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    																style="" submenuSize="auto">
+    																<xf:choices>
+    																	<xf:item>
+    																		<xf:label><![CDATA[중분류 선택]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																</xf:choices>
+    															</xf:select1>
+    															<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    																class="wxs" direction="auto" disabled="true" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    																style="" submenuSize="auto">
+    																<xf:choices>
+    																	<xf:item>
+    																		<xf:label><![CDATA[소분류 선택]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																</xf:choices>
+    															</xf:select1>
+    															<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    																<xf:label><![CDATA[추가하기]]></xf:label>
+    															</xf:trigger>
+    															<w2:textbox class="" id="" label="최대 5개 등록 가능" style=""></w2:textbox>
+    														</xf:group>
+    														<xf:group class="add-box" id="" style="">
+    															<xf:group class="name" id="" style="">
+    																<w2:span id="" label="퇴직연금" style=""></w2:span>
+    																<w2:span id="" label="국내주식" style=""></w2:span>
+    															</xf:group>
+    															<xf:trigger class="btn-delete" id="" style="" type="button">
+    																<xf:label><![CDATA[삭제]]></xf:label>
+    															</xf:trigger>
+    														</xf:group>
+    														<xf:group class="add-box" id="" style="">
+    															<xf:group class="name" id="" style="">
+    																<w2:span id="" label="계좌 대분류" style=""></w2:span>
+    																<w2:span id="" label="계좌 중분류" style=""></w2:span>
+    																<w2:span id="" label="계좌 소분류" style=""></w2:span>
+    															</xf:group>
+    															<xf:trigger class="btn-delete" id="" style="" type="button">
+    																<xf:label><![CDATA[삭제]]></xf:label>
+    															</xf:trigger>
+    														</xf:group>
+    														<xf:group class="add-box" id="" style="">
+    															<xf:group class="name" id="" style="">
+    																<w2:span id="" label="계좌 대분류" style=""></w2:span>
+    																<w2:span id="" label="계좌 중분류" style=""></w2:span>
+    																<w2:span id="" label="상품 소분류:경험여부(" style=""></w2:span>
+    																<xf:select1 appearance="full" cols="" id="" ref=""
+    																	renderType="radiogroup" rows="" selectedIndex="0" style="" class="small" name="rdo1">
+    																	<xf:choices>
+    																		<xf:item>
+    																			<xf:label><![CDATA[있음 ]]></xf:label>
+    																			<xf:value><![CDATA[]]></xf:value>
+    																		</xf:item>
+    																	</xf:choices>
+    																</xf:select1>
+    																<w2:textbox id="" label=" /" style=""></w2:textbox>
+    																<xf:select1 appearance="full" cols="" id="" ref=""
+    																	renderType="radiogroup" rows="" selectedIndex="0" style="" class="small" name="rdo1">
+    																	<xf:choices>
+    																		<xf:item>
+    																			<xf:label><![CDATA[없음]]></xf:label>
+    																			<xf:value><![CDATA[]]></xf:value>
+    																		</xf:item>
+    																	</xf:choices>
+    																</xf:select1>
+    																<w2:textbox id="" label=")" style=""></w2:textbox>
+    															</xf:group>
+    															<xf:trigger class="btn-delete" id="" style="" type="button">
+    																<xf:label><![CDATA[삭제]]></xf:label>
+    															</xf:trigger>
+    														</xf:group>
+    													</xf:group>
+    												</xf:group>
+    												<xf:group tagname="tr">
+    													<xf:group class="w2tb_th" style="" tagname="th">
+    														<w2:attributes>
+    															<w2:scope>row</w2:scope>
+    														</w2:attributes>
+    														<w2:textbox id="" label="계좌 기준정보" style=""></w2:textbox>
+    													</xf:group>
+    													<xf:group class="w2tb_td" style="" tagname="td">
+    														<xf:group class="form-box" id="" style="">
+    															<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    																class="wxs" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    																style="" submenuSize="auto">
+    																<xf:choices>
+    																	<xf:item>
+    																		<xf:label><![CDATA[대분류 선택]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																</xf:choices>
+    															</xf:select1>
+    															<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    																class="wxs" direction="auto" disabled="true" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    																style="" submenuSize="auto">
+    																<xf:choices>
+    																	<xf:item>
+    																		<xf:label><![CDATA[중분류 선택]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																</xf:choices>
+    															</xf:select1>
+    															<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    																class="wxs" direction="auto" disabled="true" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    																style="" submenuSize="auto">
+    																<xf:choices>
+    																	<xf:item>
+    																		<xf:label><![CDATA[소분류 선택]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																	<xf:item>
+    																		<xf:label><![CDATA[new row]]></xf:label>
+    																		<xf:value></xf:value>
+    																	</xf:item>
+    																</xf:choices>
+    															</xf:select1>
+    															<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    																<xf:label><![CDATA[추가하기]]></xf:label>
+    															</xf:trigger>
+    															<w2:textbox class="" id="" label="최대 5개 등록 가능" style=""></w2:textbox>
+    														</xf:group>
+    													</xf:group>
+    												</xf:group>
+    											<xf:group tagname="tr">
+    												<xf:group tagname="th" class="w2tb_th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="서비스 기준정보" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group tagname="td" class="w2tb_td">
+    													<w2:attributes></w2:attributes>
+    													<xf:group class="form-box" id="" style="">
+    														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    															class="wxs" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    															style="" submenuSize="auto">
+    															<xf:choices>
+    																<xf:item>
+    																	<xf:label><![CDATA[대분류 선택]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    																<xf:item>
+    																	<xf:label><![CDATA[new row]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    																<xf:item>
+    																	<xf:label><![CDATA[new row]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    																<xf:item>
+    																	<xf:label><![CDATA[new row]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    															</xf:choices>
+    														</xf:select1>
+    														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    															class="wxs" direction="auto" disabled="true" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    															style="" submenuSize="auto">
+    															<xf:choices>
+    																<xf:item>
+    																	<xf:label><![CDATA[중분류 선택]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    																<xf:item>
+    																	<xf:label><![CDATA[new row]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    																<xf:item>
+    																	<xf:label><![CDATA[new row]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    																<xf:item>
+    																	<xf:label><![CDATA[new row]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    															</xf:choices>
+    														</xf:select1>
+    														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    															class="wxs" direction="auto" disabled="true" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    															style="" submenuSize="auto">
+    															<xf:choices>
+    																<xf:item>
+    																	<xf:label><![CDATA[소분류 선택]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    																<xf:item>
+    																	<xf:label><![CDATA[new row]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    																<xf:item>
+    																	<xf:label><![CDATA[new row]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    																<xf:item>
+    																	<xf:label><![CDATA[new row]]></xf:label>
+    																	<xf:value></xf:value>
+    																</xf:item>
+    															</xf:choices>
+    														</xf:select1>
+    														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    															<xf:label><![CDATA[추가하기]]></xf:label>
+    														</xf:trigger>
+    														<w2:textbox class="" id="" label="최대 5개 등록 가능" style=""></w2:textbox>
+    													</xf:group>
+    												</xf:group></xf:group></xf:group>
+    										</xf:group>
+    									</xf:group>
+    								</xf:group>
+    								<xf:group tagname="tr">
+    									<xf:group class="w2tb_th" style="" tagname="th">
+    										<w2:attributes>
+    											<w2:scope>row</w2:scope>
+    										</w2:attributes>
+    										<w2:textbox id="" label="연관키워드" style=""></w2:textbox>
+    									</xf:group>
+    									<xf:group class="w2tb_td" style="" tagname="td">
+    										<xf:group class="form-box" id="" style="">
+    											<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="" class="wxs"
+    												direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
+    												submenuSize="auto">
+    												<xf:choices>
+    													<xf:item>
+    														<xf:label><![CDATA[대분류 선택]]></xf:label>
+    														<xf:value></xf:value>
+    													</xf:item>
+    													<xf:item>
+    														<xf:label><![CDATA[new row]]></xf:label>
+    														<xf:value></xf:value>
+    													</xf:item>
+    													<xf:item>
+    														<xf:label><![CDATA[new row]]></xf:label>
+    														<xf:value></xf:value>
+    													</xf:item>
+    													<xf:item>
+    														<xf:label><![CDATA[new row]]></xf:label>
+    														<xf:value></xf:value>
+    													</xf:item>
+    												</xf:choices>
+    											</xf:select1>
+    											<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    												<xf:label><![CDATA[불러오기]]></xf:label>
+    											</xf:trigger>
+    											<xf:input adjustMaxLength="false" id="" placeholder="입력해주세요" style="" class="wl"></xf:input>
+    											<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    												<xf:label><![CDATA[직접입력]]></xf:label>
+    											</xf:trigger>
+    											<w2:textbox class="" id="" label="최대 10개 등록 가능" style=""></w2:textbox>
+    										</xf:group>
+    										<xf:group id="" class="grp-add-box">
+    											<xf:group style="" id="" class="add-box">
+    												<xf:group style="" id="" class="name">
+    													<w2:span style="" id="" label="#주식"></w2:span>
+    												</xf:group>
+    												<xf:trigger style="" id="" type="button" class="btn-delete">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    											<xf:group class="add-box" id="" style="">
+    												<xf:group class="name" id="" style="">
+    													<w2:span id="" label="#해외주식" style=""></w2:span>
+    												</xf:group>
+    												<xf:trigger class="btn-delete" id="" style="" type="button">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    											<xf:group class="add-box" id="" style="">
+    												<xf:group class="name" id="" style="">
+    													<w2:span id="" label="#환율" style=""></w2:span>
+    												</xf:group>
+    												<xf:trigger class="btn-delete" id="" style="" type="button">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    											<xf:group class="add-box" id="" style="">
+    												<xf:group class="name" id="" style="">
+    													<w2:span id="" label="#키워드4" style=""></w2:span>
+    												</xf:group>
+    												<xf:trigger class="btn-delete" id="" style="" type="button">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    											<xf:group class="add-box" id="" style="">
+    												<xf:group class="name" id="" style="">
+    													<w2:span id="" label="키워드5" style=""></w2:span>
+    												</xf:group>
+    												<xf:trigger class="btn-delete" id="" style="" type="button">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    											<xf:group class="add-box" id="" style="">
+    												<xf:group class="name" id="" style="">
+    													<w2:span id="" label="키워드5" style=""></w2:span>
+    												</xf:group>
+    												<xf:trigger class="btn-delete" id="" style="" type="button">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    											<xf:group class="add-box" id="" style="">
+    												<xf:group class="name" id="" style="">
+    													<w2:span id="" label="키워드5" style=""></w2:span>
+    												</xf:group>
+    												<xf:trigger class="btn-delete" id="" style="" type="button">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    											<xf:group class="add-box" id="" style="">
+    												<xf:group class="name" id="" style="">
+    													<w2:span id="" label="키워드5" style=""></w2:span>
+    												</xf:group>
+    												<xf:trigger class="btn-delete" id="" style="" type="button">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    											<xf:group class="add-box" id="" style="">
+    												<xf:group class="name" id="" style="">
+    													<w2:span id="" label="키워드5" style=""></w2:span>
+    												</xf:group>
+    												<xf:trigger class="btn-delete" id="" style="" type="button">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    											<xf:group class="add-box" id="" style="">
+    												<xf:group class="name" id="" style="">
+    													<w2:span id="" label="키워드5" style=""></w2:span>
+    												</xf:group>
+    												<xf:trigger class="btn-delete" id="" style="" type="button">
+    													<xf:label><![CDATA[삭제]]></xf:label>
+    												</xf:trigger>
+    											</xf:group>
+    										</xf:group>
+    										<xf:group class="form-box" id="" style="">
+    											<w2:textbox class="fc-d-gray" id=""
+    												label="분류 선택 후 직접입력 할 수 있습니다. 직접 입력 시 해당 분류의 연관키워드로 자동 저장됩니다.(분류 별 최대 20개 키워드 관리 가능)" style="">
+    											</w2:textbox>
+    										</xf:group>
+    										<xf:group class="form-box" id="" style="">
+    											<w2:textbox class="fc-d-gray" id=""
+    												label="분류 미선택 후 직접입력 시 해당 콘텐츠에만 연관키워드로 등록됩니다.(연관키워드 내 관리안함)" style="">
+    											</w2:textbox>
+    										</xf:group>
+    									</xf:group>
+    								</xf:group>
+    							<xf:group tagname="tr">
+    								<xf:group tagname="th" class="w2tb_th">
+    									<w2:attributes>
+    										<w2:scope>row</w2:scope>
+    									</w2:attributes>
+    									<w2:textbox id="" label="파일첨부" style=""></w2:textbox>
+    								</xf:group>
+    								<xf:group tagname="td" class="w2tb_td">
+    									<w2:attributes></w2:attributes>
+    									<xf:group class="upload-form-box" id="" style="">
+    										<xf:group class="form-header" id="" style="">
+    											<w2:textbox class="fc-d-gray" id="" label="첨부파일은 최대 10MB × 1개로 pdf 파일만 등록할 수 있습니다." style=""></w2:textbox>
+    										</xf:group>
+    										<xf:group class="form-contents" id="" style="">
+    											<xf:group class="upload-list-box" id="" style="">
+    												<w2:span class="notice" id="" label="파일첨부 영역을 클릭하거나, Drag&amp;Drop으로 파일을 업로드 하세요."
+    													style="">
+    												</w2:span>
+    												<xf:group class="table-box" id="" style="">
+    													<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+    														<w2:attributes>
+    															<w2:summary></w2:summary>
+    														</w2:attributes>
+    														<xf:group tagname="caption"></xf:group>
+    														<xf:group tagname="colgroup">
+    															<xf:group style="" tagname="col"></xf:group>
+    														</xf:group>
+    														<xf:group style="" tagname="tr">
+    															<xf:group class="w2tb_td" style="" tagname="td">
+    																<xf:group class="form-box" id="">
+    																	<w2:anchor class="btn-text" id="" outerDiv="false" style="">
+    																		<xf:label><![CDATA[업로드한 파일명이 출력됩니다(다운로드 가능).jpg(1542byte)]]></xf:label>
+    																	</w2:anchor>
+    																	<xf:trigger class="btn-delete" id="" style="" type="button">
+    																		<xf:label></xf:label>
+    																	</xf:trigger>
+    																</xf:group>
+    															</xf:group>
+    														</xf:group>
+    													</xf:group>
+    												</xf:group>
+    											<w2:multiupload id="" mode="html5_transparent" style="" uploadButton="false" wmode="false">
+    												</w2:multiupload></xf:group>
+    										</xf:group>
+    									</xf:group>
+    								</xf:group></xf:group><xf:group tagname="tr">
+	<xf:group tagname="th" class="w2tb_th">
+		<w2:attributes>
+			<w2:scope>row</w2:scope>
+		</w2:attributes>
+		<w2:textbox id="" label="배너1" style=""></w2:textbox>
+	</xf:group>
+	<xf:group tagname="td" class="w2tb_td">
+		<w2:attributes></w2:attributes>
+		<xf:group class="table-box" id="" style="">
+			<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+				<w2:attributes>
+					<w2:summary></w2:summary>
+				</w2:attributes>
+				<xf:group tagname="caption"></xf:group>
+				<xf:group tagname="colgroup">
+					<xf:group style="width:132px;" tagname="col"></xf:group>
+					<xf:group style="" tagname="col"></xf:group>
+				</xf:group>
+				<xf:group style="" tagname="tr">
+					<xf:group class="w2tb_th" style="" tagname="th"><w2:attributes>
+							<w2:scope>row</w2:scope>
+						</w2:attributes><w2:textbox id="" label="파일첨부" style=""></w2:textbox></xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:group class="upload-form-box" id="" style="">
+							<xf:group class="form-header" id="" style="">
+								<w2:textbox class="fc-d-gray" id="" label="첨부파일은 최대 10MB × 1개로 pdf 파일만 등록할 수 있습니다." style=""></w2:textbox>
+							</xf:group>
+							<xf:group class="form-contents" id="" style="">
+								<xf:group class="upload-list-box" id="" style="">
+									<w2:span class="notice" id="" label="파일첨부 영역을 클릭하거나, Drag&amp;Drop으로 파일을 업로드 하세요." style=""></w2:span>
+									<xf:group class="table-box" id="" style="">
+										<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+											<w2:attributes>
+												<w2:summary></w2:summary>
+											</w2:attributes>
+											<xf:group tagname="caption"></xf:group>
+											<xf:group tagname="colgroup">
+												<xf:group style="" tagname="col"></xf:group>
+											</xf:group>
+											<xf:group style="" tagname="tr">
+												<xf:group class="w2tb_td" style="" tagname="td">
+													<xf:group class="form-box" id="">
+														<w2:anchor class="btn-text" id="" outerDiv="false" style="">
+															<xf:label><![CDATA[업로드한 파일명이 출력됩니다(다운로드 가능).jpg(1542byte)]]></xf:label>
+														</w2:anchor>
+														<xf:trigger class="btn-delete" id="" style="" type="button">
+															<xf:label></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+											</xf:group>
+										</xf:group>
+									</xf:group>
+									<w2:multiupload id="" mode="html5_transparent" style="" uploadButton="false" wmode="false"></w2:multiupload>
+								</xf:group>
+							</xf:group>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<xf:group tagname="tr">
+					<xf:group class="w2tb_th" style="" tagname="th">
+						<w2:attributes>
+							<w2:scope>row</w2:scope>
+						</w2:attributes>
+						<w2:textbox id="" label="대체텍스트" style=""></w2:textbox>
+					</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<xf:input adjustMaxLength="false" id="" placeholder="대체텍스트를 입력해주세요" style="" class="w100"></xf:input>
+					</xf:group>
+				</xf:group>
+			<xf:group tagname="tr">
+				<xf:group tagname="th" class="w2tb_th">
+					<w2:attributes>
+						<w2:scope>row</w2:scope>
+					</w2:attributes>
+					<w2:textbox id="" label="이동경로" style=""></w2:textbox>
+				</xf:group>
+				<xf:group tagname="td" class="w2tb_td">
+					<w2:attributes></w2:attributes>
+					<xf:input adjustMaxLength="false" class="w100" id="" placeholder="이동 URL을 입력해주세요." style=""></xf:input>
+				</xf:group></xf:group></xf:group>
+		</xf:group>
+	</xf:group></xf:group><xf:group tagname="tr">
+	<xf:group tagname="th" class="w2tb_th">
+		<w2:attributes>
+			<w2:scope>row</w2:scope>
+		</w2:attributes>
+		<w2:textbox id="" label="연관섹터/테마" style=""></w2:textbox>
+	</xf:group>
+	<xf:group tagname="td" class="w2tb_td">
+		<w2:attributes></w2:attributes>
+		<xf:group class="form-box" id="" style="">
+			<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+				<xf:label><![CDATA[추가하기]]></xf:label>
+			</xf:trigger>
+			<w2:textbox class="" id="" label="최대 5개 등록 가능" style=""></w2:textbox>
+		</xf:group>
+		<xf:group class="add-box" id="" style="">
+			<xf:group class="name" id="" style="">
+				<w2:span id="" label="A000001 / 2차전지(전고체)" style=""></w2:span>
+			</xf:group>
+			<xf:trigger class="btn-delete" id="" style="" type="button">
+				<xf:label><![CDATA[삭제]]></xf:label>
+			</xf:trigger>
+		</xf:group>
+		<xf:group class="add-box" id="" style="">
+			<xf:group class="name" id="" style="">
+				<w2:span id="" label="A000003 / 2차전지" style=""></w2:span>
+			</xf:group>
+			<xf:trigger class="btn-delete" id="" style="" type="button">
+				<xf:label><![CDATA[삭제]]></xf:label>
+			</xf:trigger>
+		</xf:group>
+	</xf:group></xf:group><xf:group tagname="tr">
+	<xf:group tagname="th" class="w2tb_th">
+		<w2:attributes>
+			<w2:scope>row</w2:scope>
+		</w2:attributes>
+		<w2:textbox id="" label="연관메뉴" style=""></w2:textbox>
+	</xf:group>
+	<xf:group tagname="td" class="w2tb_td">
+		<w2:attributes></w2:attributes>
+		<xf:group class="form-box" id="" style="">
+			<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+				<xf:label><![CDATA[추가하기]]></xf:label>
+			</xf:trigger>
+			<w2:textbox class="" id="" label="최대 5개 등록 가능" style=""></w2:textbox>
+		</xf:group>
+		<xf:group class="add-box" id="" style="">
+			<xf:group class="name" id="" style="">
+				<w2:span id="" label="A000001 / 2차전지(전고체)" style=""></w2:span>
+
+			</xf:group>
+			<xf:group id="" class="cell">
+				<xf:input adjustMaxLength="false" style="" id="" placeholder="대체메뉴명을 입력하세요" class="wl"></xf:input>
+			</xf:group>
+			<xf:trigger class="btn-delete" id="" style="" type="button">
+				<xf:label><![CDATA[삭제]]></xf:label>
+			</xf:trigger>
+		</xf:group>
+		<xf:group class="add-box" id="" style="">
+			<xf:group class="name" id="" style="">
+				<w2:span id="" label="A000001 / 2차전지(전고체)" style=""></w2:span>
+			</xf:group>
+			<xf:group class="cell" id="">
+				<xf:input adjustMaxLength="false" class="wl" id="" placeholder="대체메뉴명을 입력하세요" style=""></xf:input>
+			</xf:group>
+			<xf:trigger class="btn-delete" id="" style="" type="button">
+				<xf:label><![CDATA[삭제]]></xf:label>
+			</xf:trigger>
+		</xf:group>
+	</xf:group></xf:group><xf:group tagname="tr">
+	<xf:group tagname="th" class="w2tb_th">
+		<w2:attributes>
+			<w2:scope>row</w2:scope>
+		</w2:attributes>
+		<w2:textbox id="" label="연관메뉴" style=""></w2:textbox>
+	</xf:group>
+	<xf:group tagname="td" class="w2tb_td">
+		<w2:attributes></w2:attributes>
+		<xf:group class="form-box" id="" style="">
+			<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+				<xf:label><![CDATA[추가하기]]></xf:label>
+			</xf:trigger>
+			<w2:textbox class="" id="" label="최대 5개 등록 가능" style=""></w2:textbox>
+		</xf:group>
+		<xf:group class="round-table-box" id="" style="">
+			<w2:textbox id="" label="등록된 상품/종목 정보가 없습니다." style="" class="nodata"></w2:textbox>
+			<xf:group class="w2tb tb" id="" style="" tagname="table">
+				<w2:attributes>
+					<w2:summary></w2:summary>
+				</w2:attributes>
+				<xf:group tagname="caption"></xf:group>
+				<xf:group tagname="colgroup">
+					<xf:group style="" tagname="col"></xf:group>
+					<xf:group tagname="col" style="width:60%;"></xf:group>
+					<xf:group style="width:10%;" tagname="col"></xf:group>
+				</xf:group>
+				<xf:group id="" tagname="thead">
+					<xf:group tagname="tr" style="">
+						<xf:group tagname="th" style="" class="w2tb_th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox style="" id="" label="메뉴번호"></w2:textbox>
+						</xf:group>
+						<xf:group tagname="th" style="" class="w2tb_th">
+							<w2:textbox style="" id="" label="메뉴명" class=""></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_th" style="" tagname="th">
+							<w2:textbox class="" id="" label="삭제" style=""></w2:textbox>
+						</xf:group>
+					</xf:group>
+				</xf:group>
+				<xf:group tagname="tr" style="">
+					<xf:group class="w2tb_td" style="" tagname="td">
+						<w2:attributes>
+							<w2:scope>row</w2:scope>
+						</w2:attributes>
+						<xf:input adjustMaxLength="false" id="" placeholder="메뉴번호를 입력하세요" style="" class="w100"></xf:input>
+					</xf:group>
+					<xf:group class="w2tb_td" style="" tagname="td"><xf:input adjustMaxLength="false" id="" placeholder="메뉴번호를 입력하세요" style="" class="w100"></xf:input></xf:group>
+					<xf:group tagname="td" class="w2tb_td tac">
+						<w2:attributes></w2:attributes>
+						<xf:trigger class="btn-delete" id="" style="" type="button">
+							<xf:label><![CDATA[삭제]]></xf:label>
+						</xf:trigger>
+					</xf:group>
+				</xf:group>
+				<xf:group tagname="tr">
+					<xf:group tagname="td" class="w2tb_td">
+						<w2:attributes></w2:attributes>
+						<xf:input adjustMaxLength="false" class="w100" id="" placeholder="메뉴번호를 입력하세요" style=""></xf:input>
+					</xf:group>
+					<xf:group tagname="td" class="w2tb_td">
+						<w2:attributes></w2:attributes>
+						<xf:input adjustMaxLength="false" class="w100" id="" placeholder="메뉴번호를 입력하세요" style=""></xf:input>
+					</xf:group>
+					<xf:group tagname="td" class="w2tb_td tac">
+						<w2:attributes></w2:attributes>
+						<xf:trigger class="btn-delete" id="" style="" type="button">
+							<xf:label><![CDATA[삭제]]></xf:label>
+						</xf:trigger>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</xf:group></xf:group></xf:group>
+    						</xf:group>
+    					</xf:group>
+    				</xf:group>
+    			</xf:group>
+    		</xf:group>
+    	</xf:group>
+    </body>
+</html>

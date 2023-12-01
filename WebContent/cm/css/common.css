@@ -99,10 +99,16 @@ body{
 	line-height: 1.8rem;
 }
 .fc-yellow {color: #FFDC00 !important;}
-.fc-blue {color: #2E74F2;}
-.fc-gray {color: #999;}
-.fc-d-gray {color: #666;}
+.fc-blue {color: #2E74F2 !important;}
+.fc-gray {color: #999 !important;}
+.fc-d-gray {color: #666 !important;}
 .fwb {font-weight: 900 !important;}
+
+/*align*/
+.tac {text-align: center !important;}
+.tar {text-align: right !important;}
+.tal {text-align: left !important;}
+.vam {vertical-align: middle !important;}
 
 /*width*/
 .wxs {width: 12rem !important; flex-grow: 0 !important;}
@@ -112,6 +118,10 @@ body{
 .wxl {width:25rem !important; flex-grow: 0 !important;}
 .w100 {width:100% !important;}
 
+/*flex*/
+.flex {display: flex;}
+.flex.-wrap {flex-wrap: wrap;}
+
 /*margin*/
 .mt10 {margin-top: 1rem;}
 
@@ -120,6 +130,9 @@ body{
 .title-box * {display: inline-block;}
 .table-box + .title-box {margin-top: 3.2rem;}
 .title-box .right {display: flex;gap: 0.6rem;margin-bottom: 1.2rem;}
+.title-box .left .btn {vertical-align: top;margin-top: 0.2rem;}
+.title-box .head-title + .btn {margin-left: 1.2rem;}
+.title-box .btn + .btn {margin-left: 0.6rem;}
 .head-title {margin-bottom:2rem;font-size: 2.2rem;line-height:3.4rem;font-weight: 700;}
 .sub-title {margin-bottom:1.2rem;font-size: 1.6rem;line-height: 2.4rem;font-weight: 700;}
 
@@ -178,7 +191,7 @@ body{
 .btn-line.small:disabled {border-color: #ccc;background-color: #F3F5F6;color: #ccc;}
 
 /*icon button*/
-.btn-icon {min-width: auto;height: 3.2rem;padding: 0 1.6rem 0 3.2rem;border-radius: 0.2rem;border:1px solid #AEB6D0;background-repeat: no-repeat;background-size: 2rem 2rem;background-position: 1.0rem 0.5rem;color: #42444E;font-size: 1.4rem;font-weight: 300;}
+.btn-icon {min-width: auto;height: 3.2rem;padding: 0 1.6rem 0 3.2rem;border-radius: 0.2rem;border:1px solid #AEB6D0;background-repeat: no-repeat;background-size: 2rem 2rem;background-position: 1.0rem 0.5rem;color: #42444E;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
 .btn-icon:hover {border-color: #4A567E;color: #4A567E;}
 .btn-icon:disabled {border-color: #ccc;background-color: #F3F5F6;color: #ccc;}
 .btn-icon.-download {background-image: url(../images/ico/ico-download.svg);background-repeat: no-repeat;background-size: 2rem 2rem;background-position: 1.0rem 0.5rem;}
@@ -256,7 +269,7 @@ body{
 .w2checkbox.small .w2checkbox_label,
 .w2radio.small .w2radio_label {padding-left:2.8rem;font-size: 1.3rem;line-height: 2rem;}
 .w2checkbox.small .w2checkbox_label::before,
-.w2radio.small .w2radio_label::before {top:3px;width: 2rem;height: 2rem;background-size: 2rem 2rem;}
+.w2radio.small .w2radio_label::before {top:1px;width: 2rem;height: 2rem;background-size: 2rem 2rem;}
 /*radio button round*/
 .w2radio.btn-round {display: flex;gap:0.4rem;}
 .w2radio.btn-round .w2radio_item {position: relative;height: 3.2rem;}
@@ -332,23 +345,29 @@ body{
 .form-box > .btn-delete,
 .form-box > .btn-text {flex-grow:0;}
 
-.add-box {display: flex;align-items: center;}
-.add-box .name {padding-left:1.2rem;background-color:#F3F5F6;border-radius: 0.4rem 0 0 0.4rem;}
+.add-box {display: flex;align-items:stretch;}
+.add-box .name {display: flex;align-items:center;padding-left:1.2rem;background-color:#F3F5F6;border-radius: 0.4rem 0 0 0.4rem;}
 .add-box span {display:inline-block;height: 3.2rem;line-height: 3.2rem;}
 .add-box span + span {margin-left: 0.8rem;}
 .add-box span + span::before {content: '';display: inline-block;width:2rem;height: 2rem;margin-right:0.8rem;background: url(../images/ico/ico-arrow-right.svg) no-repeat 0 0 / cover;transform: translate(0, 0.5rem);}
-.add-box .name + .btn-delete {width:4rem;height:3.2rem;padding-left: 0.8rem;padding-right:1.2rem;border-radius:0 0.4rem 0.4rem 0;background-color:#F3F5F6;background-size:2rem 2rem;background-position: 0.8rem 50%;}
+.add-box .btn-delete {width:4rem;height:3.2rem;padding-left: 0.8rem;padding-right:1.2rem;border-radius:0 0.4rem 0.4rem 0;background-color:#F3F5F6;background-size:2rem 2rem;background-position: 0.8rem 50%;}
 .add-box + .add-box {margin-top: 0.6rem;}
+
+.grp-add-box {display: flex;flex-wrap: wrap;column-gap: 0.6rem;row-gap: 0.6rem;margin:0.8rem 0;}
+.grp-add-box .add-box + .add-box {margin-top: 0;}
+.add-box .cell {padding: 0.6rem 0 0.6rem 0.8rem;background-color:#F3F5F6;}
+.add-box .cell + .btn-delete {height: 4.4rem;}
+.add-box .w2radio {margin-left: 0.4rem;}
 .search-box .add-box {margin-top:2.4rem;font-size: 1.4rem;font-weight: 300;gap:0.6rem;}
 .search-box .add-box .name {padding-right:1.2rem;border-radius: 0.4rem;}
 
 /*multiupload*/
-.upload-form-box .form-header {display: flex;justify-content: space-between;align-items: center;margin-bottom: 0.6rem;}
+.upload-form-box .form-header {display: flex;justify-content: space-between;align-items: center;height:3.2rem;margin-bottom: 0.6rem;}
 .upload-form-box .form-header .btn-box {position: relative;margin: 0;}
-.upload-form-box .form-header .w2multiupload_uploader {width: 100%;height: 100%;}
-.upload-form-box .form-header .w2multiupload_uploader input {cursor: pointer;}
+.upload-form-box .w2multiupload_uploader {left:0;top:0;width: 100%;height: 100%;}
+.upload-form-box .w2multiupload_uploader input {cursor: pointer;}
 .upload-form-box .form-header .w2multiupload_uploader:hover + .btn {border-color: #4A567E;background-image: url(../images/ico/ico-download-hover.svg);color: #4A567E;}
-.upload-form-box .form-contents .upload-list-box {position:relative;min-height:8rem;padding:1.6rem;border-radius: 0.3rem;border:1px dashed #ccc;background-color: #FBFBFB;}
+.upload-form-box .form-contents .upload-list-box {position:relative;min-height:5.2rem;padding:1.6rem;border-radius: 0.3rem;border:1px dashed #ccc;background-color: #FBFBFB;box-sizing: border-box;}
 .upload-form-box .form-contents .upload-list-box .notice {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:100%;font-weight: 300;line-height: 2rem;text-align: center;color:#999;}
 .upload-form-box .form-contents .upload-list-box .notice::before {content: '';display: inline-block;width:2rem;height: 2rem;margin-right:0.4rem;margin-bottom:0.3rem;background: url(../images/ico/ico-file-upload.svg) no-repeat 0 0 / cover;vertical-align: middle;}
 .upload-form-box .form-contents .upload-list-box .table-box {display: none;}
@@ -379,6 +398,9 @@ body{
 .search-box .tb .w2tb_th.req > .w2textbox:after,
 .search-box .tb .w2tb_th.req > span:after,
 .search-box .tb .w2tb_th .req:after {content: '*';position: absolute;right:-12px;color:#FF1C37;font-size: 1.6rem;}
+.table-box .tb thead .w2tb_th {height:3.6rem;text-align: center;font-size: 1.3rem;}
+.table-box .tb thead .w2tb_th:last-child {border-right: 0;}
+.table-box .tb thead + tbody > tr:first-child {border-top: 1px solid #ddd;}
 /*table td > table*/
 .table-box .tb .w2tb_td > .table-box {width:calc(100% + 2.4rem);margin-left: -1.2rem;margin-top: -0.6rem;margin-bottom: -0.6rem;}
 .table-box .tb .w2tb_td > .table-box .tb {border-top: 0;}
@@ -388,14 +410,22 @@ body{
 .table-box .tb .w2tb_td > .table-box .tb .w2tb_td {padding: 0.6rem 0;}
 .table-box .tb .w2tb_td > .table-box .tb tr:last-child {border-bottom: 0;}
 
+.round-table-box {border: 1px solid #ddd;border-radius: 0.4rem;overflow: hidden;}
+.round-table-box .tb {border-top: 0 !important;}
+.round-table-box .tb tbody tr {border-bottom:0;}
+.round-table-box .tb tbody tr + tr {border-top:1px solid #ddd;}
+.round-table-box .nodata {display:none;width:100%;margin:0.8rem 0;font-weight: 300;line-height: 2rem;text-align: center;color: #999;}
+.form-box + .round-table-box {margin-top: 0.6rem;}
+
 /*grid*/
-.grid-box .gvw {border-top: 1px solid #AEB6D0;min-height:8rem;}
-.grid-box .gvw .gridHeaderTableDefault {border: 0;border-bottom: 1px solid #ddd;}
+.grid-box .gvw {border-top: 1px solid #AEB6D0;border-bottom: 1px solid #ddd;min-height:8rem;}
+.grid-box .gvw table {border: 0;}
+.grid-box .gvw table thead {border:0;border-bottom:1px solid #ddd;}
 .grid-box .gvw th.gridHeaderTDDefault {padding:1.2rem 0.8rem;border: 0;background: #FBFBFB;font-size: 1.4rem;font-weight: 500;line-height: 2rem;}
 .grid-box .gvw th.gridHeaderTDDefault + th.gridHeaderTDDefault {border-left:1px solid #ddd;} 
 .grid-box .gvw .gridBodyDefault {height: 4.5rem;padding:0 0.8rem;border: 0;vertical-align: middle;line-height:1.3rem;font-size:1.3rem;font-weight:300;box-sizing: border-box;}
 .grid-box .gvw .gridBodyDefault + .gridBodyDefault {border-left: 1px solid #ddd;}
-.grid-box .gvw .grid_body_row {border-bottom: 1px solid #ddd;}
+.grid-box .gvw .grid_body_row + .grid_body_row {border-top: 1px solid #ddd;}
 .grid-box .gvw .gridHeaderTableDefault th[inputtype="checkbox"] {position: relative;}
 .grid-box .gvw .gridHeaderTableDefault input[type="checkbox"] {position:absolute;left:0;top:0;width:100%;height: 100%;margin:0;opacity: 0;}
 .grid-box .gvw .gridHeaderTableDefault input[type="checkbox"] + label {display:block;width:100%;height:2rem;background: url(../images/ico/ico-checkbox-default.svg) no-repeat 50% 0 / 2rem 2rem;text-indent: -9999em;}
@@ -405,7 +435,7 @@ body{
 .grid-box .gvw .gridHeaderTableDefault .w2grid_default_disabled input[type="checkbox"] + label,
 .grid-box .gvw .gridHeaderTableDefault input[type="checkbox"]:disabled + label {background-image: url(../images/ico/ico-checkbox-default-disabled.svg);}
 .grid-box .gvw .gridHeaderTableDefault td[inputtype="link"] a {height:40%;text-decoration: underline;color: #2E74F2;overflow: hidden;text-overflow: ellipsis;}
-.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"] button {width:auto !important;height: 2.4rem !important;border:1px solid #AEB6D0;border-radius:0.2rem;background:#fff;padding-left: 1rem;padding-right:1rem;font-size: 1.2rem;font-weight: 300;color:#42444E;line-height: 2rem;box-sizing: border-box;}
+.grid-box .gvw .gridHeaderTableDefault td[inputtype="button"] button {width:auto !important;height: 2.4rem !important;border:1px solid #AEB6D0;border-radius:0.2rem;background:#fff;padding-left: 1rem;padding-right:1rem;font-size: 1.2rem;font-weight: 300;color:#42444E;line-height: 1rem;box-sizing: border-box;}
 .grid-box .gvw .gridHeaderTableDefault td[inputtype="button"] button:hover {color: #4A567E;border-color: #4A567E;}
 .grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].w2grid_default_disabled button {border-color: #ccc;background-color: #F3F5F6;color:#999;cursor: default;}
 .grid-box .gvw .gridHeaderTableDefault td[inputtype="button"].ico-download button {padding-left:2.6rem;background:#fff url(../images/ico/ico-download.svg) no-repeat 0.6rem 0 / 2rem 2rem;}
