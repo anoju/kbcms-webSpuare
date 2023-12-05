@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:buildDate/>
+        <w2:userPalette defaultIcon="i_group.png" desc=""/>
+        <xf:model>
+            <xf:instance>
+                <data xmlns=""/>
+            </xf:instance>
+        </xf:model>
+        <script type="text/javascript"><![CDATA[ ]]></script>
+    </head>
+    <body><xf:group class="tooltip-box" id="" style="">
+	<xf:trigger centerOnImageClass="" class="btn-tooltip" id="" style="" type="button">
+		<xf:label>
+<![CDATA[도움말보기]]></xf:label>
+</xf:trigger>
+	<xf:group class="balloon" id="" style="">
+		<xf:group class="inner" id="">
+			<w2:textbox id="" label="툴팁 스크립트 참고" style="">
+			</w2:textbox>
+			<xf:trigger centerOnImageClass="" class="btn-closed" id="" style="" type="button">
+				<xf:label>
+<![CDATA[도움말닫기]]></xf:label>
+</xf:trigger>
+</xf:group>
+</xf:group>
+</xf:group>
+</body>
+</html>

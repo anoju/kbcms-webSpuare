@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map"/>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+    //코멘트 솔팅 버튼 스타일 
+    function commentSort(){
+        const btnSortComment = $('.comment-control').find('a');
+
+        btnSortComment.on('click', function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    }
+    commentSort();
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:group class="wrap" id="" style="">
+    		<w2:wframe class="header_frame" id="" src="main_header.xml" style=""></w2:wframe>
+    		<xf:group class="contents-box" id="" style="">
+    			<w2:wframe class="side-menu-frame" id="" src="side_menu.xml" style=""></w2:wframe>
+    			<xf:group class="page-box" id="" style="">
+    				<xf:group class="contents" id="" style="">
+    					<xf:group class="title-box" id="" style="">
+    						<w2:textbox class="head-title" id="" label="콘텐츠 미리보기" style="" tagname="h2"></w2:textbox>
+    						<xf:group class="breadcrumb" id="" style="">
+    							<xf:group class="" id="" style="" tagname="ul">
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[홈]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[콘텐츠 생성배포]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[콘텐츠 제작요청]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[콘텐츠 미리보기]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    							</xf:group>
+    						</xf:group>
+    					</xf:group>
+    					<xf:group class="layer-box" id="" style="">
+    						<xf:group class="title-box" id="" style="">
+    							<w2:textbox class="sub-title" id="" label="AEM 콘텐츠 미리보기" style="" tagname="h3"></w2:textbox>
+    						</xf:group>
+    						<xf:group class="contents-view-box" id="" style="">
+    							<xf:group class="contents-view-box" id=""
+    								style="height: 400px;background-color: rgba(0,0,0,0.5);display: flex;align-items:center;">
+    								<w2:textbox class="fc-yellow tac fs-15 fwb" id="" label="AEM 콘텐츠 노출" style="width:100%"></w2:textbox>
+    							</xf:group>
+    						</xf:group>
+    						<xf:group class="title-box" id="" style="">
+    							<w2:textbox class="sub-title" id="" label="댓글" style="" tagname="h3"></w2:textbox>
+    						</xf:group>
+    						<xf:group class="comment-box" id="" style="">
+    							<xf:group class="comment-title" id="" style="">
+    								<xf:group class="left" id="" style="">
+    									<w2:span id="" label="김증권(WM상품부)" style="" class="user-name"></w2:span>
+    									<w2:span id="" label="2023-07-14 12:23:30" style="" class="date"></w2:span>
+    								</xf:group>
+    								<xf:group class="right" id="" style="">
+    									<w2:span id="" label="0" style="" class="fc-blue"></w2:span>
+    									<w2:span id="" label="/" style=""></w2:span>
+    									<w2:span id="" label="500" style="" class="total"></w2:span>
+    								</xf:group>
+    							</xf:group>
+    							<xf:group class="comments" id="" style="">
+    								<xf:textarea id="" style="" placeholder="댓글을 입력해주세요."></xf:textarea>
+    								<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    									<xf:label><![CDATA[저장]]></xf:label>
+    								</xf:trigger>
+    							</xf:group>
+    						</xf:group>
+    						<xf:group class="comment-list-box" id="" style="">
+    							<xf:group class="comment-control" id="" style="">
+    								<w2:anchor class="recent active" id="" outerDiv="false" style="" role="button">
+    									<xf:label><![CDATA[최신순]]></xf:label>
+    								</w2:anchor>
+    								<w2:anchor class="upload" id="" outerDiv="false" style="" role="button">
+    									<xf:label><![CDATA[등록순]]></xf:label>
+    								</w2:anchor>
+    							</xf:group>
+    							<xf:group class="comment-box" id="" style="">
+    								<xf:group class="comment-title" id="" style="">
+    									<xf:group class="left" id="" style="">
+    										<w2:span class="user-name" id="" label="김증권(WM상품부)" style=""></w2:span>
+    										<w2:span class="date" id="" label="2023-07-14 12:23:30" style=""></w2:span>
+    									</xf:group>
+    									<xf:group class="right" id="" style="">
+    										<xf:trigger centerOnImageClass="" class="btn btn-line small" id="" style="" type="button">
+    											<xf:label><![CDATA[삭제]]></xf:label>
+    										</xf:trigger>
+    										<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    											<xf:label><![CDATA[수정]]></xf:label>
+    										</xf:trigger>
+    									</xf:group>
+    								</xf:group>
+    								<xf:group class="comments" id="" style="">
+    									<xf:group class="number" id="" style="">
+    										<w2:span id="" label="45" style=""></w2:span>
+    									</xf:group>
+    									<w2:textbox id=""
+    										label="댓글을 출력합니다. 콘텐츠 내용에 오타가 있어요. 빠른 수정 부탁 드립니다.&lt;br/&gt;내일 중에 배포되어야 하는 콘텐츠 입니다" style="" class="txt">
+    									</w2:textbox>
+    								</xf:group>
+    							</xf:group>
+    							<xf:group class="comment-box" id="" style="">
+    								<xf:group class="comment-title" id="" style="">
+    									<xf:group class="left" id="" style="">
+    										<w2:span class="user-name" id="" label="김증권(WM상품부)" style=""></w2:span>
+    										<w2:span class="date" id="" label="2023-07-14 12:23:30" style=""></w2:span>
+    									</xf:group>
+    									<xf:group class="right" id="" style="">
+    										<w2:span class="fc-blue" id="" label="0" style=""></w2:span>
+    										<w2:span id="" label="/" style=""></w2:span>
+    										<w2:span class="total" id="" label="500" style=""></w2:span>
+    									</xf:group>
+    								</xf:group>
+    								<xf:group class="comments" id="" style="">
+    									<xf:textarea id="" placeholder="댓글을 입력해주세요." style=""></xf:textarea>
+    									<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    										<xf:label><![CDATA[저장]]></xf:label>
+    									</xf:trigger>
+    								</xf:group>
+    							</xf:group>
+    							<xf:group class="comment-box" id="" style="">
+    								<xf:group class="comment-title" id="" style="">
+    									<xf:group class="left" id="" style="">
+    										<w2:span class="user-name" id="" label="이담당(콘텐츠전략 Squad)" style=""></w2:span>
+    										<w2:span class="date" id="" label="2023-07-14 12:23:30" style=""></w2:span>
+    									</xf:group>
+    								</xf:group>
+    								<xf:group class="comments" id="" style="">
+    									<xf:group class="number" id="" style="">
+    										<w2:span id="" label="44" style=""></w2:span>
+    									</xf:group>
+    									<w2:textbox class="txt" id=""
+    										label="댓글을 출력합니다. 콘텐츠 내용에 오타가 있어요. 빠른 수정 부탁 드립니다.&lt;br/&gt;내일 중에 배포되어야 하는 콘텐츠 입니다" style="">
+    									</w2:textbox>
+    								</xf:group>
+    							</xf:group>
+    						</xf:group>
+
+    						<w2:pageList displayButtonType="display" displayFormat="#" id=""
+    							leftPageBackImage="/cm/images/ico/ico-double-arrow.svg" leftPageImage="/cm/images/ico/ico-single-arrow.svg" pageSize="10"
+    							rightPageBackImage="/cm/images/ico/ico-double-arrow-right.svg" rightPageImage="/cm/images/ico/ico-single-arrow-right.svg"
+    							style="">
+    						</w2:pageList>
+    					</xf:group>
+    				</xf:group>
+    			</xf:group>
+    		</xf:group>
+    	</xf:group>
+    </body>
+</html>

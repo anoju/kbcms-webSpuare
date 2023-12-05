@@ -3461,12 +3461,12 @@
 							<xf:group class="tab-box" id="">
 								<w2:tabControl alwaysDraw="false" class="tc-btn-type" closable="true" confirmFalseAction="new"
 									confirmTrueAction="exist" id="" style="" useConfirmMessage="false" useMoveNextTabFocus="false" useTabKeyOnly="true">
-									<w2:tabs disabled="false" id="tabs1" label="매체(마블)정보" style=""></w2:tabs>
-									<w2:tabs disabled="false" id="tabs2" label="매체(마블미니) 정보" style=""></w2:tabs>
-									<w2:tabs disabled="false" id="tabs3" label="매체(WTS) 정보" style=""></w2:tabs>
+									<w2:tabs disabled="false" id="tabs1" label="탭메뉴타이틀" style=""></w2:tabs>
+									<w2:tabs disabled="false" id="tabs2" label="탭메뉴타이틀2" style=""></w2:tabs>
+									<w2:tabs disabled="false" id="tabs3" label="탭메뉴타이틀타이틑타이틀" style=""></w2:tabs>
 									<w2:content alwaysDraw="false" id="content1" style="">
 										<xf:group class="title-box" id="" style="">
-											<w2:textbox class="sub-title" id="" label="매체 별 전시정보" style="" tagname="h3"></w2:textbox>
+											<w2:textbox class="sub-title" id="" label="탭 메뉴 컨탠츠 영역111" style="" tagname="h3"></w2:textbox>
 										</xf:group>
 										<xf:group class="table-box" id="" style="">
 											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
@@ -3483,7 +3483,7 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="매체 선택" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" style="" tagname="td">
 														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
@@ -3515,10 +3515,10 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" style="" tagname="td">
-														<w2:textbox class="fs-15" id="" label="자동생성됩니다" style=""></w2:textbox>
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
 													</xf:group>
 												</xf:group>
 												<xf:group tagname="tr">
@@ -3526,11 +3526,11 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" tagname="td">
 														<w2:attributes></w2:attributes>
-														<w2:textbox class="fs-15" id="" label="게시글 생성 후 단축URL을 생성할 수 있습니다." style=""></w2:textbox>
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
 													</xf:group>
 												</xf:group>
 												<xf:group tagname="tr">
@@ -3538,16 +3538,13 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" tagname="td">
 														<w2:attributes></w2:attributes>
-														<w2:span class="mr10" id=""
-															label="Http://app.kbsec.com/scr/index.html?id=5181&amp;key=2839&amp;date=2023/08/11" style="">
-														</w2:span>
-														<xf:trigger class="btn btn-primary small" ev:onclick="scwin.trigger1_onclick" id=""
-															style="" type="button">
-															<xf:label><![CDATA[복사하기]]></xf:label>
+														<w2:span class="mr10" id="" label="text" style=""></w2:span>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[small btn]]></xf:label>
 														</xf:trigger>
 													</xf:group>
 												</xf:group>
@@ -3556,12 +3553,12 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" tagname="td">
 														<w2:attributes></w2:attributes>
 														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
-															<xf:label><![CDATA[단축 URL 생성하기]]></xf:label>
+															<xf:label><![CDATA[small btn]]></xf:label>
 														</xf:trigger>
 													</xf:group>
 												</xf:group>
@@ -3570,7 +3567,7 @@
 									</w2:content>
 									<w2:content alwaysDraw="false" id="content2" style="">
 										<xf:group class="title-box" id="" style="">
-											<w2:textbox class="sub-title" id="" label="매체 별 전시정보2" style="" tagname="h3"></w2:textbox>
+											<w2:textbox class="sub-title" id="" label="탭 메뉴 컨탠츠 영역222" style="" tagname="h3"></w2:textbox>
 										</xf:group>
 										<xf:group class="table-box" id="" style="">
 											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
@@ -3587,7 +3584,7 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="매체 선택" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" style="" tagname="td">
 														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
@@ -3619,10 +3616,10 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" style="" tagname="td">
-														<w2:textbox class="fs-15" id="" label="자동생성됩니다" style=""></w2:textbox>
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
 													</xf:group>
 												</xf:group>
 												<xf:group tagname="tr">
@@ -3630,11 +3627,11 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" tagname="td">
 														<w2:attributes></w2:attributes>
-														<w2:textbox class="fs-15" id="" label="게시글 생성 후 단축URL을 생성할 수 있습니다." style=""></w2:textbox>
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
 													</xf:group>
 												</xf:group>
 												<xf:group tagname="tr">
@@ -3642,15 +3639,13 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" tagname="td">
 														<w2:attributes></w2:attributes>
-														<w2:span class="mr10" id=""
-															label="Http://app.kbsec.com/scr/index.html?id=5181&amp;key=2839&amp;date=2023/08/11" style="">
-														</w2:span>
+														<w2:span class="mr10" id="" label="text" style=""></w2:span>
 														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
-															<xf:label><![CDATA[복사하기]]></xf:label>
+															<xf:label><![CDATA[small btn]]></xf:label>
 														</xf:trigger>
 													</xf:group>
 												</xf:group>
@@ -3659,12 +3654,12 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" tagname="td">
 														<w2:attributes></w2:attributes>
 														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
-															<xf:label><![CDATA[단축 URL 생성하기]]></xf:label>
+															<xf:label><![CDATA[small btn]]></xf:label>
 														</xf:trigger>
 													</xf:group>
 												</xf:group>
@@ -3673,7 +3668,7 @@
 									</w2:content>
 									<w2:content alwaysDraw="false" id="content3" style="">
 										<xf:group class="title-box" id="" style="">
-											<w2:textbox class="sub-title" id="" label="매체 별 전시정보3" style="" tagname="h3"></w2:textbox>
+											<w2:textbox class="sub-title" id="" label="탭 메뉴 컨탠츠 영역333" style="" tagname="h3"></w2:textbox>
 										</xf:group>
 										<xf:group class="table-box" id="" style="">
 											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
@@ -3690,7 +3685,7 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="매체 선택" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" style="" tagname="td">
 														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
@@ -3722,10 +3717,10 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" style="" tagname="td">
-														<w2:textbox class="fs-15" id="" label="자동생성됩니다" style=""></w2:textbox>
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
 													</xf:group>
 												</xf:group>
 												<xf:group tagname="tr">
@@ -3733,11 +3728,11 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" tagname="td">
 														<w2:attributes></w2:attributes>
-														<w2:textbox class="fs-15" id="" label="게시글 생성 후 단축URL을 생성할 수 있습니다." style=""></w2:textbox>
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
 													</xf:group>
 												</xf:group>
 												<xf:group tagname="tr">
@@ -3745,15 +3740,13 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" tagname="td">
 														<w2:attributes></w2:attributes>
-														<w2:span class="mr10" id=""
-															label="Http://app.kbsec.com/scr/index.html?id=5181&amp;key=2839&amp;date=2023/08/11" style="">
-														</w2:span>
+														<w2:span class="mr10" id="" label="text" style=""></w2:span>
 														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
-															<xf:label><![CDATA[복사하기]]></xf:label>
+															<xf:label><![CDATA[small btn]]></xf:label>
 														</xf:trigger>
 													</xf:group>
 												</xf:group>
@@ -3762,12 +3755,12 @@
 														<w2:attributes>
 															<w2:scope>row</w2:scope>
 														</w2:attributes>
-														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
 													</xf:group>
 													<xf:group class="w2tb_td" tagname="td">
 														<w2:attributes></w2:attributes>
 														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
-															<xf:label><![CDATA[단축 URL 생성하기]]></xf:label>
+															<xf:label><![CDATA[small btn]]></xf:label>
 														</xf:trigger>
 													</xf:group>
 												</xf:group>

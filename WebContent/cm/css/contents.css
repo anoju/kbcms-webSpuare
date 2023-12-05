@@ -1,0 +1,21 @@
+
+@charset "utf-8";
+
+/*댓글영역*/
+.contents-view-box {margin-bottom: 3.2rem;}
+.comment-box .comment-title {display: flex;justify-content: space-between;align-items: center;margin-bottom: 1.2rem;}
+.comment-box .comment-title .user-name {font-size: 1.5rem;font-weight: 500;line-height: 2.2rem;}
+.comment-box .comment-title .date {font-size: 1.5rem;font-weight: 300;line-height: 2.2rem;color: #666;}
+.comment-box .comment-title .user-name + .date::before,
+.comment-list-box .comment-control a + a::before {content: '';display:inline-block;width: 1px;height: 1.6rem;margin:0 1.2rem;background-color: #D9D9D9;transform: translateY(2px);}
+.comment-box .comment-title .right {display:flex;gap:0.4rem;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
+.comment-box .comment-title .right .fc-blue {font-weight: 500;}
+.comment-box .comments {display: flex;gap:0.6rem;}
+.comment-box .comments textarea {flex-grow: 1;}
+.comment-box .comments .btn-primary {flex-shrink: 0;height: 7.2rem;width: 7.2rem;}
+.comment-box .comments .number {height: 4.4rem;width: 6.5rem;padding: 0.6rem 0;margin-right:1.8rem;background-color:#F3F5F6;border-radius: 0.4rem;font-size: 2rem;font-weight: 700;line-height: 3.2rem;color: #42444E; text-align: center;box-sizing: border-box;}
+.comment-box .comments .txt {flex-grow:1;font-size: 1.5rem; font-weight: 300;line-height: 2.2rem;color:#666;}
+.comment-list-box .comment-control {margin-top:4rem;padding-bottom:2.4rem;border-bottom: 1px dashed #ccc;}
+.comment-list-box .comment-control a {display: inline-block;font-size: 1.5rem;font-weight: 300;line-height: 2.2rem;color:#999;}
+.comment-list-box .comment-control a.active {font-weight: 500;color:#202020;}
+.comment-list-box .comment-box {padding: 2.4rem 0;border-bottom:1px dashed #ccc;}
