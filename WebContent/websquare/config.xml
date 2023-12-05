@@ -131,16 +131,16 @@
 			<date displayFormat="yyyy-MM-dd" />
 		</dataType>
 		<editType value="focus" />
-		<rowNumBackgroundColor value="#e5eff7" />
-		<selectedRowColor value="#fcf8e3" />
-		<oddEvenColorDisplay value="true" />
-		<evenRowBackgroundColor value="#f5f5f5" />
-		<oddRowBackgroundColor value="#ffffff" />
-		<rowMouseOver value="true" />
-		<rowMouseOverColor value="#edf3fb" />
+		<rowNumBackgroundColor value="" />
+		<selectedRowColor value="rgba(46, 116, 242, 0.05)" />
+		<oddEvenColorDisplay value="" />
+		<evenRowBackgroundColor value="" />
+		<oddRowBackgroundColor value="" />
+		<rowMouseOver value="" />
+		<rowMouseOverColor value="" />
 		<tooltipStyle value="padding:1px 3px 0;line-height:14px;font-size:12px;border:0;background-color:#5c85d4;color:#fff" />
 		<noResultMessageVisible value="true" />
-		<noResultMessage value="데이터가 없음" />
+		<noResultMessage value="데이터가 없습니다." />
 		<noResultMessageStyle
 			value="position:absolute; left:40%; width:20%; top:40%; border:1px solid #b3b3b3; color:#383d41; font-size:12px; padding:5px; text-align:center; background:#fafafa" />
 		<pasteMessage value="데이터 붙이는 중" />
@@ -168,6 +168,7 @@
 		<sortEvent value="onclick"></sortEvent>
 		<showSortableImage value="true"></showSortableImage>
 		<keepDefaultColumnWidth value="true"></keepDefaultColumnWidth>
+		<selectedCellColor value="rgba(46, 116, 242, 0.05)"></selectedCellColor>
 	</gridView>
 	<inputCalendar>
 		<validCheck value="false" />

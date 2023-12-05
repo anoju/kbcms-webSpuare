@@ -357,25 +357,25 @@ export default {
         "@value": "focus"
       },
       "rowNumBackgroundColor": {
-        "@value": "#e5eff7"
+        "@value": ""
       },
       "selectedRowColor": {
-        "@value": "#fcf8e3"
+        "@value": "rgba(46, 116, 242, 0.05)"
       },
       "oddEvenColorDisplay": {
-        "@value": "true"
+        "@value": ""
       },
       "evenRowBackgroundColor": {
-        "@value": "#f5f5f5"
+        "@value": ""
       },
       "oddRowBackgroundColor": {
-        "@value": "#ffffff"
+        "@value": ""
       },
       "rowMouseOver": {
-        "@value": "true"
+        "@value": ""
       },
       "rowMouseOverColor": {
-        "@value": "#edf3fb"
+        "@value": ""
       },
       "tooltipStyle": {
         "@value": "padding:1px 3px 0;line-height:14px;font-size:12px;border:0;background-color:#5c85d4;color:#fff"
@@ -384,7 +384,7 @@ export default {
         "@value": "true"
       },
       "noResultMessage": {
-        "@value": "데이터가 없음"
+        "@value": "데이터가 없습니다."
       },
       "noResultMessageStyle": {
         "@value": "position:absolute; left:40%; width:20%; top:40%; border:1px solid #b3b3b3; color:#383d41; font-size:12px; padding:5px; text-align:center; background:#fafafa"
@@ -463,6 +463,9 @@ export default {
       },
       "keepDefaultColumnWidth": {
         "@value": "true"
+      },
+      "selectedCellColor": {
+        "@value": "rgba(46, 116, 242, 0.05)"
       }
     },
     "inputCalendar": {
