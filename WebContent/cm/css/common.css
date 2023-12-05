@@ -516,6 +516,7 @@ body{
 .tooltip-box {display: inline-block;position: relative;width: 2rem;height: 2rem;margin-left: 0.5rem;}
 .tooltip-box .balloon {display:none;position:absolute;top:0;left:0;width:30rem;padding: 2rem;background-color:#fff;border-radius:0.8rem;border:1px solid #ccc;font-size: 1.4rem;font-weight: 300;line-height: 2rem;box-sizing:border-box;box-shadow: 0.4rem 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.08);z-index: 50;}
 .tooltip-box .balloon .inner {display: flex;}
+.tooltip-box .balloon .w2textbox {flex: 1;}
 .tooltip-box .balloon .btn-closed {flex-shrink: 0;width: 2rem;height: 2rem;border: 0;outline: 0;background: url(../images/btn/btn-closed.svg) no-repeat 0 0 / cover;text-indent: -999em;}
 /******common component end*******/
 

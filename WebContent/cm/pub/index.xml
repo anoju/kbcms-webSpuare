@@ -163,6 +163,31 @@
 					}
         		});
     		};
+            //버튼 있는 tab
+            function tabBtn(){
+                const buttonBox = $('<li class="tab-control-box w2tabcontrol_li"></li>');
+
+                const tabAddBtn = $('<a href role="button" id="addTabLi" class="btn-dotline">추가하기</a>');
+                const tabCopyPaste = $('<a href role="button" class="btn-dotline">복사 추가하기</a>');
+
+                buttonBox.append(tabAddBtn);
+                buttonBox.append(tabCopyPaste);
+
+                $('.w2tabcontrol_tabhost').append(buttonBox);
+            }
+    //툴팁
+            function tooltipOn(){
+                const btnTooltipOn = $('.btn-tooltip');
+                const btnToolTipOff = btnTooltipOn.next().find('.btn-closed');
+
+                btnTooltipOn.on('click',function(){
+                    $(this).next().fadeIn();
+                });
+                btnToolTipOff.on('click', function(){
+                    $(this).closest('.balloon').fadeOut();
+                });
+
+            }
 
 
             addBoxVisibility();
@@ -170,6 +195,8 @@
 			uploadVisibility();
             deleteBtn(); 
     		searchListExpand();
+            tooltipOn();
+            tabBtn();
 	};
 	
 	scwin.onpageunload = function() {
@@ -418,28 +445,31 @@
 											<w2:textbox class="fc-d-gray" id="" label=".fc-d-gray" style=""></w2:textbox>
 										</xf:group>
 									</xf:group>
-								<xf:group tagname="tr">
-									<xf:group tagname="th" class="w2tb_th">
-										<w2:attributes>
-											<w2:scope>row</w2:scope>
-										</w2:attributes>
-										<w2:textbox id="" label="text정렬" style=""></w2:textbox>
+									<xf:group tagname="tr">
+										<xf:group tagname="th" class="w2tb_th">
+											<w2:attributes>
+												<w2:scope>row</w2:scope>
+											</w2:attributes>
+											<w2:textbox id="" label="text정렬" style=""></w2:textbox>
+										</xf:group>
+										<xf:group tagname="td" class="w2tb_td">
+											<w2:attributes></w2:attributes>
+											<w2:textbox class="tal" id="" label="left" style=""></w2:textbox>
+											<w2:textbox class="tac" id="" label="center" style=""></w2:textbox>
+											<w2:textbox class="tar" id="" label="right" style=""></w2:textbox>
+										</xf:group>
+										<xf:group tagname="th" class="w2tb_th">
+											<w2:attributes>
+												<w2:scope>row</w2:scope>
+											</w2:attributes>
+											<w2:textbox id="" label="vertical-align:middle" style=""></w2:textbox>
+										</xf:group>
+										<xf:group tagname="td" class="w2tb_td">
+											<w2:attributes></w2:attributes>
+											<w2:span id="" label="middle" style="" class="vam"></w2:span>
+										</xf:group>
 									</xf:group>
-									<xf:group tagname="td" class="w2tb_td">
-										<w2:attributes></w2:attributes>
-										<w2:textbox class="tal" id="" label="left" style=""></w2:textbox>
-										<w2:textbox class="tac" id="" label="center" style=""></w2:textbox>
-										<w2:textbox class="tar" id="" label="right" style=""></w2:textbox>
-									</xf:group>
-									<xf:group tagname="th" class="w2tb_th">
-										<w2:attributes>
-											<w2:scope>row</w2:scope>
-										</w2:attributes>
-										<w2:textbox id="" label="vertical-align:middle" style=""></w2:textbox>
-									</xf:group>
-									<xf:group tagname="td" class="w2tb_td">
-										<w2:attributes></w2:attributes>
-									<w2:span id="" label="middle" style="" class="vam"></w2:span></xf:group></xf:group></xf:group>
+								</xf:group>
 							</xf:group>
 						</xf:group>
 						<xf:group class="layer-box" id="" style="">
@@ -583,6 +613,19 @@
 												<w2:scope>row</w2:scope>
 											</w2:attributes>
 											<w2:textbox id="" label="input text" style=""></w2:textbox>
+											<xf:group class="tooltip-box" id="" style="">
+												<xf:trigger centerOnImageClass="" class="btn-tooltip" id="" style="" type="button">
+													<xf:label><![CDATA[도움말보기]]></xf:label>
+												</xf:trigger>
+												<xf:group class="balloon" id="" style="">
+													<xf:group class="inner" id="">
+														<w2:textbox id="" label="툴팁 스크립트 참고" style=""></w2:textbox>
+														<xf:trigger centerOnImageClass="" class="btn-closed" id="" style="" type="button">
+															<xf:label><![CDATA[도움말닫기]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+											</xf:group>
 										</xf:group>
 										<xf:group class="w2tb_td" style="" tagname="td">
 											<xf:input adjustMaxLength="false" id="" style="" placeholder="입력해주세요"></xf:input>
@@ -958,12 +1001,14 @@
 											</xf:group>
 											<xf:group class="upload-form-box" id="" style="">
 												<xf:group class="form-header" id="" style="">
-													<w2:textbox class="fc-d-gray" id="" label="첨부파일은 최대 10MB × 1개로 pdf 파일만 등록할 수 있습니다." style="">
+													<w2:textbox class="fc-d-gray" id="" label="첨부파일은 최대 10MB × 1개로 pdf 파일만 등록할 수 있습니다."
+														style="">
 													</w2:textbox>
 												</xf:group>
 												<xf:group class="form-contents" id="" style="">
 													<xf:group class="upload-list-box" id="" style="">
-														<w2:span class="notice" id="" label="파일첨부 영역을 클릭하거나, Drag&amp;Drop으로 파일을 업로드 하세요." style="">
+														<w2:span class="notice" id="" label="파일첨부 영역을 클릭하거나, Drag&amp;Drop으로 파일을 업로드 하세요."
+															style="">
 														</w2:span>
 														<xf:group class="table-box" id="" style="">
 															<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
@@ -988,12 +1033,13 @@
 																</xf:group>
 															</xf:group>
 														</xf:group>
-														<w2:multiupload id="" mode="html5_transparent" style="" uploadButton="false" wmode="false">
+														<w2:multiupload id="" mode="html5_transparent" style="" uploadButton="false"
+															wmode="false">
 														</w2:multiupload>
 													</xf:group>
 												</xf:group>
 											</xf:group>
-											
+
 										</xf:group>
 									</xf:group>
 									<xf:group tagname="tr">
@@ -1476,7 +1522,8 @@
 												</xf:group>
 											</xf:group>
 										</xf:group>
-									</xf:group></xf:group>
+									</xf:group>
+								</xf:group>
 							</xf:group>
 						</xf:group>
 						<xf:group class="title-box mt10" id="" style="">
@@ -1797,8 +1844,12 @@
 												</w2:attributes>
 												<w2:textbox id="" label="thead" style=""></w2:textbox>
 											</xf:group>
-											<xf:group class="w2tb_th" style="" tagname="th"><w2:textbox class="" id="" label="thead" style=""></w2:textbox></xf:group>
-											<xf:group class="w2tb_th" style="" tagname="th"><w2:textbox class="" id="" label="thead" style=""></w2:textbox></xf:group>
+											<xf:group class="w2tb_th" style="" tagname="th">
+												<w2:textbox class="" id="" label="thead" style=""></w2:textbox>
+											</xf:group>
+											<xf:group class="w2tb_th" style="" tagname="th">
+												<w2:textbox class="" id="" label="thead" style=""></w2:textbox>
+											</xf:group>
 										</xf:group>
 									</xf:group>
 									<xf:group style="" tagname="tr">
@@ -3399,6 +3450,332 @@
 							<xf:trigger class="btn btn-line" ev:onclick="scwin.alertBtn_onclick" id="alertBtn" style="" type="button">
 								<xf:label><![CDATA[alert]]></xf:label>
 							</xf:trigger>
+						</xf:group>
+						<xf:group class="layer-box" id="" style="">
+							<xf:group class="title-box mt10" id="" style="">
+								<xf:group id="">
+									<w2:textbox class="head-title" id="" label="탭" style="" tagname="h2"></w2:textbox>
+									<w2:span class="txt-division" id="" label="스크립트 확인" style=""></w2:span>
+								</xf:group>
+							</xf:group>
+							<xf:group class="tab-box" id="">
+								<w2:tabControl alwaysDraw="false" class="tc-btn-type" closable="true" confirmFalseAction="new"
+									confirmTrueAction="exist" id="" style="" useConfirmMessage="false" useMoveNextTabFocus="false" useTabKeyOnly="true">
+									<w2:tabs disabled="false" id="tabs1" label="매체(마블)정보" style=""></w2:tabs>
+									<w2:tabs disabled="false" id="tabs2" label="매체(마블미니) 정보" style=""></w2:tabs>
+									<w2:tabs disabled="false" id="tabs3" label="매체(WTS) 정보" style=""></w2:tabs>
+									<w2:content alwaysDraw="false" id="content1" style="">
+										<xf:group class="title-box" id="" style="">
+											<w2:textbox class="sub-title" id="" label="매체 별 전시정보" style="" tagname="h3"></w2:textbox>
+										</xf:group>
+										<xf:group class="table-box" id="" style="">
+											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+												<w2:attributes>
+													<w2:summary></w2:summary>
+												</w2:attributes>
+												<xf:group tagname="caption"></xf:group>
+												<xf:group tagname="colgroup">
+													<xf:group style="width:172px;" tagname="col"></xf:group>
+													<xf:group style="" tagname="col"></xf:group>
+												</xf:group>
+												<xf:group style="" tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="매체 선택" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+															class="wxl" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
+															submenuSize="auto">
+															<xf:choices>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+															</xf:choices>
+														</xf:select1>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<w2:textbox class="fs-15" id="" label="자동생성됩니다" style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:textbox class="fs-15" id="" label="게시글 생성 후 단축URL을 생성할 수 있습니다." style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:span class="mr10" id=""
+															label="Http://app.kbsec.com/scr/index.html?id=5181&amp;key=2839&amp;date=2023/08/11" style="">
+														</w2:span>
+														<xf:trigger class="btn btn-primary small" ev:onclick="scwin.trigger1_onclick" id=""
+															style="" type="button">
+															<xf:label><![CDATA[복사하기]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[단축 URL 생성하기]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+											</xf:group>
+										</xf:group>
+									</w2:content>
+									<w2:content alwaysDraw="false" id="content2" style="">
+										<xf:group class="title-box" id="" style="">
+											<w2:textbox class="sub-title" id="" label="매체 별 전시정보2" style="" tagname="h3"></w2:textbox>
+										</xf:group>
+										<xf:group class="table-box" id="" style="">
+											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+												<w2:attributes>
+													<w2:summary></w2:summary>
+												</w2:attributes>
+												<xf:group tagname="caption"></xf:group>
+												<xf:group tagname="colgroup">
+													<xf:group style="width:172px;" tagname="col"></xf:group>
+													<xf:group style="" tagname="col"></xf:group>
+												</xf:group>
+												<xf:group style="" tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="매체 선택" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+															class="wxl" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
+															submenuSize="auto">
+															<xf:choices>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+															</xf:choices>
+														</xf:select1>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<w2:textbox class="fs-15" id="" label="자동생성됩니다" style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:textbox class="fs-15" id="" label="게시글 생성 후 단축URL을 생성할 수 있습니다." style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:span class="mr10" id=""
+															label="Http://app.kbsec.com/scr/index.html?id=5181&amp;key=2839&amp;date=2023/08/11" style="">
+														</w2:span>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[복사하기]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[단축 URL 생성하기]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+											</xf:group>
+										</xf:group>
+									</w2:content>
+									<w2:content alwaysDraw="false" id="content3" style="">
+										<xf:group class="title-box" id="" style="">
+											<w2:textbox class="sub-title" id="" label="매체 별 전시정보3" style="" tagname="h3"></w2:textbox>
+										</xf:group>
+										<xf:group class="table-box" id="" style="">
+											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+												<w2:attributes>
+													<w2:summary></w2:summary>
+												</w2:attributes>
+												<xf:group tagname="caption"></xf:group>
+												<xf:group tagname="colgroup">
+													<xf:group style="width:172px;" tagname="col"></xf:group>
+													<xf:group style="" tagname="col"></xf:group>
+												</xf:group>
+												<xf:group style="" tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="매체 선택" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+															class="wxl" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
+															submenuSize="auto">
+															<xf:choices>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+															</xf:choices>
+														</xf:select1>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<w2:textbox class="fs-15" id="" label="자동생성됩니다" style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:textbox class="fs-15" id="" label="게시글 생성 후 단축URL을 생성할 수 있습니다." style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="게시글 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:span class="mr10" id=""
+															label="Http://app.kbsec.com/scr/index.html?id=5181&amp;key=2839&amp;date=2023/08/11" style="">
+														</w2:span>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[복사하기]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="단축 URL" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[단축 URL 생성하기]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+											</xf:group>
+										</xf:group>
+									</w2:content>
+								</w2:tabControl>
+							</xf:group>
 						</xf:group>
 					</xf:group>
 				</xf:group>
