@@ -357,7 +357,7 @@ scwin.onpageload = function() {
     										<w2:column width="70" inputType="text" style="" id="column7" value="분류단계" displayMode="label"></w2:column>
     										<w2:column width="90" inputType="text" style="" id="column6" value="정의" displayMode="label"></w2:column>
     										<w2:column width="50" inputType="text" style="" id="column5" value="사용여부" displayMode="label"></w2:column>
-    										<w2:column width="100" inputType="text" style="" id="column4" value="등록일시" displayMode="label"></w2:column>
+    										<w2:column width="100" inputType="text" style="" id="column4" value="등록일시" displayMode="label" sortable="true"></w2:column>
     										<w2:column width="50" inputType="text" style="" id="column3" value="등록자" displayMode="label"></w2:column>
     										<w2:column width="100" inputType="text" style="" id="column2" value="최종 수정일시"
     											displayMode="label">

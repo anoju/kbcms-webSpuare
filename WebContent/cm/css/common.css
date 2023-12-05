@@ -28,7 +28,9 @@ body{
 	right:0;
 	bottom:0;
 	width: 100%;
-	height: calc(100% - 6.4rem);}
+	height: calc(100% - 6.4rem);
+	overflow: hidden;
+}
 /*main header*/
 .header {
 	display: flex;
@@ -126,7 +128,7 @@ body{
 
 /*margin*/
 .mt10 {margin-top: 1rem;}
-
+.mr10 {margin-right: 1rem;}
 /***title***/
 .title-box {display:flex;width: 100%;justify-content: space-between;}
 .title-box * {display: inline-block;}
@@ -205,6 +207,9 @@ body{
 .btn-text {display:inline-block;text-decoration: underline !important;font-size: 1.4rem;color: #2E74F2 !important;line-height: 2rem;}
 .btn-delete {display:inline-block;width: 2rem;height: 2rem;background: url(../images/btn/btn-file-del.svg) no-repeat 0 0 / cover;border:0;outline:0;vertical-align: middle;text-indent: -9999em;}
 .btn-expand {height:3.5rem;border-radius:0.8rem;padding-left:3.2rem;padding-right:3.2rem;font-size: 1.3rem;font-weight: 500;clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);}
+.btn-dotline {position:relative;height:2.4rem;padding:0 1.2rem 0 3rem !important;background-color:#fff;border-radius:1.2rem;border: 1px dotted #ccc;font-size: 1.3rem;color: #999;font-weight: 300;}
+.btn-dotline::before {content: '';position: absolute;left:0.8rem;top:0.4rem;width:1.6rem;height: 1.6rem;background:url(../images/ico/ico-addtab-plus.svg) no-repeat 0 0 / cover;}
+.btn-tooltip {display: inline-block;width:2rem;height: 2rem;border:0;outline:0;background: url(../images/btn/btn-ico-tooltip.svg) no-repeat 0 0 / cover;text-indent: -999em;}
 
 .btn-box {display: flex;gap:0.6rem;justify-content: center;margin-top: 1.6rem;}
 .layer-box .btn-box {justify-content: space-between;}
@@ -235,11 +240,12 @@ body{
 .w2calendar .w2calendar_wrap .w2selectbox:focus {border-color: #42444E;}
 
 /*input*/
-.w2input {height: 3.2rem;padding:0 1.2rem;border-radius: 0.3rem !important;border: 1px solid #ccc;outline: 0;font-size: 1.4rem;font-weight: 300;line-height: 2rem;font-family:'Noto Sans KR', 'sans-serif';box-sizing: border-box;}
+.w2input {min-width:2rem;height: 3.2rem;padding:0 1.2rem;border-radius: 0.3rem !important;border: 1px solid #ccc;outline: 0;font-size: 1.4rem;font-weight: 300;line-height: 2rem;font-family:'Noto Sans KR', 'sans-serif';box-sizing: border-box;}
 .w2input:hover:not([disabled="disabled"]) {border-color: #2E74F2;}
 .w2input:placeholder {color: #999999;}
 .w2input:focus:not([disabled="disabled"]),
 .w2input:active:not([disabled="disabled"]) {border-color: #42444E;background: #fff;}
+.w2input_disabled {background-color: #F3F5F6;}
 
 /*textarea*/
 .w2textarea {width:100%;height: 7.2rem;padding:0.6rem 1.2rem;border-radius: 0.3rem !important;border: 1px solid #ccc;outline: 0;font-size: 1.4rem;font-weight: 300;line-height: 2rem;font-family:'Noto Sans KR', 'sans-serif';box-sizing: border-box;}
@@ -388,12 +394,13 @@ body{
 .table-box .tb .w2tb_td {padding:0.6rem 1.2rem;border:0;border-right: 1px solid #ddd;background-color: #fbfbfb;font-size: 1.4rem;line-height: 2rem;font-weight: 500;text-align: left;height: 4.4rem;box-sizing: border-box;}
 .table-box .tb .w2tb_td {border-right:0;background-color: #fff;font-size: 1.4rem;font-weight: 300;}
 .table-box .tb .w2tb_td + .w2tb_td {border-left: 1px solid #ddd;}
+.table-box .tb .w2tb_th > .w2textbox {display: inline-block;}
 .table-box .tb .w2tb_th.req > .w2textbox,
 .table-box .tb .w2tb_th.req > span,
 .table-box .tb .w2tb_th .req,
 .search-box .tb .w2tb_th.req > .w2textbox,
 .search-box .tb .w2tb_th.req > span,
-.search-box .tb .w2tb_th .req {position:relative;display: inline-block;}
+.search-box .tb .w2tb_th .req {position:relative;}
 .table-box .tb .w2tb_th.req > .w2textbox:after,
 .table-box .tb .w2tb_th.req > span:after,
 .table-box .tb .w2tb_th .req:after,
@@ -410,6 +417,7 @@ body{
 .table-box .tb .w2tb_td > .table-box .tb .w2tb_td {border-right: 0;background-color:transparent;}
 .table-box .tb .w2tb_td > .table-box .tb .w2tb_th {padding:0.6rem 1.6rem;}
 .table-box .tb .w2tb_td > .table-box .tb .w2tb_td {padding: 0.6rem 0;}
+.table-box .tb .w2tb_td > .table-box .tb .w2tb_td:last-of-type {padding-right:1.2rem;} 
 .table-box .tb .w2tb_td > .table-box .tb tr:last-child {border-bottom: 0;}
 
 .round-table-box {border: 1px solid #ddd;border-radius: 0.4rem;overflow: hidden;}
@@ -486,6 +494,29 @@ body{
 .search-box.expand .add-box {display: none;}
 .search-box.expand .btn-expand-box::before {transition: transform 0.6s linear;transform: rotate(180deg);}
 
+/*tab*/
+.tab-box .w2tabcontrol {width:100%;height: auto;}
+.tab-box .w2tabcontrol_tabhost {display:flex;float:inherit;gap:1.6rem;height: 3.4rem;font-size: 1.6rem;}
+.tab-box .w2tabcontrol_tabhost .w2tabcontrol_li {margin: 0;float: inherit;box-sizing: border-box;}
+.tab-box .w2tabcontrol_tabhost .w2tabcontrol_tab_center,
+.tab-box .w2tabcontrol_tabhost .w2tabcontrol_tab_left,
+.tab-box .w2tabcontrol_tabhost .w2tabcontrol_tab_right {background: none;}
+.tab-box .w2tabcontrol_tabhost li a[role="tab"] {top:0;margin:0;padding-right:2.2rem;text-align: left;font-weight: 500;color: #999;line-height: 2.4rem;}
+.tab-box .w2tabcontrol_tabhost .w2tabcontrol_tab_right {width: 2rem;background: url(../images/btn/btn-tab-closed.svg) no-repeat 0 20% / 2rem 2rem;}
+.tab-box .w2tabcontrol_active .w2tabcontrol_tab_right {background-image: url(../images/btn/btn-tab-closed-action.svg);}
+.tab-box .w2tabcontrol_tabhost .w2tabcontrol_tab_close, 
+.tab-box .w2tabcontrol_tabhost .w2tabcontrol_tab_close2 {width: 100%;background:none;}
+.tab-box .w2tabcontrol_active {border-bottom: 3px solid #2E74F2;} 
+.tab-box .w2tabcontrol_active a {color: #2E74F2 !important;} 
+.tab-box .w2tabcontrol_container {border: 0;float: inherit;height: auto !important;padding-top:2.4rem;}
+.tab-box .tab-control-box {display: flex;gap: 1.6rem;}
+.tab-box .tab-control-box a {position:relative;top:0;margin: 0;font-weight: 300;color: #999;line-height: 2.4rem;}
+
+/*tooltip*/
+.tooltip-box {display: inline-block;position: relative;width: 2rem;height: 2rem;margin-left: 0.5rem;}
+.tooltip-box .balloon {display:none;position:absolute;top:0;left:0;width:30rem;padding: 2rem;background-color:#fff;border-radius:0.8rem;border:1px solid #ccc;font-size: 1.4rem;font-weight: 300;line-height: 2rem;box-sizing:border-box;box-shadow: 0.4rem 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.08);z-index: 50;}
+.tooltip-box .balloon .inner {display: flex;}
+.tooltip-box .balloon .btn-closed {flex-shrink: 0;width: 2rem;height: 2rem;border: 0;outline: 0;background: url(../images/btn/btn-closed.svg) no-repeat 0 0 / cover;text-indent: -999em;}
 /******common component end*******/
 
 /*******popup*******/
