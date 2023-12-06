@@ -17,7 +17,26 @@
          <script type="text/javascript" lazy="false"><![CDATA[
         
 	scwin.onpageload = function() {
-		
+		function menuBtn(){
+			const btn = $('.btn_menu');
+			const sideMenu = btn.closest('.wrap').find('.side-menu-box');
+			const contentBox = sideMenu.closest('.contents-box').find('.page-box');
+
+			btn.on('click', function(){
+				if(btn.hasClass('off')){
+					$(this).removeClass('off');
+					sideMenu.removeClass('off');
+					contentBox.removeClass('off');
+				} else {
+					$(this).addClass('off');
+					sideMenu.addClass('off');
+					contentBox.addClass('off');
+				}
+
+			});
+		}
+
+		menuBtn();
 	};
 	
 	scwin.onpageunload = function() {
