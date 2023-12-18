@@ -173,7 +173,7 @@
                 buttonBox.append(tabAddBtn);
                 buttonBox.append(tabCopyPaste);
 
-                $('.w2tabcontrol_tabhost').append(buttonBox);
+                $('.tc-btn-type .w2tabcontrol_tabhost').append(buttonBox);
             }
     //툴팁
             function tooltipOn(){
@@ -294,6 +294,13 @@ scwin.confirmBtn_onclick = function(e) {
 // 	$p.closePopup();
 // };
 
+//count number of count
+  $(document).on("input", ".input-count", function (e) {      
+    const counterEle = $(this).next();
+    const target = e.target;
+    const maxLength = target.getAttribute("maxlength");
+    const currentLength = target.value.length;
+    counterEle.html(`<strong>${currentLength}</strong> / ${maxLength}`);
 ]]></script>
 	</head>
 	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
@@ -696,6 +703,28 @@ scwin.confirmBtn_onclick = function(e) {
 													</xf:item>
 												</xf:choices>
 											</xf:select1>
+											<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="" class="ws"
+												direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" style=""
+												submenuSize="auto" renderType="component">
+												<xf:choices>
+													<xf:item>
+														<xf:label><![CDATA[new row]]></xf:label>
+														<xf:value></xf:value>
+													</xf:item>
+													<xf:item>
+														<xf:label><![CDATA[new row]]></xf:label>
+														<xf:value></xf:value>
+													</xf:item>
+													<xf:item>
+														<xf:label><![CDATA[new row]]></xf:label>
+														<xf:value></xf:value>
+													</xf:item>
+													<xf:item>
+														<xf:label><![CDATA[new row]]></xf:label>
+														<xf:value></xf:value>
+													</xf:item>
+												</xf:choices>
+											</xf:select1>
 										</xf:group>
 									</xf:group>
 									<xf:group tagname="tr">
@@ -732,7 +761,14 @@ scwin.confirmBtn_onclick = function(e) {
 													</xf:item>
 												</xf:choices>
 											</xf:select>
-										</xf:group>
+										<xf:group id="" class="mt10"><xf:select ref="" appearance="full" style="" id="" renderType="checkboxgroup" rows="" selectedindex="0" cols="" class="single">
+												<xf:choices>
+													<xf:item>
+														<xf:label><![CDATA[]]></xf:label>
+														<xf:value><![CDATA[]]></xf:value>
+													</xf:item>
+												</xf:choices>
+											</xf:select></xf:group></xf:group>
 										<xf:group class="w2tb_th" tagname="th">
 											<w2:attributes></w2:attributes>
 											<w2:textbox id="" label="checkbox small" style=""></w2:textbox>
@@ -762,6 +798,15 @@ scwin.confirmBtn_onclick = function(e) {
 													<xf:item>
 														<xf:label><![CDATA[new row]]></xf:label>
 														<xf:value></xf:value>
+													</xf:item>
+												</xf:choices>
+											</xf:select>
+											<xf:select appearance="full" class="mt10 small single" cols="" id="" ref=""
+												renderType="checkboxgroup" rows="" selectedindex="0" style="">
+												<xf:choices>
+													<xf:item>
+														<xf:label><![CDATA[]]></xf:label>
+														<xf:value><![CDATA[]]></xf:value>
 													</xf:item>
 												</xf:choices>
 											</xf:select>

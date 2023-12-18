@@ -254,7 +254,7 @@ body{
 
 /*select*/
 .w2selectbox_select,
-.w2calendar .w2calendar_wrap .w2selectbox {height: 3.2rem;padding:0.6rem 3.2rem 0.6rem 1.2rem;border: 1px solid #ccc;border-radius: 0.3rem;background: #fff url(../images/ico/ico-arrow-select.svg) no-repeat 98% / 2.4rem 2.4rem;font-size: 1.4rem;font-weight: 300;line-height: 2.2rem;}
+.w2calendar .w2calendar_wrap .w2selectbox {height: 3.2rem;padding:0.6rem 3.2rem 0.6rem 1.2rem;border: 1px solid #ccc;border-radius: 0.3rem;background: #fff url(../images/ico/ico-arrow-select.svg) no-repeat 98% / 2.4rem 2.4rem;font-size: 1.4rem;font-weight: 300;line-height: 2.2rem;box-sizing: border-box;}
 .w2selectbox_select:hover:not([disabled="disabled"]),
 .w2calendar .w2calendar_wrap .w2selectbox:hover  {border-color: #2E74F2;}
 .w2selectbox_select:disabled,
@@ -263,6 +263,19 @@ body{
 .w2selectbox_select:focus:not([disabled="disabled"]),
 .w2calendar .w2calendar_wrap .w2selectbox:active,
 .w2calendar .w2calendar_wrap .w2selectbox:focus {border-color: #42444E;}
+
+/*select render type-component*/
+.w2selectbox  {height: 3.2rem;border: 1px solid #ccc;border-radius: 0.3rem;font-size: 1.4rem;font-weight: 300;line-height: 2.2rem;box-sizing: border-box;}
+.w2selectbox .w2selectbox_table_main {padding:0.6rem 0 0.6rem 1.2rem;}
+.w2selectbox .w2selectbox_table_main .w2selectbox_col_button {width: 2.4rem;background: #fff url(../images/ico/ico-arrow-select.svg) no-repeat 50% 50% / 2.4rem 2.4rem;}
+.w2selectbox .w2selectbox_table_main .w2selectbox_label {height:100%;padding-left:1.2rem;text-align: left;font-size: 1.4rem;font-weight: 400;line-height: 2.4rem;}
+.w2selectbox_focus .w2selectbox_col_label {background-color: transparent;}
+
+.w2table_sb {margin-top:0.4rem;;border-radius: 0.3rem; border: 1px solid #ccc;}
+.w2table_sb_main {top:0;width: calc(100% - 0.5rem) !important;margin:0 0.3rem}
+.w2table_sb_col {height:2.8rem;border-radius:0.3rem;border: 0;padding: 0 0.9rem;text-align: left;font-size:1.4rem;line-height:2.8rem;box-sizing: border-box;}
+.w2table_sb_col_over {background-color: rgba(46, 116, 242, 0.05);}
+.w2table_sb_col[aria-selected="true"] {font-weight: 500;}
 
 /*input*/
 .w2input {min-width:2rem;height: 3.2rem;padding:0 1.2rem;border-radius: 0.3rem !important;border: 1px solid #ccc;outline: 0;font-size: 1.4rem;font-weight: 300;line-height: 2rem;font-family:'Noto Sans KR', 'sans-serif';box-sizing: border-box;}
@@ -282,7 +295,7 @@ body{
 /*checkbox & radio*/
 .w2checkbox,.w2radio {display: flex;flex-wrap: wrap;align-items: center;gap:2.4rem;row-gap: 0.8rem;}
 .w2checkbox .w2checkbox_item, .w2radio .w2radio_item {position: relative;height: 2.4rem;}
-.w2checkbox .w2checkbox_label, .w2radio .w2radio_label {display:block;padding-left:3.2rem;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
+.w2checkbox .w2checkbox_label, .w2radio .w2radio_label {display:block;height:100%;padding-left:3.2rem;font-size: 1.4rem;font-weight: 300;line-height: 2rem;}
 .w2checkbox .w2checkbox_label::before {content: '';position:absolute;left:0;top:0;display:inline-block;width: 2.4rem;height: 2.4rem;background: url(../images/ico/ico-checkbox-default.svg) no-repeat 0 0 / 2.4rem 2.4rem;}
 .w2radio .w2radio_label::before {content: '';position:absolute;left:0;top:0;display:inline-block;width: 2.4rem;height: 2.4rem;background: url(../images/ico/ico-radio-default.svg) no-repeat 0 0 / 2.4rem 2.4rem;}
 .w2checkbox .w2checkbox_input,
@@ -300,7 +313,7 @@ body{
 .w2checkbox.small .w2checkbox_item,
 .w2radio.small .w2radio_item {height: 2rem;}
 .w2checkbox.small .w2checkbox_label,
-.w2radio.small .w2radio_label {padding-left:2.8rem;font-size: 1.3rem;line-height: 2rem;}
+.w2radio.small .w2radio_label {padding-left:2.8rem;font-size: 1.3rem;line-height: 1.8rem;}
 .w2checkbox.small .w2checkbox_label::before,
 .w2radio.small .w2radio_label::before {top:1px;width: 2rem;height: 2rem;background-size: 2rem 2rem;}
 /*radio button round*/
@@ -311,6 +324,10 @@ body{
 .w2radio.btn-round .w2radio_item .w2radio_label::before {display: none;}
 .w2radio.btn-round .w2radio_item .w2radio_input:hover + .w2radio_label {background-color:#4A567E;border-color: #4A567E;color:#fff;}
 .w2radio.btn-round .w2radio_item .w2radio_input:checked + .w2radio_label  {background-color: #42444E;color:#fff;border-color: #42444E;}
+
+.w2checkbox.single {display: block;width: 2.4rem;height: 2.4rem;}
+.w2checkbox.small.single {display: block;width: 2rem;height: 2rem;}
+.w2checkbox.single .w2checkbox_label {padding: 0;}
 
 /*input calendar*/
 .w2inputCalendar_div {position:relative;height:3.2rem;width: 12rem;border-radius: 0.3rem;border: 1px solid #ccc;box-sizing: border-box;}
