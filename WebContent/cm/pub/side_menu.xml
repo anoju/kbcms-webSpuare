@@ -650,6 +650,22 @@
     								</xf:group>
     							</xf:group>
     						</xf:group>
+    						<xf:group class="two-dept-li" id="" style="" tagname="li">
+    							<w2:anchor class="" id="" outerDiv="false" style="">
+    								<xf:label><![CDATA[시스템관리]]></xf:label>
+    							</w2:anchor>
+    							<w2:anchor class="btn_expand" id="" outerDiv="false" style="">
+    								<xf:label><![CDATA[하위 리스트 열기닫기]]></xf:label>
+    							</w2:anchor>
+    							<xf:group class="three-dept-list" id="" style="" tagname="ul">
+    								<xf:group class="" id="" style="" tagname="li">
+    									<w2:anchor class="" href="websquare.html?w2xPath=/cm/pub/kbcms_page08.xml" id="" outerDiv="false"
+    										style="">
+    										<xf:label><![CDATA[권한관리]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    							</xf:group>
+    						</xf:group>
     					</xf:group>
     				</w2:panelContent>
     			</w2:panels>

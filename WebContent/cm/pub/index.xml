@@ -390,10 +390,12 @@
 											<w2:attributes>
 												<w2:scope>row</w2:scope>
 											</w2:attributes>
-											<w2:textbox id="" label="폰트 굵게" style=""></w2:textbox>
+											<w2:textbox id="" label="폰트 굵기" style=""></w2:textbox>
 										</xf:group>
 										<xf:group tagname="td" style="" class="w2tb_td">
-											<w2:textbox id="" label=".fwb" style="" class="fwb"></w2:textbox>
+											<w2:textbox id="" label=".fw-300" style="" class=".fw-300"></w2:textbox>
+											<w2:textbox class="fw-500" id="" label=".fw-500" style=""></w2:textbox>
+											<w2:textbox class="fwb" id="" label=".fwb - 900" style=""></w2:textbox>
 										</xf:group>
 										<xf:group tagname="th" class="w2tb_th">
 											<w2:attributes></w2:attributes>
@@ -462,11 +464,12 @@
 											<w2:attributes>
 												<w2:scope>row</w2:scope>
 											</w2:attributes>
-											<w2:textbox id="" label="vertical-align:middle" style=""></w2:textbox>
+											<w2:textbox id="" label="vertical-align" style=""></w2:textbox>
 										</xf:group>
 										<xf:group tagname="td" class="w2tb_td">
 											<w2:attributes></w2:attributes>
-											<w2:span id="" label="middle" style="" class="vam"></w2:span>
+											<w2:span id="" label="vam" style="" class="vam"></w2:span>
+											<w2:span class="vab" id="" label="vab" style=""></w2:span>
 										</xf:group>
 									</xf:group>
 								</xf:group>
@@ -3458,12 +3461,12 @@
 									<w2:span class="txt-division" id="" label="스크립트 확인" style=""></w2:span>
 								</xf:group>
 							</xf:group>
-							<xf:group class="tab-box" id="">
+							<xf:group class="tab-box closable" id="">
 								<w2:tabControl alwaysDraw="false" class="tc-btn-type" closable="true" confirmFalseAction="new"
 									confirmTrueAction="exist" id="" style="" useConfirmMessage="false" useMoveNextTabFocus="false" useTabKeyOnly="true">
-									<w2:tabs disabled="false" id="tabs1" label="탭메뉴타이틀" style=""></w2:tabs>
-									<w2:tabs disabled="false" id="tabs2" label="탭메뉴타이틀2" style=""></w2:tabs>
-									<w2:tabs disabled="false" id="tabs3" label="탭메뉴타이틀타이틑타이틀" style=""></w2:tabs>
+									<w2:tabs disabled="false" id="tabs1" label="닫기버튼있는탭" style=""></w2:tabs>
+									<w2:tabs disabled="false" id="tabs2" label="닫기버튼있는탭2" style=""></w2:tabs>
+									<w2:tabs disabled="false" id="tabs3" label="닫기버튼있는탭닫기버튼있는탭닫기버튼있는탭" style=""></w2:tabs>
 									<w2:content alwaysDraw="false" id="content1" style="">
 										<xf:group class="title-box" id="" style="">
 											<w2:textbox class="sub-title" id="" label="탭 메뉴 컨탠츠 영역111" style="" tagname="h3"></w2:textbox>
@@ -3669,6 +3672,239 @@
 									<w2:content alwaysDraw="false" id="content3" style="">
 										<xf:group class="title-box" id="" style="">
 											<w2:textbox class="sub-title" id="" label="탭 메뉴 컨탠츠 영역333" style="" tagname="h3"></w2:textbox>
+										</xf:group>
+										<xf:group class="table-box" id="" style="">
+											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+												<w2:attributes>
+													<w2:summary></w2:summary>
+												</w2:attributes>
+												<xf:group tagname="caption"></xf:group>
+												<xf:group tagname="colgroup">
+													<xf:group style="width:172px;" tagname="col"></xf:group>
+													<xf:group style="" tagname="col"></xf:group>
+												</xf:group>
+												<xf:group style="" tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+															class="wxl" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
+															submenuSize="auto">
+															<xf:choices>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+															</xf:choices>
+														</xf:select1>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:span class="mr10" id="" label="text" style=""></w2:span>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[small btn]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[small btn]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+											</xf:group>
+										</xf:group>
+									</w2:content>
+								</w2:tabControl>
+							</xf:group>
+							<xf:group class="tab-box" id="" style="">
+								<w2:tabControl alwaysDraw="false" class="" closable="false" confirmFalseAction="new"
+									confirmTrueAction="exist" id="" style="" useConfirmMessage="false" useMoveNextTabFocus="false" useTabKeyOnly="true">
+									<w2:tabs closable="false" disabled="false" id="tabs1" label="닫기버튼없는탭" style=""></w2:tabs>
+									<w2:tabs closable="false" disabled="false" id="tabs2" label="닫기버튼없는탭" style=""></w2:tabs>
+									<w2:content alwaysDraw="false" id="content1" style="">
+										<xf:group class="title-box" id="" style="">
+											<xf:group class="left vam" id="">
+												<w2:textbox class="fs-14" id="" label="그룹내 계정 사용자" style=""></w2:textbox>
+												<w2:textbox class="fs-14 fc-blue" id="" label="12" style=""></w2:textbox>
+												<w2:textbox class="fs-14" id="" label="명" style=""></w2:textbox>
+											</xf:group>
+											<xf:group class="right" id="" style="">
+												<xf:trigger centerOnImageClass="" class="btn btn-line small" id="" style="" type="button">
+													<xf:label><![CDATA[삭제]]></xf:label>
+												</xf:trigger>
+												<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+													<xf:label><![CDATA[추가]]></xf:label>
+												</xf:trigger>
+											</xf:group>
+										</xf:group>
+										<xf:group class="table-box" id="" style="">
+											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+												<w2:attributes>
+													<w2:summary></w2:summary>
+												</w2:attributes>
+												<xf:group tagname="caption"></xf:group>
+												<xf:group tagname="colgroup">
+													<xf:group style="width:172px;" tagname="col"></xf:group>
+													<xf:group style="" tagname="col"></xf:group>
+												</xf:group>
+												<xf:group style="" tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+															class="wxl" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
+															submenuSize="auto">
+															<xf:choices>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+																<xf:item>
+																	<xf:label><![CDATA[new row]]></xf:label>
+																	<xf:value></xf:value>
+																</xf:item>
+															</xf:choices>
+														</xf:select1>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" style="" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" style="" tagname="td">
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th req" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<w2:span class="mr10" id="" label="text" style=""></w2:span>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[small btn]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+												<xf:group tagname="tr">
+													<xf:group class="w2tb_th" tagname="th">
+														<w2:attributes>
+															<w2:scope>row</w2:scope>
+														</w2:attributes>
+														<w2:textbox id="" label="th text" style=""></w2:textbox>
+													</xf:group>
+													<xf:group class="w2tb_td" tagname="td">
+														<w2:attributes></w2:attributes>
+														<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+															<xf:label><![CDATA[small btn]]></xf:label>
+														</xf:trigger>
+													</xf:group>
+												</xf:group>
+											</xf:group>
+										</xf:group>
+									</w2:content>
+									<w2:content alwaysDraw="false" id="content2" style="">
+										<xf:group class="title-box" id="" style="">
+											<xf:group class="left" id="">
+												<w2:textbox class="fs-14" id="" label="그룹내 계정 사용자" style=""></w2:textbox>
+												<w2:textbox class="fc-blue fs-14" id="" label="12" style=""></w2:textbox>
+												<w2:textbox class="fs-14" id="" label="명" style=""></w2:textbox>
+											</xf:group>
+											<xf:group class="right" id="" style="">
+												<xf:trigger centerOnImageClass="" class="btn btn-line small" id="" style="" type="button">
+													<xf:label><![CDATA[삭제]]></xf:label>
+												</xf:trigger>
+												<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+													<xf:label><![CDATA[추가]]></xf:label>
+												</xf:trigger>
+											</xf:group>
 										</xf:group>
 										<xf:group class="table-box" id="" style="">
 											<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
