@@ -230,14 +230,7 @@
 	}; 
 	$p.openPopup("popup1.xml", popupL);
 
-	var alert = {
-    id : "alertBtn",
-    type : "wframePopup",
-    popupName : "alert",
-    modal : "true",
-	width:"280px"
-	}; 
-	$p.openPopup("alert.xml", alert);
+	
 
 	scwin.popupS_onclick = function(e) {
 		$p.openPopup("popup1.xml", popupS);
@@ -251,15 +244,57 @@
 		$p.openPopup("popup1.xml", popupL);
 	};
 
-	scwin.alertBtn_onclick = function(e) {
-		$p.openPopup("alert.xml", alert);
-	}; 
+function popAlert(obj){
+    if(!obj.type || !obj.msg) return;
+    var rowJSON = obj;
+    var dataObject = {
+        "type" : "json", // 데이터 타입. "json" 권장 
+        "name" : "alertParam",  // 데이터를 가져오기 위한 key 값. popup에서 $p.getParameter( "alertParam" )로 깨내올 수 있음.
+        "data" : rowJSON // 실제 전달할 데이터
+    };
 
+    var alertOpt = {
+        id : "popAlert",
+        type : "wframePopup",
+        className : "pop-alert",
+        popupName : "alert",
+        modal : "true",
+        width:"280px",
+        dataObject : dataObject
+    }; 
+    $p.openPopup("alert.xml", alertOpt);
+}
+
+scwin.alertBtn_onclick = function(e) {
+    popAlert({ 
+        "type": "alert",
+        "msg": "얼럿 메시지 입니다 1111",
+        "ok": function(){
+            console.log("완료!!");
+        }
+    });
+}; 
+scwin.confirmBtn_onclick = function(e) {
+    popAlert({ 
+        "type": "confirm",
+        "msg": "컨펌 메시지 입니다 222",
+        "okTxt": "예",
+        "cancelTxt": "아니오",
+        "ok": function(){
+            console.log("예!! 예!! 예!!");
+        },
+        "cancel": function(){
+            console.log("아니오!!! 아니오!!!");
+        }
+    });
+};
 
 //팝업닫기
 // scwin.closePopup_onclick = function(e) {
 // 	$p.closePopup();
-// };]]></script>
+// };
+
+]]></script>
 	</head>
 	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
 		<xf:group style="" id="" class="wrap">
@@ -3452,6 +3487,9 @@
 							</xf:trigger>
 							<xf:trigger class="btn btn-line" ev:onclick="scwin.alertBtn_onclick" id="alertBtn" style="" type="button">
 								<xf:label><![CDATA[alert]]></xf:label>
+							</xf:trigger>
+							<xf:trigger class="btn btn-line" id="confirmBtn" style="" type="button" ev:onclick="scwin.confirmBtn_onclick">
+								<xf:label><![CDATA[confirm]]></xf:label>
 							</xf:trigger>
 						</xf:group>
 						<xf:group class="layer-box" id="" style="">

@@ -12,39 +12,59 @@
         </xf:model>
         <w2:layoutInfo/>
         <w2:publicInfo method=""/>
-        <script lazy="false" type="text/javascript"><![CDATA[
+        <script lazy="false" type="text/javascript"><![CDATA[// var okFn;
+// var cancelFn;
+
 scwin.onpageload = function() {
-    // 알럿창 클래스 부여
-    var alertElements = document.querySelectorAll('.alert');
+    var $id = $p.model.scope_id;
+    var $this = document.querySelector('#'+$id);
+    if(!$this) return;
+    var popAlert = $this.closest('.pop-alert');
+    if(!popAlert) return;
+    var $alertParam = $p.getParameter( "alertParam" );
 
-    alertElements.forEach(function(alertElement) {
-        var popupWindow = alertElement.closest('.w2popup_window');
-        
-        if (popupWindow) {
-            popupWindow.classList.add('alert-pop');
+    // 버튼처리
+    const $okBtn = popAlert.querySelector('#'+$id+'_alertOKBtn');
+    const $cancelBtn = popAlert.querySelector('#'+$id+'_alertCancelBtn');
+    if($cancelBtn && $alertParam.type === 'alert') $cancelBtn.remove();
+    if($okBtn && $alertParam.okTxt) $okBtn.value = $alertParam.okTxt;
+    if($cancelBtn && $alertParam.cancelTxt) $cancelBtn.value = $alertParam.cancelTxt;
 
-            var modalSibling = popupWindow.previousElementSibling;
-            if (modalSibling && modalSibling.classList.contains('w2modal')) {
-                modalSibling.classList.add('opt');
-            }
-        }
-    });
+    // 메세지
+    var $msg = $this.querySelector('.alert-msg');
+    if($msg && $alertParam.msg) $msg.innerHTML = $alertParam.msg;
+
+    //dimm 투명하게
+    var dimm = popAlert.previousElementSibling;
+    if (dimm && dimm.classList.contains('w2modal')) dimm.classList.add('transparent');
+
+    //콜백
+    // if($alertParam.ok) okFn = $alertParam.ok();
+    // if($alertParam.cancel) cancelFn = $alertParam.cancel();
 };
-//팝업 닫기
-scwin.closePopup_onclick = function(e) {
-	$p.closePopup();
+
+scwin.alertOKBtn_onclick = function(e) {
+    // console.log(okFn);
+    // if(okFn && typeof okFn === 'function') okFn();
+    console.log('확인');
+    $p.closePopup();
+};
+scwin.alertCancelBtn_onclick = function(e) {
+    // if(cancelFn && typeof cancelFn === 'function') cancelFn();
+    console.log('취소');
+    $p.closePopup();
 };]]></script>
     </head>
     <body ev:onpageload="scwin.onpageload">
-    	<xf:group class="pop-contents alert" id="" style="">
+    	<xf:group class="pop-contents alert-contents" id="" style="">
     		<xf:group class="pop-content-box" id="" style="">
-    			<w2:textbox id="" label="알럿 메시지 입니다" style=""></w2:textbox>
+    			<w2:textbox id="" label="알럿 메시지 입니다" style="" class="alert-msg"></w2:textbox>
     		</xf:group>
     		<xf:group class="pop-btn-box" id="" style="">
-    			<xf:trigger class="btn btn-line" ev:onclick="scwin.closePopup_onclick" id="closePopup" style="" type="button">
+    			<xf:trigger class="btn btn-line" id="alertCancelBtn" style="" type="button" ev:onclick="scwin.alertCancelBtn_onclick">
     				<xf:label><![CDATA[취소]]></xf:label>
     			</xf:trigger>
-    			<xf:trigger class="btn btn-primary" id="" style="" type="button">
+    			<xf:trigger class="btn btn-primary" id="alertOKBtn" style="" type="button" ev:onclick="scwin.alertOKBtn_onclick">
     				<xf:label><![CDATA[확인]]></xf:label>
     			</xf:trigger>
     		</xf:group>
