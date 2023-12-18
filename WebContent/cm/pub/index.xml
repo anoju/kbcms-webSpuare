@@ -267,25 +267,25 @@ function popAlert(obj){
 
 scwin.alertBtn_onclick = function(e) {
     popAlert({ 
-        "type": "alert",
-        "msg": "얼럿 메시지 입니다 1111",
-        "ok": function(){
+        type: "alert",
+        msg: "얼럿 메시지 입니다 1111",
+        /* ok: function(){
             console.log("완료!!");
-        }
+        } */
     });
 }; 
 scwin.confirmBtn_onclick = function(e) {
     popAlert({ 
-        "type": "confirm",
-        "msg": "컨펌 메시지 입니다 222",
-        "okTxt": "예",
-        "cancelTxt": "아니오",
-        "ok": function(){
+        type: "confirm",
+        msg: "컨펌 메시지 입니다 222",
+        okTxt: "예",
+        cancelTxt: "아니오",
+        /* ok: function(){
             console.log("예!! 예!! 예!!");
         },
-        "cancel": function(){
+        cancel: function(){
             console.log("아니오!!! 아니오!!!");
-        }
+        } */
     });
 };
 
@@ -301,7 +301,7 @@ scwin.confirmBtn_onclick = function(e) {
     const maxLength = target.getAttribute("maxlength");
     const currentLength = target.value.length;
     counterEle.html(`<strong>${currentLength}</strong> / ${maxLength}`);
-]]></script>
+  });]]></script>
 	</head>
 	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
 		<xf:group style="" id="" class="wrap">
@@ -733,7 +733,16 @@ scwin.confirmBtn_onclick = function(e) {
 												<w2:scope>row</w2:scope>
 											</w2:attributes>
 											<w2:textbox id="" label="checkbox" style=""></w2:textbox>
-										</xf:group>
+										<xf:group id="" class="tooltip-box"><xf:trigger style="" id="" centerOnImageClass="" type="button" class="btn-tooltip">
+												<xf:label><![CDATA[도움말보기]]></xf:label>
+											</xf:trigger><xf:group style="" id="" class="balloon">
+												<xf:group id="" class="inner">
+													<w2:textbox style="" id="" label="툴팁 스크립트 참고"></w2:textbox>
+													<xf:trigger style="" id="" centerOnImageClass="" type="button" class="btn-closed">
+														<xf:label><![CDATA[도움말닫기]]></xf:label>
+													</xf:trigger>
+												</xf:group>
+											</xf:group></xf:group></xf:group>
 										<xf:group class="w2tb_td" style="" tagname="td">
 											<xf:select selectedindex="0" id="" appearance="full" style="" cols="" rows="" ref=""
 												renderType="checkboxgroup">
@@ -1116,8 +1125,8 @@ scwin.confirmBtn_onclick = function(e) {
 																</xf:group>
 															</xf:group>
 														</xf:group>
-														<w2:multiupload id="" mode="html5_transparent" style="" uploadButton="false"
-															wmode="false">
+														<w2:multiupload id="multiupload1" mode="html5_transparent" style="" uploadButton="false"
+															wmode="false" ev:onComplete="scwin.multiupload1_onComplete" ev:ondone="scwin.multiupload1_ondone" displaySizeUnit="Byte" sizeUnit="Byte">
 														</w2:multiupload>
 													</xf:group>
 												</xf:group>
@@ -1599,6 +1608,24 @@ scwin.confirmBtn_onclick = function(e) {
 																	style="">
 																</xf:input>
 																<w2:span id="" label="width 100%" style=""></w2:span>
+															</xf:group>
+														</xf:group>
+													</xf:group>
+													<xf:group tagname="tr" style="">
+														<xf:group class="w2tb_th" tagname="th">
+															<w2:attributes>
+																<w2:scope>row</w2:scope>
+															</w2:attributes>
+															<w2:textbox id="" label="w100" style=""></w2:textbox>
+														</xf:group>
+														<xf:group class="w2tb_td" tagname="td">
+															<w2:attributes></w2:attributes>
+															<xf:group class="form-box counting-num" id="" style="">
+																<xf:input adjustMaxLength="false" class="w100 input-count" id=""
+																	placeholder="입력해주세요" style="" maxlength="20">
+																</xf:input>
+																<xf:group class="count-num" id="" style="" tagname="p" text="&lt;strong&gt;0&lt;/strong&gt; / 20">
+																</xf:group>
 															</xf:group>
 														</xf:group>
 													</xf:group>
