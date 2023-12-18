@@ -431,7 +431,7 @@ body{
 /*table*/
 .table-box + .table-box {margin-top: 1.6rem;}
 .table-box .tb {width:100%;border-top:1px solid #AEB6D0;}
-.table-box .tb tbody tr {border-bottom: 1px solid #ddd;box-sizing: border-box;}
+.table-box .tb > tbody > tr {border-bottom: 1px solid #ddd;box-sizing: border-box;}
 .table-box .tb .w2tb_th,
 .table-box .tb .w2tb_td {padding:0.6rem 1.2rem;border:0;border-right: 1px solid #ddd;background-color: #fbfbfb;font-size: 1.4rem;line-height: 2rem;font-weight: 500;text-align: left;height: 4.4rem;box-sizing: border-box;}
 .table-box .tb .w2tb_td {border-right:0;background-color: #fff;font-size: 1.4rem;font-weight: 300;}
