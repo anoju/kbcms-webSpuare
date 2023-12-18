@@ -267,25 +267,25 @@ function popAlert(obj){
 
 scwin.alertBtn_onclick = function(e) {
     popAlert({ 
-        "type": "alert",
-        "msg": "얼럿 메시지 입니다 1111",
-        "ok": function(){
+        type: "alert",
+        msg: "얼럿 메시지 입니다 1111",
+        /* ok: function(){
             console.log("완료!!");
-        }
+        } */
     });
 }; 
 scwin.confirmBtn_onclick = function(e) {
     popAlert({ 
-        "type": "confirm",
-        "msg": "컨펌 메시지 입니다 222",
-        "okTxt": "예",
-        "cancelTxt": "아니오",
-        "ok": function(){
+        type: "confirm",
+        msg: "컨펌 메시지 입니다 222",
+        okTxt: "예",
+        cancelTxt: "아니오",
+        /* ok: function(){
             console.log("예!! 예!! 예!!");
         },
-        "cancel": function(){
+        cancel: function(){
             console.log("아니오!!! 아니오!!!");
-        }
+        } */
     });
 };
 
@@ -1071,8 +1071,8 @@ scwin.confirmBtn_onclick = function(e) {
 																</xf:group>
 															</xf:group>
 														</xf:group>
-														<w2:multiupload id="" mode="html5_transparent" style="" uploadButton="false"
-															wmode="false">
+														<w2:multiupload id="multiupload1" mode="html5_transparent" style="" uploadButton="false"
+															wmode="false" ev:onComplete="scwin.multiupload1_onComplete" ev:ondone="scwin.multiupload1_ondone" displaySizeUnit="Byte" sizeUnit="Byte">
 														</w2:multiupload>
 													</xf:group>
 												</xf:group>
