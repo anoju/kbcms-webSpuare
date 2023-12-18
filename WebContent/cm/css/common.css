@@ -154,7 +154,7 @@ body{
 .title-box * {display: inline-block;}
 .table-box + .title-box {margin-top: 3.2rem;}
 .title-box .right {display: flex;gap: 0.6rem;margin-bottom: 1.2rem;}
-.title-box .left .btn {vertical-align: top;margin-top: 0.2rem;}
+.title-box .left .btn {vertical-align: top;margin-top: 0.2rem;margin-left: 0.4rem;}
 .title-box .head-title + .btn {margin-left: 1.2rem;}
 .head-title {margin-bottom:2rem;font-size: 2.2rem;line-height:3.4rem;font-weight: 700;}
 .sub-title {margin-bottom:1.2rem;font-size: 1.6rem;line-height: 2.4rem;font-weight: 700;}
