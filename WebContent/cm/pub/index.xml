@@ -295,13 +295,21 @@ scwin.confirmBtn_onclick = function(e) {
 // };
 
 //count number of count
-  $(document).on("input", ".input-count", function (e) {      
-    const counterEle = $(this).next();
+function valueLengthCheck(e){
     const target = e.target;
-    const maxLength = target.getAttribute("maxlength");
-    const currentLength = target.value.length;
-    counterEle.html(`<strong>${currentLength}</strong> / ${maxLength}`);
-  });]]></script>
+    const value = target.value
+    document.querySelector
+    const el = target.parentNode.querySelector('.count-num');
+    el.querySelector('strong').innerHTML = value.length;
+}
+scwin.input1_onkeyup = function(e) {
+    valueLengthCheck(e);
+};
+
+scwin.input1_onkeypress = function(e) {
+    valueLengthCheck(e);
+};
+]]></script>
 	</head>
 	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
 		<xf:group style="" id="" class="wrap">
@@ -733,16 +741,20 @@ scwin.confirmBtn_onclick = function(e) {
 												<w2:scope>row</w2:scope>
 											</w2:attributes>
 											<w2:textbox id="" label="checkbox" style=""></w2:textbox>
-										<xf:group id="" class="tooltip-box"><xf:trigger style="" id="" centerOnImageClass="" type="button" class="btn-tooltip">
-												<xf:label><![CDATA[도움말보기]]></xf:label>
-											</xf:trigger><xf:group style="" id="" class="balloon">
-												<xf:group id="" class="inner">
-													<w2:textbox style="" id="" label="툴팁 스크립트 참고"></w2:textbox>
-													<xf:trigger style="" id="" centerOnImageClass="" type="button" class="btn-closed">
-														<xf:label><![CDATA[도움말닫기]]></xf:label>
-													</xf:trigger>
+											<xf:group id="" class="tooltip-box">
+												<xf:trigger style="" id="" centerOnImageClass="" type="button" class="btn-tooltip">
+													<xf:label><![CDATA[도움말보기]]></xf:label>
+												</xf:trigger>
+												<xf:group style="" id="" class="balloon">
+													<xf:group id="" class="inner">
+														<w2:textbox style="" id="" label="툴팁 스크립트 참고"></w2:textbox>
+														<xf:trigger style="" id="" centerOnImageClass="" type="button" class="btn-closed">
+															<xf:label><![CDATA[도움말닫기]]></xf:label>
+														</xf:trigger>
+													</xf:group>
 												</xf:group>
-											</xf:group></xf:group></xf:group>
+											</xf:group>
+										</xf:group>
 										<xf:group class="w2tb_td" style="" tagname="td">
 											<xf:select selectedindex="0" id="" appearance="full" style="" cols="" rows="" ref=""
 												renderType="checkboxgroup">
@@ -1125,8 +1137,9 @@ scwin.confirmBtn_onclick = function(e) {
 																</xf:group>
 															</xf:group>
 														</xf:group>
-														<w2:multiupload id="multiupload1" mode="html5_transparent" style="" uploadButton="false"
-															wmode="false" ev:onComplete="scwin.multiupload1_onComplete" ev:ondone="scwin.multiupload1_ondone" displaySizeUnit="Byte" sizeUnit="Byte">
+														<w2:multiupload id="multiupload1" mode="html5_transparent" style=""
+															uploadButton="false" wmode="false" ev:onComplete="scwin.multiupload1_onComplete" ev:ondone="scwin.multiupload1_ondone"
+															displaySizeUnit="Byte" sizeUnit="Byte">
 														</w2:multiupload>
 													</xf:group>
 												</xf:group>
@@ -1621,10 +1634,12 @@ scwin.confirmBtn_onclick = function(e) {
 														<xf:group class="w2tb_td" tagname="td">
 															<w2:attributes></w2:attributes>
 															<xf:group class="form-box counting-num" id="" style="">
-																<xf:input adjustMaxLength="false" class="w100 input-count" id=""
-																	placeholder="입력해주세요" style="" maxlength="20">
+																<xf:input adjustMaxLength="false" class="w100 input-count" id="input1"
+																	placeholder="입력해주세요" style="" maxlength="20" ev:onkeyup="scwin.input1_onkeyup" ev:onkeypress="scwin.input1_onkeypress">
 																</xf:input>
-																<xf:group class="count-num" id="" style="" tagname="p" text="&lt;strong&gt;0&lt;/strong&gt; / 20">
+																<xf:group class="count-num" id="" style="" tagname="p">
+																	<xf:group class="" id="" style="" tagname="strong" text="0"></xf:group>
+																	<xf:group class="" id="" style="" tagname="span" text=" / 20"></xf:group>
 																</xf:group>
 															</xf:group>
 														</xf:group>
@@ -4121,6 +4136,9 @@ scwin.confirmBtn_onclick = function(e) {
 			</xf:group>
 		</xf:group>
 
-		
+
+		<xf:trigger class="btn btn-line" ev:onclick="scwin.alertBtn_onclick" id="trigger1" style="" type="button">
+			<xf:label><![CDATA[alert]]></xf:label>
+		</xf:trigger>
 	</body>
 </html>
