@@ -100,11 +100,7 @@ export default {
         "@value": "true"
       }
     },
-    "engine": {
-      "module": {
-        "@src": "/cm/js/jquery-3.6.0.min.js"
-      }
-    },
+    "engine": {},
     "ModelUtil": {
       "copyChildrenNodes": {
         "@refresh": "false"
@@ -645,6 +641,9 @@ export default {
       "escape": {
         "@value": "false"
       }
+    },
+    "jquerySupport": {
+      "@src": "/cm/js/jquery-3.6.0.min.js"
     }
   }
 }

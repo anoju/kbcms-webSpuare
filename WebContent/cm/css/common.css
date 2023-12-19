@@ -52,14 +52,14 @@ body{
 .header .logo::after{content: '';display:inline-block;width: 1px;height: 1.8rem;background-color: #fff;margin: 0 1.8rem;opacity: 0.2;}
 .header .logo a {width:11rem;height: 2.4rem;background: url(../images/kb_logo.png) no-repeat 0 0 / contain;text-indent: -9999em;}
 .header .btn_menu {width: 2.4rem;height: 2.4rem;margin-right:2rem;background: url(../images/btn/btn_menu_closed.svg) no-repeat 0 0 / cover;text-indent: -9999em;}
-.header .btn_menu.off {background-image: url(../images/btn/btn-menu-opened.svg);}
+.sidebar-off .header .btn_menu {background-image: url(../images/btn/btn-menu-opened.svg);}
 .header .btn_logout {height: 2.4rem;margin-left:1.2rem;padding-right:3.7rem;background: url(../images/btn/btn_logout.svg) no-repeat 100% 0 / 2.4rem 2.4rem;color:#fff;}
 .header .user-box + .logout::before {content: '';display: inline-block;width:1px;height: 1.6rem;margin-left:1.2rem;background-color: #fff;opacity: 0.2;}
 
 
 /*main side menu*/ 
 .side-menu-box {position: absolute;left:0;width:26rem;height:100%;background-color: #fff;box-shadow:2px 2px 8px 0px rgba(0,0,0,0.08);overflow-y:auto;box-sizing: border-box;transition-property:left;transition-duration:0.5s;transition-delay: 0.3s;}
-.side-menu-box.off {left: -26rem;transition-property:left;transition-duration:0.5s;transition-delay: 0.3s;}
+.sidebar-off .side-menu-box {left: -26rem;transition-property:left;transition-duration:0.5s;transition-delay: 0.3s;}
 .side-menu-box .side-menu-list {height: 100%;}
 .side-menu-box .w2panels:first-child .w2panels_title {padding-top: 2.4rem;}
 .side-menu-box .w2panels:first-child .w2panels_title_image {top:2.4rem;}
@@ -83,7 +83,7 @@ body{
 
 /*main page area*/
 .contents-box .page-box {width:calc(100% - 26rem);height:100%;margin-left:26rem;overflow-y: auto;background-color: #F3F5F6;transition-property:margin-left, width;transition-delay: 0.3s;transition-duration:0.5s;}
-.contents-box .page-box.off {width:100%;margin-left:0;transition-property:margin-left, width;transition-duration:0.5s;transition-delay: 0.3s;}
+.sidebar-off .contents-box .page-box {width:100%;margin-left:0;transition-property:margin-left, width;transition-duration:0.5s;transition-delay: 0.3s;}
 .contents-box .page-box .contents {padding:3.2rem;}
 .contents-box .layer-box {padding:2.4rem;border-radius:0.8rem;background-color:#fff;box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.05);}
 .contents-box .layer-box + .layer-box {margin-top: 1.6rem;}

@@ -14,42 +14,32 @@
             <w2:workflowCollection>
             </w2:workflowCollection>
         </xf:model>
-         <script type="text/javascript" lazy="false"><![CDATA[
-        
-	scwin.onpageload = function() {
-		function menuBtn(){
-			const btn = $('.btn_menu');
-			const sideMenu = btn.closest('.wrap').find('.side-menu-box');
-			const contentBox = sideMenu.closest('.contents-box').find('.page-box');
+         <script type="text/javascript" lazy="false"><![CDATA[	
+const sidebarCloseClassName = 'sidebar-off'
 
-			btn.on('click', function(){
-				if(btn.hasClass('off')){
-					$(this).removeClass('off');
-					sideMenu.removeClass('off');
-					contentBox.removeClass('off');
-				} else {
-					$(this).addClass('off');
-					sideMenu.addClass('off');
-					contentBox.addClass('off');
-				}
+scwin.btnSidebar_onclick = function() {
+	const $btn = $(this.render);
+	const wrap = $btn.closest('.wrap');
+	if(wrap.hasClass(sidebarCloseClassName)){
+		wrap.removeClass(sidebarCloseClassName);
+		WebSquare.localStorage.removeItem('sidebarClose'); 
+	} else {
+		wrap.addClass(sidebarCloseClassName);
+		WebSquare.localStorage.setItem('sidebarClose', true); 
+	}
+};
 
-			});
-		}
-
-		menuBtn();
-	};
-	
-	scwin.onpageunload = function() {
-		
-	};
-	
-	]]></script>
+scwin.onpageload = function() {
+	const sidebarClose = WebSquare.localStorage.getItem('sidebarClose');
+	if(sidebarClose) $('.wrap').addClass(sidebarCloseClassName);
+};
+]]></script>
     </head>
-    <body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
+    <body ev:onpageunload="scwin.onpageunload" ev:onpageload="scwin.onpageload">
     	<xf:group class="header" id="" style="">
 
     		<xf:group class="left" id="" style="">
-    			<w2:anchor outerDiv="false" style="" id="" class="btn_menu">
+    			<w2:anchor outerDiv="false" style="" id="btnSidebar" class="btn_menu" ev:onclick="scwin.btnSidebar_onclick">
     				<xf:label><![CDATA[메뉴 닫기]]></xf:label>
     			</w2:anchor>
     			<xf:group id="" class="logo" tagname="h1">
