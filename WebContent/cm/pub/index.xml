@@ -90,159 +90,151 @@
 		</xf:model>
 		<script type="text/javascript" lazy="false"><![CDATA[
         
-	scwin.onpageload = function() {
+scwin.onpageload = function() {
     // grp-add-box 안에 add-box가 없으면
-            function addBoxVisibility(){
-                $(".grp-add-box").each(function() {
-                    const wrapAddBox = $(this);
-                    const addBox = wrapAddBox.find(".add-box");
+    function addBoxVisibility(){
+        $(".grp-add-box").each(function() {
+            const wrapAddBox = $(this);
+            const addBox = wrapAddBox.find(".add-box");
 
-                    if (addBox.length === 0) {
-                        wrapAddBox.remove();
-                    }
-                });
-            };
+            if (addBox.length === 0) {
+                wrapAddBox.remove();
+            }
+        });
+    };
     //round-table-box 안에 data가 없으면
-            function tableVisibility(){
-                 $(".round-table-box").each(function() {
-                const wrapTableBox = $(this);
-                const dataRow = wrapTableBox.find(".w2tb_td");
+    function tableVisibility(){
+            $(".round-table-box").each(function() {
+        const wrapTableBox = $(this);
+        const dataRow = wrapTableBox.find(".w2tb_td");
 
-                if(dataRow.length === 0){
-                    wrapTableBox.find('.tb').remove();
-                    wrapTableBox.find('.nodata').show();
+        if(dataRow.length === 0){
+            wrapTableBox.find('.tb').remove();
+            wrapTableBox.find('.nodata').show();
+        }
+        });
+    };
+    //upload-form-box 안에 data가 없으면
+    function uploadVisibility(){
+            $(".upload-form-box").each(function() {
+        const uploadBox = $(this);
+        const dataRow = uploadBox.find(".w2tb_td");
+
+        if(dataRow.length === 0){
+            uploadBox.find('.table-box').remove();
+            uploadBox.find('.notice').show();
+        }
+        });
+    };
+    // add-box 삭제       
+    function deleteBtn() {
+            const $btn = $('.btn-delete');
+
+            $btn.on('click', function(){
+                if($(this).closest('.add-box')){
+                    $(this).closest('.add-box').remove();
+                } 
+                if($(this).closest('table')){
+                    $(this).closest('tr').remove();
                 }
-                });
-            };
-	//upload-form-box 안에 data가 없으면
-            function uploadVisibility(){
-                 $(".upload-form-box").each(function() {
-                const uploadBox = $(this);
-                const dataRow = uploadBox.find(".w2tb_td");
+                addBoxVisibility();
+                tableVisibility();
+                uploadVisibility();
+            });
+    };
 
-                if(dataRow.length === 0){
-                    uploadBox.find('.table-box').remove();
-                    uploadBox.find('.notice').show();
-                }
-                });
-            };
-     // add-box 삭제       
-			function deleteBtn() {
-                    const $btn = $('.btn-delete');
+    //검색영역 확장축소
+    function searchListExpand(){
+        const btnExp = $('.btn-expand');
 
-                    $btn.on('click', function(){
-                        if($(this).closest('.add-box')){
-                            $(this).closest('.add-box').remove();
-                        } 
-                        if($(this).closest('table')){
-                            $(this).closest('tr').remove();
-                        }
-                        addBoxVisibility();
-                        tableVisibility();
-						uploadVisibility();
-                    });
-			};
+        btnExp.on('click', function(){
+            const searchBox = $(this).closest('.search-box');
+            const currentVal = $(this).val();
 
-		//검색영역 확장축소
-			function searchListExpand(){
-				const btnExp = $('.btn-expand');
-
-				btnExp.on('click', function(){
-					const searchBox = $(this).closest('.search-box');
-					const currentVal = $(this).val();
-
-					if(searchBox.hasClass('expand')){
-						searchBox.removeClass('expand');
-					} else {
-						searchBox.addClass('expand');
-					}
-					if(currentVal === "열기"){
-						$(this).val("닫기");
-					} else {
-						$(this).val("열기");
-					}
-        		});
-    		};
-            //버튼 있는 tab
-            function tabBtn(){
-                const buttonBox = $('<li class="tab-control-box w2tabcontrol_li"></li>');
-
-                const tabAddBtn = $('<a href role="button" id="addTabLi" class="btn-dotline">추가하기</a>');
-                const tabCopyPaste = $('<a href role="button" class="btn-dotline">복사 추가하기</a>');
-
-                buttonBox.append(tabAddBtn);
-                buttonBox.append(tabCopyPaste);
-
-                $('.tc-btn-type .w2tabcontrol_tabhost').append(buttonBox);
+            if(searchBox.hasClass('expand')){
+                searchBox.removeClass('expand');
+            } else {
+                searchBox.addClass('expand');
             }
+            if(currentVal === "열기"){
+                $(this).val("닫기");
+            } else {
+                $(this).val("열기");
+            }
+        });
+    };
+    //버튼 있는 tab
+    function tabBtn(){
+        const buttonBox = $('<li class="tab-control-box w2tabcontrol_li"></li>');
+
+        const tabAddBtn = $('<a href role="button" id="addTabLi" class="btn-dotline">추가하기</a>');
+        const tabCopyPaste = $('<a href role="button" class="btn-dotline">복사 추가하기</a>');
+
+        buttonBox.append(tabAddBtn);
+        buttonBox.append(tabCopyPaste);
+
+        $('.tc-btn-type .w2tabcontrol_tabhost').append(buttonBox);
+    }
     //툴팁
-            function tooltipOn(){
-                const btnTooltipOn = $('.btn-tooltip');
-                const btnToolTipOff = btnTooltipOn.next().find('.btn-closed');
+    function tooltipOn(){
+        const btnTooltipOn = $('.btn-tooltip');
+        const btnToolTipOff = btnTooltipOn.next().find('.btn-closed');
 
-                btnTooltipOn.on('click',function(){
-                    $(this).next().fadeIn();
-                });
-                btnToolTipOff.on('click', function(){
-                    $(this).closest('.balloon').fadeOut();
-                });
+        btnTooltipOn.on('click',function(){
+            $(this).next().fadeIn();
+        });
+        btnToolTipOff.on('click', function(){
+            $(this).closest('.balloon').fadeOut();
+        });
 
-            }
+    }
 
 
-            addBoxVisibility();
-            tableVisibility();
-			uploadVisibility();
-            deleteBtn(); 
-    		searchListExpand();
-            tooltipOn();
-            tabBtn();
-	};
+    addBoxVisibility();
+    tableVisibility();
+    uploadVisibility();
+    deleteBtn(); 
+    searchListExpand();
+    // tooltipOn();
+    tabBtn();
+};
+
+scwin.onpageunload = function() {
+    
+};
 	
-	scwin.onpageunload = function() {
-		
-	};
-	var popupS = {
-    id : "popupS",
-    type : "wframePopup",
-    popupName : "팝업S-W500",
-    modal : "true",
-	width:"500px"
+scwin.btnPopupS_onclick = function(e) {
+    var popupS = {
+        id : "popupS",
+        type : "wframePopup",
+        popupName : "팝업S-W500",
+        modal : "true",
+        width:"500px"
 	}; 
-	$p.openPopup("popup1.xml", popupS);
+    $p.openPopup("popup1.xml", popupS);
+};
 
-	var popupM = {
-    id : "popupM",
-    type : "wframePopup",
-    popupName : "팝업M-W800",
-    modal : "true",
-	width:"800px"
+scwin.btnPopupM_onclick = function(e) {
+    var popupM = {
+        id : "popupM",
+        type : "wframePopup",
+        popupName : "팝업M-W800",
+        modal : "true",
+        width:"800px"
 	}; 
-	$p.openPopup("popup1.xml", popupM);
+    $p.openPopup("popup1.xml", popupM);
+};
 
-
-	var popupL = {
-    id : "popupL",
-    type : "wframePopup",
-    popupName : "팝업L-W1000",
-    modal : "true",
-	width:"1000px"
-	}; 
-	$p.openPopup("popup1.xml", popupL);
-
-	
-
-	scwin.popupS_onclick = function(e) {
-		$p.openPopup("popup1.xml", popupS);
-	};
-
-	scwin.popupM_onclick = function(e) {
-		$p.openPopup("popup1.xml", popupM);
-	};
-
-	scwin.popupL_onclick = function(e) {
-		$p.openPopup("popup1.xml", popupL);
-	};
+scwin.btnPopupL_onclick = function(e) {
+    var popupL = {
+        id : "popupL",
+        type : "wframePopup",
+        popupName : "팝업L-W1000",
+        modal : "true",
+        width:"1000px"
+    }; 
+    $p.openPopup("popup1.xml", popupL);
+};
 
 function popAlert(obj){
     if(!obj.type || !obj.msg) return;
@@ -261,11 +253,16 @@ function popAlert(obj){
         modal : "true",
         width:"280px",
         dataObject : dataObject
+        // closeAction: function(e){
+        //     console.log('closeAction',e, this);
+        //     const $this = this;
+        //     $p.closePopup($this);
+        // }
     }; 
     $p.openPopup("alert.xml", alertOpt);
 }
 
-scwin.alertBtn_onclick = function(e) {
+scwin.btnAlert_onclick = function(e) {
     popAlert({ 
         type: "alert",
         msg: "얼럿 메시지 입니다 1111",
@@ -274,7 +271,7 @@ scwin.alertBtn_onclick = function(e) {
         } */
     });
 }; 
-scwin.confirmBtn_onclick = function(e) {
+scwin.btnConfirm_onclick = function(e) {
     popAlert({ 
         type: "confirm",
         msg: "컨펌 메시지 입니다 222",
@@ -309,13 +306,14 @@ scwin.input1_onkeyup = function(e) {
 scwin.input1_onkeypress = function(e) {
     valueLengthCheck(e);
 };
+
 ]]></script>
 	</head>
 	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
 		<xf:group style="" id="" class="wrap">
-			<w2:wframe style="" id="" class="header_frame" src="/cm/pub/main_header.xml"></w2:wframe>
+			<w2:wframe style="" id="" class="header_frame" src="/cm/pub/common/header.xml"></w2:wframe>
 			<xf:group class="contents-box" id="" style="">
-				<w2:wframe style="" id="" class="side-menu-frame" src="/cm/pub/side_menu.xml"></w2:wframe>
+				<w2:wframe style="" id="" class="side-menu-frame" src="/cm/pub/common/sidebar.xml"></w2:wframe>
 				<xf:group class="page-box" id="" style="">
 					<xf:group class="contents" id="" style="">
 						<xf:group class="title-box" id="" style="">
@@ -3563,19 +3561,19 @@ scwin.input1_onkeypress = function(e) {
 							</xf:group>
 						</xf:group>
 						<xf:group class="btn-box" id="" style="">
-							<xf:trigger class="btn btn-line" id="popupS" style="" type="button" ev:onclick="scwin.popupS_onclick">
+							<xf:trigger class="btn btn-line" id="btnPopupS" style="" type="button" ev:onclick="scwin.btnPopupS_onclick">
 								<xf:label><![CDATA[팝업S w500]]></xf:label>
 							</xf:trigger>
-							<xf:trigger class="btn btn-line" ev:onclick="scwin.popupM_onclick" id="popupM" style="" type="button">
+							<xf:trigger class="btn btn-line" ev:onclick="scwin.btnPopupM_onclick" id="btnPopupM" style="" type="button">
 								<xf:label><![CDATA[팝업m w800]]></xf:label>
 							</xf:trigger>
-							<xf:trigger class="btn btn-line" ev:onclick="scwin.popupL_onclick" id="popupL" style="" type="button">
+							<xf:trigger class="btn btn-line" ev:onclick="scwin.btnPopupL_onclick" id="btnPopupL" style="" type="button">
 								<xf:label><![CDATA[팝업L w1000]]></xf:label>
 							</xf:trigger>
-							<xf:trigger class="btn btn-line" ev:onclick="scwin.alertBtn_onclick" id="alertBtn" style="" type="button">
+							<xf:trigger class="btn btn-line" ev:onclick="scwin.btnAlert_onclick" id="btnAlert" style="" type="button">
 								<xf:label><![CDATA[alert]]></xf:label>
 							</xf:trigger>
-							<xf:trigger class="btn btn-line" id="confirmBtn" style="" type="button" ev:onclick="scwin.confirmBtn_onclick">
+							<xf:trigger class="btn btn-line" id="btnConfirm" style="" type="button" ev:onclick="scwin.btnConfirm_onclick">
 								<xf:label><![CDATA[confirm]]></xf:label>
 							</xf:trigger>
 						</xf:group>

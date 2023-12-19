@@ -37,21 +37,12 @@ scwin.onpageload = function() {
     //dimm 투명하게
     var dimm = popAlert.previousElementSibling;
     if (dimm && dimm.classList.contains('w2modal')) dimm.classList.add('transparent');
-
-    //콜백
-    // if($alertParam.ok) okFn = $alertParam.ok();
-    // if($alertParam.cancel) cancelFn = $alertParam.cancel();
 };
 
 scwin.alertOKBtn_onclick = function(e) {
-    // console.log(okFn);
-    // if(okFn && typeof okFn === 'function') okFn();
-    console.log('확인');
     $p.closePopup();
 };
 scwin.alertCancelBtn_onclick = function(e) {
-    // if(cancelFn && typeof cancelFn === 'function') cancelFn();
-    console.log('취소');
     $p.closePopup();
 };]]></script>
     </head>

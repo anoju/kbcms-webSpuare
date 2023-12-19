@@ -103,9 +103,9 @@ scwin.onpageload = function() {
     </head>
     <body ev:onpageload="scwin.onpageload">
     	<xf:group class="wrap" id="" style="">
-    		<w2:wframe class="header_frame" id="" src="main_header.xml" style=""></w2:wframe>
+    		<w2:wframe class="header_frame" id="" src="/cm/pub/common/header.xml" style=""></w2:wframe>
     		<xf:group class="contents-box" id="" style="">
-    			<w2:wframe class="side-menu-frame" id="" src="side_menu.xml" style=""></w2:wframe>
+    			<w2:wframe class="side-menu-frame" id="" src="/cm/pub/common/sidebar.xml" style=""></w2:wframe>
     			<xf:group class="page-box" id="" style="">
     				<xf:group class="contents" id="" style="">
     					<xf:group class="title-box" id="" style="">
