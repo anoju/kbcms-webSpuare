@@ -28,6 +28,29 @@
 .author-list-box li .author:hover,
 .author-list-box li .author:active,
 .author-list-box li .author:focus {background-color: #DFEAFF;font-weight: 500;}
-.author-list-box .list-controler {position: absolute;left:0.9rem;bottom: 0;display: flex;gap: 0.6rem;}
+.author-list-box .list-controler {position: absolute;left:0.9rem;bottom: 1rem;display: flex;gap: 0.6rem;}
+
+.author-list-box .w2treeview {width: 23.3rem;height: 100%;}
+.author-list-box .w2treeview .w2treeview_group{width: 100%;}
+.author-list-box .w2treeview > .w2treeview_group:last-child{padding-bottom: 1.6rem;}
+.author-list-box .w2treeview .w2treeview_col_label {width:100%;padding: 0.8rem 1.2rem;}
+.author-list-box .w2treeview .w2treeview_col_label .w2treeview_label{padding: 0;}
+.author-list-box .w2treeview .w2treeview_row_depth1,
+.author-list-box .w2treeview .w2treeview_row_depth2 {position: relative;}
+.author-list-box .w2treeview .w2treeview_col_icon_navi{width: 0;}
+.author-list-box .w2treeview .w2treeview_row_depth1 .w2treeview_col_label .w2treeview_label {font-weight: 700;font-size: 1.5rem;}
+.author-list-box .w2treeview .w2treeview_open_child .w2treeview_row_depth1 .w2treeview_icon_navi {position: absolute;right: 1.2rem;top:0.9rem;width: 2rem;height: 2rem;background: url(../images/ico/ico-treeview-minus.svg) no-repeat 0 0 / cover;}
+.author-list-box .w2treeview .w2treeview_close_child .w2treeview_row_depth1 .w2treeview_icon_navi {position: absolute;right: 1.2rem;top:0.9rem;width: 2rem;height: 2rem;background: url(../images/ico/ico-treeview-plus.svg) no-repeat 0 0 / cover;}
+.author-list-box .w2treeview .w2treeview_guideline {display: none;}
+.author-list-box .w2treeview .w2treeview_row_depth2 .w2treeview_icon_navi{position: absolute;left: 1.2rem;top:0.9rem;width: 1.6rem;height: 1.6rem;background: url(../images/ico/ico-drilldown.svg) no-repeat 0 0 / cover;}
+.author-list-box .w2treeview .w2treeview_row_depth3 .w2treeview_icon_navi{position: absolute;left: 2.4rem;top:0.9rem;width: 1.6rem;height: 1.6rem;background: url(../images/ico/ico-drilldown.svg) no-repeat 0 0 / cover;}
+.author-list-box .w2treeview .w2treeview_row_depth2 .w2treeview_col_label {padding-left: 1.2rem;border-radius: 0.4rem;}
+.author-list-box .w2treeview .w2treeview_row_depth3 .w2treeview_col_label {padding-left: 2.4rem;border-radius: 0.4rem;}
+.author-list-box .w2treeview .w2treeview_row_depth2 .w2treeview_col_label:hover,
+.author-list-box .w2treeview .w2treeview_row_depth3 .w2treeview_col_label:hover {background-color: #DFEAFF;}
+.author-list-box .w2treeview .w2treeview_row_depth2 .w2treeview_label,
+.author-list-box .w2treeview .w2treeview_row_depth3 .w2treeview_label {margin-left: 1.6rem;font-weight: 300;font-size: 1.4rem;color: #666;}
+.author-list-box .w2treeview + .list-controler {padding-top: 1.2rem;background-color: #fff;}
+.author-list-box .w2treeview + .list-controler::before {content: '';display: block;position:absolute;left:-1rem;top:-1.2rem;width: calc(100% + 1rem);height: 1.6rem;background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);z-index: 120;}
 
 /*****관리자 페이지 end*****/

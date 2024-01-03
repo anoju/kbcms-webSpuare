@@ -195,7 +195,7 @@ scwin.onpageload = function() {
     uploadVisibility();
     deleteBtn(); 
     searchListExpand();
-    // tooltipOn();
+    tooltipOn();
     tabBtn();
 };
 
@@ -664,7 +664,7 @@ scwin.input1_onkeypress = function(e) {
 												<w2:scope>row</w2:scope>
 											</w2:attributes>
 											<w2:textbox id="" label="input text" style=""></w2:textbox>
-											<xf:group class="tooltip-box" id="" style="">
+											<xf:group class="tooltip-box -hover" id="" style="">
 												<xf:trigger centerOnImageClass="" class="btn-tooltip" id="" style="" type="button">
 													<xf:label><![CDATA[도움말보기]]></xf:label>
 												</xf:trigger>
@@ -1690,7 +1690,7 @@ scwin.input1_onkeypress = function(e) {
 								<w2:textbox class="head-title" id="" label="테이블과 그리드" style="" tagname="h2"></w2:textbox>
 							</xf:group>
 							<xf:group class="title-box" id="" style="">
-								<xf:group id="">
+								<xf:group id="" class="left">
 									<w2:textbox tagname="h3" style="" id="" label="기본테이블" class="sub-title"></w2:textbox>
 									<w2:span style="" id="" label="th의 width는 웹스퀘어에서 직접 준다" class="txt-division"></w2:span>
 								</xf:group>
@@ -2388,7 +2388,7 @@ scwin.input1_onkeypress = function(e) {
 
 						</xf:group>
 						<xf:group class="title-box mt10" id="" style="">
-							<xf:group id="">
+							<xf:group id="" class="left">
 								<w2:textbox tagname="h2" style="" id="" label="검색영역" class="head-title"></w2:textbox>
 								<w2:span style="" id="" label="layer-box에 search-box 클래스 추가" class="txt-division"></w2:span>
 							</xf:group>
@@ -3555,7 +3555,7 @@ scwin.input1_onkeypress = function(e) {
 							</xf:trigger>
 						</xf:group>
 						<xf:group class="title-box mt10" id="" style="">
-							<xf:group id="">
+							<xf:group id="" class="left">
 								<w2:textbox class="head-title" id="" label="팝업" style="" tagname="h2"></w2:textbox>
 								<w2:span class="txt-division" id="" label="스크립트 확인" style=""></w2:span>
 							</xf:group>
@@ -3579,7 +3579,7 @@ scwin.input1_onkeypress = function(e) {
 						</xf:group>
 						<xf:group class="layer-box" id="" style="">
 							<xf:group class="title-box mt10" id="" style="">
-								<xf:group id="">
+								<xf:group id="" class="left">
 									<w2:textbox class="head-title" id="" label="탭" style="" tagname="h2"></w2:textbox>
 									<w2:span class="txt-division" id="" label="스크립트 확인" style=""></w2:span>
 								</xf:group>

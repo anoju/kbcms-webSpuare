@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" repeatNode="map" id="dataList1" saveRemovedData="true">
+            		<w2:columnInfo>
+            			<w2:column id="label" name="name1" dataType="text"></w2:column>
+            			<w2:column id="val" name="name2" dataType="text"></w2:column>
+            			<w2:column id="dep" name="name3" dataType="text"></w2:column>
+            		</w2:columnInfo>
+            		<w2:data use="true">
+            			<w2:row>
+            				<label><![CDATA[KB증권 CMS]]></label>
+            				<val><![CDATA[KB증권 CMS]]></val>
+            				<dep><![CDATA[1]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[메뉴1]]></label>
+            				<val><![CDATA[메뉴1]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[메뉴2]]></label>
+            				<val><![CDATA[메뉴2]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[홈]]></label>
+            				<val><![CDATA[홈]]></val>
+            				<dep><![CDATA[1]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[대시보드]]></label>
+            				<val><![CDATA[대시보드]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[컨텐츠 생성/배포]]></label>
+            				<val><![CDATA[컨텐츠 생성/배포]]></val>
+            				<dep><![CDATA[1]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[콘텐츠(AEM) 작성하기]]></label>
+            				<val><![CDATA[콘텐츠(AEM) 작성하기]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[콘텐츠 부가정보 관리]]></label>
+            				<val><![CDATA[콘텐츠 부가정보 관리]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[콘텐츠 부가정보 등록]]></label>
+            				<val><![CDATA[콘텐츠 부가정보 등록]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[콘텐츠 사용 신청]]></label>
+            				<val><![CDATA[콘텐츠 제작 요청]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[모니터링]]></label>
+            				<val><![CDATA[모니터링]]></val>
+            				<dep><![CDATA[1]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[모니터링 대시보드]]></label>
+            				<val><![CDATA[모니터링 대시보드]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[전체현황]]></label>
+            				<val><![CDATA[전체현황]]></val>
+            				<dep><![CDATA[3]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[MAP별 현황]]></label>
+            				<val><![CDATA[MAP별 현황]]></val>
+            				<dep><![CDATA[3]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[인사이트 분석]]></label>
+            				<val><![CDATA[인사이트 분석]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[메뉴3]]></label>
+            				<val><![CDATA[메뉴3]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[메뉴4]]></label>
+            				<val><![CDATA[메뉴4]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[메뉴5]]></label>
+            				<val><![CDATA[메뉴5]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            			<w2:row>
+            				<label><![CDATA[메뉴6]]></label>
+            				<val><![CDATA[메뉴6]]></val>
+            				<dep><![CDATA[2]]></dep>
+            			</w2:row>
+            		</w2:data>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+scwin.onpageload = function() {
+	
+};
+]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:group class="wrap" id="" style="">
+    		<w2:wframe class="header_frame" id="" src="main_header.xml" style=""></w2:wframe>
+    		<xf:group class="contents-box" id="" style="">
+    			<w2:wframe class="side-menu-frame" id="" src="side_menu.xml" style=""></w2:wframe>
+    			<xf:group class="page-box" id="" style="">
+    				<xf:group class="contents" id="" style="">
+    					<xf:group class="title-box" id="" style="">
+    						<w2:textbox class="head-title" id="" label="메뉴 관리" style="" tagname="h2"></w2:textbox>
+    						<xf:group class="breadcrumb" id="" style="">
+    							<xf:group class="" id="" style="" tagname="ul">
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[홈]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[모니터링]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[모니터링 대시보드]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[모니터링 현황]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    							</xf:group>
+    						</xf:group>
+    					</xf:group>
+    					<xf:group class="flex manager-box" id="" style="">
+    						<xf:group class="layer-box w-fixed" id="" style="">
+    							<xf:group class="title-box" id="" style="">
+    								<xf:group id="" class="left">
+    									<w2:textbox tagname="h3" style="" id="" label="메뉴구조" class="sub-title"></w2:textbox>
+    								</xf:group>
+    								<xf:group class="right" id="" style="">
+    									<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="true" class=""
+    										direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" style="width: 7.2rem;"
+    										submenuSize="auto" chooseOptionLabel="전체" renderType="component">
+    										<xf:choices>
+    											<xf:item>
+    												<xf:label><![CDATA[new row]]></xf:label>
+    												<xf:value><![CDATA[]]></xf:value>
+    											</xf:item>
+    											<xf:item>
+    												<xf:label><![CDATA[new row]]></xf:label>
+    												<xf:value><![CDATA[]]></xf:value>
+    											</xf:item>
+    											<xf:item>
+    												<xf:label><![CDATA[new row]]></xf:label>
+    												<xf:value><![CDATA[]]></xf:value>
+    											</xf:item>
+    											<xf:item>
+    												<xf:label><![CDATA[new row]]></xf:label>
+    												<xf:value><![CDATA[]]></xf:value>
+    											</xf:item>
+    										</xf:choices>
+    									</xf:select1>
+    								</xf:group>
+    							</xf:group>
+    							<xf:group class="author-list-box" id="" style="">
+    								<w2:treeview id="" dataType="listed" tooltipGroupClass="false" style="">
+    									<w2:itemset nodeset="data:dataList1">
+    										<w2:label ref="label"></w2:label>
+    										<w2:value ref="val"></w2:value>
+    										<w2:depth ref="dep"></w2:depth>
+    										<w2:folder ref=""></w2:folder>
+    										<w2:checkbox ref=""></w2:checkbox>
+    										<w2:checkboxDisabled ref=""></w2:checkboxDisabled>
+    										<w2:image ref=""></w2:image>
+    										<w2:iconImage ref=""></w2:iconImage>
+    										<w2:selectedImage ref=""></w2:selectedImage>
+    										<w2:expandedImage ref=""></w2:expandedImage>
+    										<w2:leafImage ref=""></w2:leafImage>
+    									</w2:itemset>
+    								</w2:treeview>
+    								<xf:group class="list-controler" id="" style="">
+    									<xf:trigger centerOnImageClass="" class="btn btn-icon -up" id="" style="" type="button">
+    										<xf:label><![CDATA[]]></xf:label>
+    									</xf:trigger>
+    									<xf:trigger centerOnImageClass="" class="btn btn-icon -down" id="" style="" type="button">
+    										<xf:label></xf:label>
+    									</xf:trigger>
+    									<xf:trigger centerOnImageClass="" class="btn btn-icon -plus" id=""
+    										style="" type="button">
+    										<xf:label><![CDATA[메뉴 추가]]></xf:label>
+    									</xf:trigger>
+
+    								</xf:group>
+    								
+    							</xf:group>
+    						</xf:group>
+    						<xf:group class="layer-box w-flexed" id="" style="">
+    							<xf:group class="tab-box" id="" style=""></xf:group>
+    							<xf:group class="title-box" id="" style="">
+    								<w2:textbox class="sub-title" id="" label="메뉴 정보" style="" tagname="h3"></w2:textbox>
+    							</xf:group>
+    							<xf:group class="table-box" id="" style="">
+    								<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+    									<w2:attributes>
+    										<w2:summary></w2:summary>
+    									</w2:attributes>
+    									<xf:group tagname="caption"></xf:group>
+    									<xf:group tagname="colgroup">
+    										<xf:group style="width:172px;" tagname="col"></xf:group>
+    										<xf:group style="" tagname="col"></xf:group>
+    									</xf:group>
+    									<xf:group style="" tagname="tr">
+    										<xf:group class="w2tb_th req" style="" tagname="th">
+    											<w2:attributes>
+    												<w2:scope>row</w2:scope>
+    											</w2:attributes>
+    											<w2:textbox id="" label="메뉴명" style=""></w2:textbox>
+    										</xf:group>
+    										<xf:group class="w2tb_td" style="" tagname="td">
+    											<xf:input adjustMaxLength="false" id="" style="" class="wxl"></xf:input>
+    										</xf:group>
+    									</xf:group>
+    									<xf:group tagname="tr">
+    										<xf:group class="w2tb_th" style="" tagname="th">
+    											<w2:attributes>
+    												<w2:scope>row</w2:scope>
+    											</w2:attributes>
+    											<w2:textbox id="" label="메뉴 Level" style=""></w2:textbox>
+    										</xf:group>
+    										<xf:group class="w2tb_td" style="" tagname="td">
+    											<w2:textbox class="fs-15" id="" label="3depth" style=""></w2:textbox>
+    										</xf:group>
+    									</xf:group>
+    									<xf:group tagname="tr">
+    										<xf:group tagname="th" class="w2tb_th">
+    											<w2:attributes>
+    												<w2:scope>row</w2:scope>
+    											</w2:attributes>
+    											<w2:textbox id="" label="메뉴위치" style=""></w2:textbox>
+    										</xf:group>
+    										<xf:group tagname="td" class="w2tb_td">
+    											<w2:attributes></w2:attributes>
+    											<w2:textbox class="fs-15" id="" label="KB증권 CMS &gt; 모니터링 &gt; 모니터링 대시보드 &gt; 전체현황"
+    												style="">
+    											</w2:textbox>
+    										</xf:group>
+    									</xf:group>
+    									<xf:group tagname="tr">
+    										<xf:group tagname="th" class="w2tb_th req">
+    											<w2:attributes>
+    												<w2:scope>row</w2:scope>
+    											</w2:attributes>
+    											<w2:textbox id="" label="호출 페이지 URL" style=""></w2:textbox>
+    										</xf:group>
+    										<xf:group tagname="td" class="w2tb_td">
+    											<w2:attributes></w2:attributes>
+    											<xf:group id="" class="form-box">
+    												<xf:select ref="" appearance="full" style="" id="" renderType="checkboxgroup" rows=""
+    													selectedindex="0" cols="" class="w-fixed">
+    													<xf:choices>
+    														<xf:item>
+    															<xf:label><![CDATA[있음]]></xf:label>
+    															<xf:value><![CDATA[]]></xf:value>
+    														</xf:item>
+    														<xf:item>
+    															<xf:label><![CDATA[없음]]></xf:label>
+    															<xf:value><![CDATA[]]></xf:value>
+    														</xf:item>
+    													</xf:choices>
+    												</xf:select>
+    												<xf:input adjustMaxLength="false" id="" style=""></xf:input>
+    											</xf:group>
+    										</xf:group>
+    									</xf:group>
+    									<xf:group tagname="tr">
+    										<xf:group tagname="th" class="w2tb_th req">
+    											<w2:attributes>
+    												<w2:scope>row</w2:scope>
+    											</w2:attributes>
+    											<w2:textbox id="" label="사용여부" style=""></w2:textbox>
+    										</xf:group>
+    										<xf:group tagname="td" class="w2tb_td">
+    											<w2:attributes></w2:attributes>
+    											<xf:select appearance="full" class="w-fixed" cols="" id="" ref="" renderType="checkboxgroup"
+    												rows="" selectedindex="0" style="">
+    												<xf:choices>
+    													<xf:item>
+    														<xf:label><![CDATA[사용]]></xf:label>
+    														<xf:value><![CDATA[]]></xf:value>
+    													</xf:item>
+    													<xf:item>
+    														<xf:label><![CDATA[사용안함]]></xf:label>
+    														<xf:value><![CDATA[]]></xf:value>
+    													</xf:item>
+    												</xf:choices>
+    											</xf:select>
+    										</xf:group>
+    									</xf:group>
+    								</xf:group>
+    							</xf:group>
+    							<xf:group class="btn-box" id="" style="">
+    								<xf:group id=""></xf:group>
+    								<xf:group id="" style="">
+    									<xf:trigger class="btn btn-primary" id="" style="" type="button">
+    										<xf:label><![CDATA[저장]]></xf:label>
+    									</xf:trigger>
+    								</xf:group>
+    							</xf:group>
+    							<xf:group class="msg-box" id="" style="">
+    								<w2:textbox class="info-title" id="" label="안내사항" style=""></w2:textbox>
+    								<xf:group class="" id="" style="" tagname="ul">
+    									<xf:group class="" id="" style="" tagname="li">
+    										<w2:textbox id=""
+    											label="추가하는 메뉴는 메뉴구조에서 선택된 메뉴의 하위에 추가됩니다." style="">
+    										</w2:textbox>
+    									</xf:group>
+    									<xf:group class="" id="" style="" tagname="li">
+    										<w2:textbox id=""
+    											label="메뉴는 동일한 메뉴 Depth에서 ▼ ▲ 버튼을 선택하여 상/하로 이동할 수 있으며, ▼ ▲ 버튼 선택 시 즉시 반영됩니다." style="">
+    										</w2:textbox>
+    									</xf:group>
+    									<xf:group class="" id="" style="" tagname="li">
+    										<w2:textbox id="" label='루트와 홈은 &lt;span class="fwb"&gt;사용안함&lt;/span&gt; 상태로 변경하실 수 없습니다.' style=""></w2:textbox>
+    									</xf:group>
+    								</xf:group>
+    							</xf:group>
+    						</xf:group>
+    					</xf:group>
+    				</xf:group>
+    			</xf:group>
+    		</xf:group>
+    	</xf:group>
+    </body>
+</html>
