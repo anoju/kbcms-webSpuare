@@ -306,7 +306,6 @@ scwin.input1_onkeyup = function(e) {
 scwin.input1_onkeypress = function(e) {
     valueLengthCheck(e);
 };
-
 ]]></script>
 	</head>
 	<body ev:onpageload="scwin.onpageload" ev:onpageunload="scwin.onpageunload">
@@ -601,7 +600,7 @@ scwin.input1_onkeypress = function(e) {
 								</xf:select1>
 							</xf:group>
 							<xf:group class="title-box mt10" id="" style="">
-								<xf:group id="">
+								<xf:group id="" class="left">
 									<w2:textbox tagname="h3" style="" id="" label="mini (그리드에서 사용)" class="sub-title"></w2:textbox>
 									<w2:span style="" id="" label="해당 셀의 width가 100px 이상이 되어야 함" class="txt-division"></w2:span>
 								</xf:group>

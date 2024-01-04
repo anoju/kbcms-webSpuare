@@ -1,6 +1,27 @@
 
 @charset "utf-8";
 
+
+/**** 로그인 *****/
+.login-box {position:relative;display:flex;align-items: center;justify-content: center;width:100%;height:100vh;background-color: #42444E !important;}
+.login-box:after {content: '';position:absolute;left:0;top:0;display: block;width: 100%;height: 100%;background:url(../images/bg-kb-symbol.svg) no-repeat right bottom / 45% 50%; opacity:0.02;}
+.login-box .inner {position:absolute;width: 40rem;padding-top:7.5rem;z-index: 99;}
+.login-box .login-header {display:flex;justify-content: center;align-items: center;margin-bottom:4rem;font-weight: 700;font-size:2.4rem;color: #fff;line-height: 3.5rem;}
+.login-box .login-header .w2textbox {padding-bottom: 0.5rem;}
+.login-box .logo {display:flex;align-items: center;height: 3.5rem;}
+.login-box .logo::after{content: '';display:inline-block;width: 1px;height: 2.2rem;background-color: #fff;margin: 0 1.8rem;opacity: 0.2;}
+.login-box .logo a {width:16rem;height: 3.5rem;background: url(../images/kb_logo.png) no-repeat 0 0 / contain;text-indent: -9999em;}
+.login-box .login-contents {width: 100%;}
+.login-box .login-contents input {width: 100%;height: 4.8rem;padding:1.3rem 1.6rem; border-radius: 0.6rem !important;font-size: 1.5rem;}
+.login-box .login-contents input + input {margin-top: 0.8rem;}
+.login-box .login-contents .btn {height: 5.6rem;font-size: 1.8rem;font-weight: 700;}
+.login-box .login-footer .msg-box,
+.login-box .login-footer .msg-box .info-title {color: #ccc;}
+.login-box .login-footer .msg-box li::before {background-color: #ccc;}
+.login-box .login-footer .msg-box {margin-top: 3.2rem;word-break: keep-all;}
+/**** 로그인 끝 *****/
+
+
 /*댓글영역*/
 .contents-view-box {margin-bottom: 3.2rem;}
 .comment-box .comment-title {display: flex;justify-content: space-between;align-items: center;margin-bottom: 1.2rem;}
@@ -51,6 +72,6 @@
 .author-list-box .w2treeview .w2treeview_row_depth2 .w2treeview_label,
 .author-list-box .w2treeview .w2treeview_row_depth3 .w2treeview_label {margin-left: 1.6rem;font-weight: 300;font-size: 1.4rem;color: #666;}
 .author-list-box .w2treeview + .list-controler {padding-top: 1.2rem;background-color: #fff;}
-.author-list-box .w2treeview + .list-controler::before {content: '';display: block;position:absolute;left:-1rem;top:-1.2rem;width: calc(100% + 1rem);height: 1.6rem;background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);z-index: 120;}
+.author-list-box .w2treeview + .list-controler::before {content: '';display: block;position:absolute;left:-1rem;top:-1.2rem;width: calc(100% + 1.6rem);height: 1.6rem;background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);z-index: 120;}
 
 /*****관리자 페이지 end*****/

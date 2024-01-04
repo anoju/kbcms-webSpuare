@@ -572,6 +572,11 @@
     							</w2:anchor>
     						</xf:group>
     						<xf:group class="two-dept-li" id="" style="" tagname="li">
+    							<w2:anchor class="" href="websquare.html?w2xPath=/cm/pub/login.xml" id="" outerDiv="false" style="">
+    								<xf:label><![CDATA[로그인]]></xf:label>
+    							</w2:anchor>
+    						</xf:group>
+    						<xf:group class="two-dept-li" id="" style="" tagname="li">
     							<w2:anchor class="" id="" outerDiv="false" style=""
     								href="websquare.html?w2xPath=/cm/pub/kbcms_mainPage.xml">
     								<xf:label><![CDATA[메인화면]]></xf:label>

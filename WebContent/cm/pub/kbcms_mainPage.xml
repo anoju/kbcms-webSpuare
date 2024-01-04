@@ -362,7 +362,7 @@ scwin.onpageload = function() {
     					</xf:group>
     					<xf:group class="layer-box" id="" style="">
     						<xf:group class="title-box" id="" style="">
-    							<xf:group id="">
+    							<xf:group id="" class="left">
     								<w2:textbox tagname="h3" style="" id="" label="하위분류 목록" class="sub-title"></w2:textbox>
     								<w2:span style="" id="" label="상품기준정보 &gt; 선물옵션 &gt; 선물" class="txt-division"></w2:span>
     							</xf:group>
