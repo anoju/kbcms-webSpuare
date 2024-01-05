@@ -113,6 +113,7 @@ body{
 .fw-300 {font-weight: 300 !important;}
 .fw-500 {font-weight: 500 !important;}
 .fwb {font-weight: 900 !important;}
+.ellips {text-overflow: ellipsis;overflow: hidden;text-wrap: nowrap;}
 
 /*align*/
 .tac {text-align: center !important;}
@@ -221,6 +222,7 @@ body{
 .btn-icon.-download {background-image: url(../images/ico/ico-download.svg);background-repeat: no-repeat;background-size: 2rem 2rem;background-position: 1.0rem 0.5rem;}
 .btn-icon.-download:hover {background-image: url(../images/ico/ico-download-hover.svg);}
 .btn-icon.-download:disabled {background-image: url(../images/ico/ico-download-disable.svg);}
+.btn-icon.-upload {background-image: url(../images/ico/ico-upload.svg);}
 .btn-icon.-o {background-image: url(../images/ico/ico-o.svg);}
 .btn-icon.-x {background-image: url(../images/ico/ico-x.svg);}
 .btn-icon.-minus {background-image: url(../images/ico/ico-minus.svg);}
@@ -236,6 +238,9 @@ body{
 .btn-tooltip {display: inline-block;width:2rem;height: 2.1rem;border:0;outline:0;background: url(../images/btn/btn-ico-tooltip.svg) no-repeat 0 0 / cover;text-indent: -999em;vertical-align:top;}
 .btn-move-right {width: 3.2rem;border: 1px solid #AEB6D0;border-radius: 0.2rem;background: url(../images/btn/btn-move-right.svg) no-repeat 50% 50% / 2rem 2rem; text-indent: -999em;}
 .btn-move-left {width: 3.2rem;border: 1px solid #AEB6D0;border-radius: 0.2rem;background: url(../images/btn/btn-move-left.svg) no-repeat 50% 50% / 2rem 2rem; text-indent: -999em;}
+.btn-date {width:2.4rem;height:2.4rem;outline: 0;border: 0;background-color:#fff;text-indent:-999em;box-sizing: border-box;cursor: pointer;}
+.btn-date.-prev {background: url(../images/ico/ico-calendar-last-month.svg) no-repeat center center / cover;}
+.btn-date.-next {background: url(../images/ico/ico-calendar-next-month.svg) no-repeat center center / cover;}
 
 .btn-box {display: flex;gap:0.6rem;justify-content: center;margin-top: 1.6rem;}
 .vertical-btn-box {display: flex;flex-direction: column;justify-content: center;}
@@ -271,7 +276,7 @@ body{
 .w2selectbox  {height: 3.2rem;border: 1px solid #ccc;border-radius: 0.3rem;font-size: 1.4rem;font-weight: 300;line-height: 2.2rem;box-sizing: border-box;}
 .w2selectbox .w2selectbox_table_main {padding:0.6rem 0 0.6rem 1.2rem;}
 .w2selectbox .w2selectbox_table_main .w2selectbox_col_button {width: 2.4rem;background: #fff url(../images/ico/ico-arrow-select.svg) no-repeat 50% 50% / 2.4rem 2.4rem;}
-.w2selectbox .w2selectbox_table_main .w2selectbox_label {height:100%;padding-left:1.2rem;text-align: left;font-size: 1.4rem;font-weight: 400;line-height: 2.4rem;}
+.w2selectbox .w2selectbox_table_main .w2selectbox_label {height:100%;padding-left:1.2rem;text-align: left;font-size: 1.4rem;font-weight: 400;line-height: 1.8rem;}
 .w2selectbox_focus .w2selectbox_col_label {background-color: transparent;}
 
 .w2table_sb {margin-top:0.4rem;;border-radius: 0.3rem; border: 1px solid #ccc;}

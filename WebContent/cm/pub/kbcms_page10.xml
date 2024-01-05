@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ev="http://www.w3.org/2001/xml-events"
+    xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+    <head>
+        <w2:type>COMPONENT</w2:type>
+        <w2:buildDate/>
+        <w2:MSA/>
+        <xf:model>
+            <w2:dataCollection baseNode="map">
+            	<w2:dataList baseNode="list" id="chartData1" repeatNode="map" saveRemovedData="true" style="">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="label" name="name5"></w2:column>
+            			<w2:column dataType="text" id="value" name="name6"></w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            	<w2:dataList baseNode="list" id="chartData2" repeatNode="map" saveRemovedData="true" style="">
+            		<w2:columnInfo>
+            			<w2:column dataType="text" id="label" name="name5"></w2:column>
+            			<w2:column dataType="text" id="value" name="name6"></w2:column>
+            		</w2:columnInfo>
+            	</w2:dataList>
+            </w2:dataCollection>
+            <w2:workflowCollection/>
+        </xf:model>
+        <w2:layoutInfo/>
+        <w2:publicInfo method=""/>
+        <script lazy="false" type="text/javascript"><![CDATA[
+        
+	scwin.onpageload = function() {
+
+	var jsonData = [ {
+                "label" : "토스증권",
+                "value" : "1789"
+            },
+            {
+                "label" : "NH투자증권",
+                "value" : "719"
+            },
+            {
+                "label" : "삼성증권",
+                "value" : "689"
+            },
+            {
+                "label" : "미래에셋증권",
+                "value" : "623"
+            },{
+                "label" : "증권1",
+                "value" : "600"
+            },{
+                "label" : "증권2",
+                "value" : "589"
+            },{
+                "label" : "증권3",
+                "value" : "520"
+            },{
+                "label" : "증권4",
+                "value" : "500"
+            },{
+                "label" : "증권5",
+                "value" : "400"
+            },{
+                "label" : "증권6",
+                "value" : "100"
+        }];
+		var jsonData2 = [ {
+                "label" : "토스증권",
+                "value" : "1789"
+            },
+            {
+                "label" : "NH투자증권",
+                "value" : "719"
+            },
+            {
+                "label" : "삼성증권",
+                "value" : "689"
+            },
+            {
+                "label" : "미래에셋증권",
+                "value" : "623"
+        }];
+	chartData1.setJSON(jsonData);
+    chartData2.setJSON(jsonData2);
+		
+
+    var chartOption = {
+        "enableSmartLabels" : "1",
+        "showBorder" : "0",
+        "showLabels" : "1",
+        "labelDistance" : "7px",
+        "labelFont" : "Noto Sans KR",
+        "labelFontSize" : "13",
+        "startingAngle" : "90",
+        "outCnvBaseFont" : "Noto Sans KR",
+        "outCnvBaseFontSize" : "13"
+    };
+    chart1.setChartAttribute(chartOption);
+    chart1.draw();
+    var chartOption2 = {
+        "width" : "420",
+        "showBorder" : "0",
+        "labelFont" : "Noto Sans KR",
+        "labelFontSize" : "13",
+        // "chartLeftMargin" : "65",
+        "canvasLeftPadding" : "8",
+        "yAxisValueFontSize" : "14",
+        "outCnvBaseFont" : "Noto Sans KR",
+        "outCnvBaseFontSize" : "14",
+        "maxBarHeight" : "16",
+        "showDivLineValues" : "0",
+        "showZeroPlaneValue" : "0",
+        "showLimits" : "0",
+        "numDivLines" : "0"
+    }
+    chart2.setChartAttribute(chartOption2);
+    chart2.draw();
+
+	var opt = chart1.getJSONData(jsonData);//chart에 매핑된 data 값 
+    var opt2 = chart2.getJSONData(jsonData2);
+	var len = opt.dataset.length; 
+
+	
+	chart1.fc().setJSONData(opt);
+    chart2.fc().setJSONData(opt2);
+		
+};
+
+	scwin.onpageunload = function() {
+		
+	};
+	
+	]]></script>
+    </head>
+    <body ev:onpageload="scwin.onpageload">
+    	<xf:group class="wrap" id="" style="">
+    		<w2:wframe class="header_frame" id="" src="/cm/pub/common/header.xml" style=""></w2:wframe>
+    		<xf:group class="contents-box" id="" style="">
+    			<w2:wframe class="side-menu-frame" id="" src="/cm/pub/common/sidebar.xml" style=""></w2:wframe>
+    			<xf:group class="page-box" id="" style="">
+    				<xf:group class="contents" id="" style="">
+    					<xf:group class="title-box" id="" style="">
+    						<w2:textbox class="head-title" id="" label="경쟁사 동향 분석" style="" tagname="h2"></w2:textbox>
+    						<xf:group class="breadcrumb" id="" style="">
+    							<xf:group class="" id="" style="" tagname="ul">
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[홈]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[모니터링]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[모니터링 대시보드]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    								<xf:group class="cell" id="" style="" tagname="li">
+    									<w2:anchor class="" id="" outerDiv="false" style="">
+    										<xf:label><![CDATA[콘텐츠별 현황]]></xf:label>
+    									</w2:anchor>
+    								</xf:group>
+    							</xf:group>
+    						</xf:group>
+    					</xf:group>
+    					<xf:group class="layer-box" id="" style="">
+    						<xf:group class="datepicker-box" id="" style="">
+    							<xf:trigger centerOnImageClass="" class="btn-date -prev" id="" style="" type="button">
+    								<xf:label><![CDATA[이전일자]]></xf:label>
+    							</xf:trigger>
+    							<w2:inputCalendar calendarValueType="yearMonthDate" displayDayType="text"
+    								displayFormat="yyyy.MM.dd" focusOnDateSelect="false" footerDiv="false" id="" renderDiv="true" rightAlign="false" style=""
+    								visibleWeekNum="5" setCurrentDate="true">
+    							</w2:inputCalendar>
+    							<xf:trigger centerOnImageClass="" class="btn-date -next" id="" style="" type="button">
+    								<xf:label><![CDATA[다음일자]]></xf:label>
+    							</xf:trigger>
+    							<xf:select1 appearance="full" class="btn-round" cols="" id="" ref="" renderType="radiogroup" rows=""
+    								selectedIndex="0" style="">
+    								<xf:choices>
+    									<xf:item>
+    										<xf:label><![CDATA[일간]]></xf:label>
+    										<xf:value><![CDATA[]]></xf:value>
+    									</xf:item>
+    									<xf:item>
+    										<xf:label><![CDATA[주간]]></xf:label>
+    										<xf:value><![CDATA[]]></xf:value>
+    									</xf:item>
+    									<xf:item>
+    										<xf:label><![CDATA[월간]]></xf:label>
+    										<xf:value><![CDATA[]]></xf:value>
+    									</xf:item>
+    								</xf:choices>
+    							</xf:select1>
+    						</xf:group>
+    						<xf:group class="tab-box" id="">
+    							<w2:tabControl alwaysDraw="false" class="" closable="false" confirmFalseAction="new"
+    								confirmTrueAction="exist" id="" style="" useConfirmMessage="false" useMoveNextTabFocus="false" useTabKeyOnly="true">
+    								<w2:tabs disabled="false" id="tabs1" label="블로그" style=""></w2:tabs>
+    								<w2:tabs disabled="false" id="tabs2" label="뉴스레터" style=""></w2:tabs>
+    								<w2:tabs disabled="false" id="tabs3" label="업권" style=""></w2:tabs>
+    								<w2:content alwaysDraw="false" id="content1" style="">
+    									
+    									
+    									<xf:group style="" id="" class="title-box">
+    										<w2:textbox tagname="h3" style="" id="" label="경쟁사별 발간수" class="sub-title"></w2:textbox>
+    										<xf:group class="right" id="" style="">
+    											<xf:trigger centerOnImageClass="" class="btn btn-icon -upload" id="" style=""
+    												type="button">
+    												<xf:label><![CDATA[파일 업로드]]></xf:label>
+    											</xf:trigger>
+    											<xf:trigger centerOnImageClass="" class="btn btn-icon -download" id="" style=""
+    												type="button">
+    												<xf:label><![CDATA[파일 다운로드]]></xf:label>
+    											</xf:trigger>
+    										</xf:group>
+    									</xf:group>
+    									<xf:group class="flex" id="" style="">
+    										<xf:group id="" style="width:calc(100% - 40%);flex-direction:column;" class="flex">
+
+    											<w2:fusionchart accessibility="false" drawType="javascript" runflashAt="IE6,IE7,IE8"
+    												seriesType="simple" chartType="Doughnut2D" style="width: 100%;height: 300px;" id="chart1"
+    												plotColor="#FFCF53,#FA844E,#5AAE6E,#5B75CE,#A9C5FF,#7155C8,#354673,#FF6391,#FEBCFF,#BC80FF,#EB2B42,#CFEC1D,#2B9D96,#2757BB,#839BD7,#80839D,#393798,#2592FF,#4DE4C9,#4F805A"
+    												valueNode="value" ref="data:chartData1" seriesNode="compnayNm" labelNode="label">
+    											</w2:fusionchart>
+    										<xf:group id="" class="asc" style="width: 420px;height:120px;"><w2:fusionchart ref="data:chartData2" labelNode="label" accessibility="false" seriesType="simple" drawType="javascript" runflashAt="IE6,IE7,IE8" chartType="Bar2D" style="width: 100%;height: 100%;" valueNode="value" id="chart2" plotColor="#FFCF53,#FA844E,#5AAE6E,#5B75CE,#A9C5FF,#7155C8,#354673,#FF6391,#FEBCFF,#BC80FF,#EB2B42,#CFEC1D,#2B9D96,#2757BB,#839BD7,#80839D,#393798,#2592FF,#4DE4C9,#4F805A">
+    											</w2:fusionchart></xf:group></xf:group>
+    										<xf:group class="" id="" style="width:40%;">
+    											<xf:group class="table-box" id="" style="">
+    												<xf:group class="w2tb tb" id="" style="" tagname="table">
+    													<w2:attributes>
+    														<w2:summary></w2:summary>
+    													</w2:attributes>
+    													<xf:group tagname="caption"></xf:group>
+    													<xf:group tagname="colgroup">
+    														<xf:group style="width:112px;" tagname="col"></xf:group>
+    														<xf:group style="" tagname="col"></xf:group>
+    													</xf:group>
+    													<xf:group id="" tagname="thead">
+    														<xf:group style="" tagname="tr">
+    															<xf:group class="w2tb_th" style="" tagname="th">
+    																<w2:attributes>
+    																	<w2:scope>row</w2:scope>
+    																</w2:attributes>
+    																<w2:textbox id="" label="업체명" style=""></w2:textbox>
+    															</xf:group>
+    															<xf:group class="w2tb_th" style="" tagname="th">
+    																<w2:textbox class="" id="" label="콘텐츠 제목" style=""></w2:textbox>
+    															</xf:group>
+    														</xf:group>
+    													</xf:group>
+    													<xf:group class="" id="" style="" tagname="tbody"><xf:group style="" tagname="tr">
+    														<xf:group class="w2tb_td" style="" tagname="td">
+    															<w2:attributes>
+    																<w2:scope>row</w2:scope>
+    															</w2:attributes>
+    															<w2:textbox id="" label="토스증권" style=""></w2:textbox>
+    														</xf:group>
+    														<xf:group class="w2tb_td" style="" tagname="td">
+    														<w2:textbox style="" id="" label="레벨5, 휴대폰 요금 연체하면 신용점수 낮아진다" class="ellips"></w2:textbox></xf:group>
+    													</xf:group><xf:group tagname="tr">
+    														<xf:group class="w2tb_td" tagname="td">
+    															<w2:attributes></w2:attributes>
+    															<w2:textbox id="" label="NH투자증권" style=""></w2:textbox>
+    														</xf:group>
+    														<xf:group class="w2tb_td" tagname="td">
+    															<w2:attributes></w2:attributes>
+    														</xf:group>
+    													</xf:group><xf:group tagname="tr">
+	<xf:group tagname="td" class="w2tb_td">
+		<w2:attributes></w2:attributes>
+		<w2:textbox id="" label="삼성증권" style=""></w2:textbox>
+	</xf:group>
+	<xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group></xf:group><xf:group tagname="tr">
+	<xf:group tagname="td" class="w2tb_td">
+		<w2:attributes></w2:attributes>
+		<w2:textbox id="" label="미래에셋증권" style=""></w2:textbox>
+	</xf:group>
+	<xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group></xf:group><xf:group tagname="tr"><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group></xf:group><xf:group tagname="tr"><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group></xf:group><xf:group tagname="tr"><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group></xf:group><xf:group tagname="tr"><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group></xf:group><xf:group tagname="tr"><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group><xf:group tagname="td" class="w2tb_td"><w2:attributes></w2:attributes></xf:group></xf:group></xf:group>
+    													
+    													
+    												</xf:group>
+    											</xf:group>
+    										</xf:group>
+    									</xf:group>
+    								</w2:content>
+    								<w2:content alwaysDraw="false" id="content2" style="">
+    									<xf:group class="title-box" id="" style="">
+    										<w2:textbox class="sub-title" id="" label="탭 메뉴 컨탠츠 영역" style="" tagname="h3"></w2:textbox>
+    									</xf:group>
+    									<xf:group class="table-box" id="" style="">
+    										<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+    											<w2:attributes>
+    												<w2:summary></w2:summary>
+    											</w2:attributes>
+    											<xf:group tagname="caption"></xf:group>
+    											<xf:group tagname="colgroup">
+    												<xf:group style="width:172px;" tagname="col"></xf:group>
+    												<xf:group style="" tagname="col"></xf:group>
+    											</xf:group>
+    											<xf:group style="" tagname="tr">
+    												<xf:group class="w2tb_th req" style="" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" style="" tagname="td">
+    													<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    														class="wxl" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    														style="" submenuSize="auto">
+    														<xf:choices>
+    															<xf:item>
+    																<xf:label><![CDATA[new row]]></xf:label>
+    																<xf:value></xf:value>
+    															</xf:item>
+    															<xf:item>
+    																<xf:label><![CDATA[new row]]></xf:label>
+    																<xf:value></xf:value>
+    															</xf:item>
+    															<xf:item>
+    																<xf:label><![CDATA[new row]]></xf:label>
+    																<xf:value></xf:value>
+    															</xf:item>
+    															<xf:item>
+    																<xf:label><![CDATA[new row]]></xf:label>
+    																<xf:value></xf:value>
+    															</xf:item>
+    														</xf:choices>
+    													</xf:select1>
+    												</xf:group>
+    											</xf:group>
+    											<xf:group tagname="tr">
+    												<xf:group class="w2tb_th req" style="" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" style="" tagname="td">
+    													<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
+    												</xf:group>
+    											</xf:group>
+    											<xf:group tagname="tr">
+    												<xf:group class="w2tb_th" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" tagname="td">
+    													<w2:attributes></w2:attributes>
+    													<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
+    												</xf:group>
+    											</xf:group>
+    											<xf:group tagname="tr">
+    												<xf:group class="w2tb_th req" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" tagname="td">
+    													<w2:attributes></w2:attributes>
+    													<w2:span class="mr10" id="" label="text" style=""></w2:span>
+    													<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    														<xf:label><![CDATA[small btn]]></xf:label>
+    													</xf:trigger>
+    												</xf:group>
+    											</xf:group>
+    											<xf:group tagname="tr">
+    												<xf:group class="w2tb_th" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" tagname="td">
+    													<w2:attributes></w2:attributes>
+    													<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    														<xf:label><![CDATA[small btn]]></xf:label>
+    													</xf:trigger>
+    												</xf:group>
+    											</xf:group>
+    										</xf:group>
+    									</xf:group>
+    								</w2:content>
+    								<w2:content alwaysDraw="false" id="content3" style="">
+    									<xf:group class="title-box" id="" style="">
+    										<w2:textbox class="sub-title" id="" label="경쟁사별 발간수" style="" tagname="h3"></w2:textbox>
+    									</xf:group>
+    									<xf:group class="table-box" id="" style="">
+    										<xf:group class="w2tb tb" id="" style="width:100%;" tagname="table">
+    											<w2:attributes>
+    												<w2:summary></w2:summary>
+    											</w2:attributes>
+    											<xf:group tagname="caption"></xf:group>
+    											<xf:group tagname="colgroup">
+    												<xf:group style="width:172px;" tagname="col"></xf:group>
+    												<xf:group style="" tagname="col"></xf:group>
+    											</xf:group>
+    											<xf:group style="" tagname="tr">
+    												<xf:group class="w2tb_th req" style="" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" style="" tagname="td">
+    													<xf:select1 allOption="" animation="" appearance="minimal" chooseOption=""
+    														class="wxl" direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select"
+    														style="" submenuSize="auto">
+    														<xf:choices>
+    															<xf:item>
+    																<xf:label><![CDATA[new row]]></xf:label>
+    																<xf:value></xf:value>
+    															</xf:item>
+    															<xf:item>
+    																<xf:label><![CDATA[new row]]></xf:label>
+    																<xf:value></xf:value>
+    															</xf:item>
+    															<xf:item>
+    																<xf:label><![CDATA[new row]]></xf:label>
+    																<xf:value></xf:value>
+    															</xf:item>
+    															<xf:item>
+    																<xf:label><![CDATA[new row]]></xf:label>
+    																<xf:value></xf:value>
+    															</xf:item>
+    														</xf:choices>
+    													</xf:select1>
+    												</xf:group>
+    											</xf:group>
+    											<xf:group tagname="tr">
+    												<xf:group class="w2tb_th req" style="" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" style="" tagname="td">
+    													<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
+    												</xf:group>
+    											</xf:group>
+    											<xf:group tagname="tr">
+    												<xf:group class="w2tb_th" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" tagname="td">
+    													<w2:attributes></w2:attributes>
+    													<w2:textbox class="fs-15" id="" label="text" style=""></w2:textbox>
+    												</xf:group>
+    											</xf:group>
+    											<xf:group tagname="tr">
+    												<xf:group class="w2tb_th req" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" tagname="td">
+    													<w2:attributes></w2:attributes>
+    													<w2:span class="mr10" id="" label="text" style=""></w2:span>
+    													<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    														<xf:label><![CDATA[small btn]]></xf:label>
+    													</xf:trigger>
+    												</xf:group>
+    											</xf:group>
+    											<xf:group tagname="tr">
+    												<xf:group class="w2tb_th" tagname="th">
+    													<w2:attributes>
+    														<w2:scope>row</w2:scope>
+    													</w2:attributes>
+    													<w2:textbox id="" label="th text" style=""></w2:textbox>
+    												</xf:group>
+    												<xf:group class="w2tb_td" tagname="td">
+    													<w2:attributes></w2:attributes>
+    													<xf:trigger class="btn btn-primary small" id="" style="" type="button">
+    														<xf:label><![CDATA[small btn]]></xf:label>
+    													</xf:trigger>
+    												</xf:group>
+    											</xf:group>
+    										</xf:group>
+    									</xf:group>
+    								</w2:content>
+    							</w2:tabControl>
+    						</xf:group>
+    					</xf:group>
+    				</xf:group>
+    			</xf:group>
+    		</xf:group>
+    	</xf:group>
+    </body>
+</html>
