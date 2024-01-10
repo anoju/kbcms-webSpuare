@@ -1362,7 +1362,7 @@ scwin.onpageload = function() {
     						</xf:group>
     					</xf:group>
     					<xf:group class="layer-box" id="" style="">
-    					<xf:group id="" class="tab-box">
+    					<xf:group id="" class="tab-box closable">
     						<w2:tabControl confirmTrueAction="exist" useTabKeyOnly="true" confirmFalseAction="new"
     							useMoveNextTabFocus="false" closable="true" useConfirmMessage="false" alwaysDraw="false" style="" id="" class="tc-btn-type">
     							<w2:tabs disabled="false" style="" id="tabs1" label="매체(마블)정보"></w2:tabs>

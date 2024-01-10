@@ -132,10 +132,10 @@ body{
 
 /*flex*/
 .flex {display: flex;column-gap: 1.6rem;}
-.flex.-wrap {flex-wrap: wrap;}
-.w-fixed {flex-shrink: 0;flex-grow: 0;}
-.w-flexed {flex-grow: 1;}
-.w-match {flex: 1;}
+.flex.-wrap {flex-wrap: wrap !important;}
+.w-fixed {flex-shrink: 0 !important;flex-grow: 0 !important;}
+.w-flexed {flex-grow: 1 !important;}
+.w-match {flex: 1 !important;}
 .flex .layer-box {margin-top: 0 !important;}
 
 .asc {align-self: center;}

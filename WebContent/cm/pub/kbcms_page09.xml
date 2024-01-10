@@ -294,7 +294,7 @@ scwin.onpageload = function() {
     														</xf:item>
     													</xf:choices>
     												</xf:select>
-    												<xf:input adjustMaxLength="false" id="" style=""></xf:input>
+    												<xf:input adjustMaxLength="false" id="" style="" class="w-flexed"></xf:input>
     											</xf:group>
     										</xf:group>
     									</xf:group>
