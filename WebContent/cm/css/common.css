@@ -276,7 +276,7 @@ body{
 .w2selectbox  {height: 3.2rem;border: 1px solid #ccc;border-radius: 0.3rem;font-size: 1.4rem;font-weight: 300;line-height: 2.2rem;box-sizing: border-box;}
 .w2selectbox .w2selectbox_table_main {padding:0.6rem 0 0.6rem 1.2rem;}
 .w2selectbox .w2selectbox_table_main .w2selectbox_col_button {width: 2.4rem;background: #fff url(../images/ico/ico-arrow-select.svg) no-repeat 50% 50% / 2.4rem 2.4rem;}
-.w2selectbox .w2selectbox_table_main .w2selectbox_label {height:100%;padding-left:1.2rem;text-align: left;font-size: 1.4rem;font-weight: 400;line-height: 1.8rem;}
+.w2selectbox .w2selectbox_table_main .w2selectbox_label {height:100%;padding-left:1.2rem;text-align: left;font-size: 1.4rem;font-weight: 400;line-height: 2.5rem;}
 .w2selectbox_focus .w2selectbox_col_label {background-color: transparent;}
 
 .w2table_sb {margin-top:0.4rem;;border-radius: 0.3rem; border: 1px solid #ccc;}
@@ -522,7 +522,7 @@ body{
 
 /*paging*/
 .w2pageList {width: 100%;height: 2rem;margin-top: 1.6rem;}
-.w2pageList td {font-size:1.3rem;line-height: 1.9rem;font-weight: 300;color: #999;}
+.w2pageList td {font-size:1.3rem;line-height: 2rem;font-weight: 300;color: #999;}
 .w2pageList td.w2pageList_col_prevPage:hover {background-image: url(../images/ico/ico-double-arrow-hover.svg) !important;}
 .w2pageList td.w2pageList_col_prev:hover {background-image: url(../images/ico/ico-single-arrow-hover.svg) !important;}
 .w2pageList td.w2pageList_col_next:hover {background-image: url(../images/ico/ico-single-arrow-right-hover.svg) !important;}

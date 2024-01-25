@@ -77,7 +77,26 @@
         <w2:publicInfo method=""/>
         <script lazy="false" type="text/javascript"><![CDATA[
 scwin.onpageload = function() {
-	
+    //페이지리스트에 숫자넣기기
+	pgList01.setCount(15);
+
+
+};
+//검색영역 초기화
+scwin.btnRefreshInp_onclick = function(e) {
+    let arrCmp = $p.$("#schSel01:wq, #schSel02:wq, #schSel03:wq, #schSel04:wq").wq("setValue","");
+    schChk01.checkAll(false);
+};
+
+scwin.schSel01_onselected = function() {
+    var newSelectedIndex = info.newValue;
+    var disable = schSel02.getDisabled();
+
+    if(newSelectedIndex === 00){
+        schSel02.setDisabled(disable);
+    }else {
+        schSel02.setDisabled(!disable);
+    }
 };
 ]]></script>
     </head>
@@ -133,91 +152,91 @@ scwin.onpageload = function() {
     										<w2:rowspan>1</w2:rowspan>
     									</w2:attributes>
     									<xf:group class="form-box" id="" style="">
-    										<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="" class="wm"
-    											direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
-    											submenuSize="auto">
+    										<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="true" class="wm"
+    											direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="schSel01" ref="" renderType="select" style=""
+    											submenuSize="auto" chooseOptionLabel="선택" mandatory="true" ev:onselected="scwin.schSel01_onselected">
     											<xf:choices>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[선택1]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[선택2]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[선택3]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[선택4]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     											</xf:choices>
     										</xf:select1>
-    										<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="" class="wm"
-    											direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
-    											submenuSize="auto">
+    										<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="true" class="wm"
+    											direction="auto" disabledClass="w2selectbox_disabled" id="schSel02" ref="" renderType="select" style=""
+    											submenuSize="auto" chooseOptionLabel="선택" disabled="true" mandatory="true">
     											<xf:choices>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[선택1]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[선택2]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[선택3]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[선택4]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     											</xf:choices>
     										</xf:select1>
-    										<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="" class="wm"
-    											direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
-    											submenuSize="auto">
+    										<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="true" class="wm"
+    											direction="auto" disabledClass="w2selectbox_disabled" id="schSel03" ref="" renderType="select" style=""
+    											submenuSize="auto" chooseOptionLabel="선택" disabled="true" mandatory="true">
     											<xf:choices>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[하위선택1]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[하위선택2]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[하위선택3]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[하위선택4]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     											</xf:choices>
     										</xf:select1>
-    										<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="" class="wm"
-    											direction="auto" disabled="false" disabledClass="w2selectbox_disabled" id="" ref="" renderType="select" style=""
-    											submenuSize="auto">
+    										<xf:select1 allOption="" animation="" appearance="minimal" chooseOption="true" class="wm"
+    											direction="auto" disabledClass="w2selectbox_disabled" id="schSel04" ref="" renderType="select" style=""
+    											submenuSize="auto" chooseOptionLabel="선택" disabled="true" mandatory="true">
     											<xf:choices>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[최하위선택1]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[최하위선택2]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[최하위선택3]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     												<xf:item>
-    													<xf:label><![CDATA[new row]]></xf:label>
-    													<xf:value></xf:value>
+    													<xf:label><![CDATA[최하위선택4]]></xf:label>
+    													<xf:value><![CDATA[]]></xf:value>
     												</xf:item>
     											</xf:choices>
     										</xf:select1>
@@ -232,7 +251,7 @@ scwin.onpageload = function() {
     									<w2:textbox id="" label="항목명" style=""></w2:textbox>
     								</xf:group>
     								<xf:group class="w2tb_td" style="" tagname="td">
-    									<xf:select appearance="full" cols="" id="" ref="" renderType="checkboxgroup" rows=""
+    									<xf:select appearance="full" cols="" id="schChk01" ref="" renderType="checkboxgroup" rows=""
     										selectedindex="0" style="">
     										<xf:choices>
     											<xf:item>
@@ -254,7 +273,7 @@ scwin.onpageload = function() {
     						</xf:group>
     					</xf:group>
     					<xf:group class="btn-box" id="" style="">
-    						<xf:trigger class="btn btn-line" id="" style="" type="button">
+    						<xf:trigger class="btn btn-line" id="btnRefreshInp" style="" type="button" ev:onclick="scwin.btnRefreshInp_onclick">
     							<xf:label><![CDATA[초기화]]></xf:label>
     						</xf:trigger>
     						<xf:trigger class="btn btn-primary" id="" style="" type="button">
@@ -319,7 +338,7 @@ scwin.onpageload = function() {
     									</w2:row>
     								</w2:gBody>
     							</w2:gridView>
-    							<w2:pageList displayButtonType="display" displayFormat="#" id=""
+    							<w2:pageList displayButtonType="display" displayFormat="#" id="pgList01"
     								leftPageBackImage="/cm/images/ico/ico-double-arrow.svg" leftPageImage="/cm/images/ico/ico-single-arrow.svg" pageSize="10"
     								rightPageBackImage="/cm/images/ico/ico-double-arrow-right.svg" rightPageImage="/cm/images/ico/ico-single-arrow-right.svg"
     								style="">
